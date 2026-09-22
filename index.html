@@ -180,6 +180,42 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 .durf-content tbody tr:nth-child(even) { background: var(--sds--color--gray--100); }
 
+.durf-matrix-wrap { overflow-x: auto; margin: 1.5rem 0 1.75rem; }
+.durf-matrix { border-collapse: collapse; width: 100%; min-width: 52rem; font-size: .8125rem; line-height: 1.35; }
+.durf-matrix th, .durf-matrix td {
+  border: .0625rem solid var(--sds--color--gray--200);
+  padding: .5rem .625rem;
+  text-align: left;
+  vertical-align: top;
+}
+.durf-matrix thead th {
+  background: var(--sds--color--gray--100);
+  font-weight: 700;
+  font-size: .75rem;
+  white-space: nowrap;
+}
+.durf-matrix tbody th {
+  background: var(--sds--color--gray--100);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.durf-matrix td.d { background: var(--sds--color--gray--200); text-align: center; color: var(--sds--color--gray--400); }
+.durf-matrix td.u { background: var(--sds--color--blue--100); }
+.durf-matrix td.l { background: #F3E7F4; }
+.durf-matrix td.n { color: var(--sds--color--gray--300); text-align: center; }
+.durf-matrix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: .75rem 0 0;
+  font-size: .8125rem;
+  color: var(--sds--color--gray--500);
+}
+.durf-matrix-legend span { display: inline-flex; align-items: center; gap: .4rem; }
+.durf-matrix-legend i { width: .875rem; height: .875rem; border-radius: .1875rem; display: inline-block; border: .0625rem solid var(--sds--color--gray--250); }
+.durf-matrix-legend .u { background: var(--sds--color--blue--100); }
+.durf-matrix-legend .l { background: #F3E7F4; }
+
 .durf-content blockquote {
   margin: 1.25rem 0;
   padding: .75rem 1.25rem;
