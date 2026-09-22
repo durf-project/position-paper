@@ -54,6 +54,104 @@ This resembles what [data mesh architecture](https://www.datamesh-architecture.c
 
 Bringing these parties together under one set of shared rules is what data mesh calls **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance theme 1, below, asks signees to commit to.
 
+### Rights and responsibilities
+
+Being part of the federation is not only a duty to the whole - it is a set of specific, bilateral obligations between the parties operating each system, and the rights that come with them. The KB's e-Depot, for example, has the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it only holds that responsibility because it also has the *right* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
+
+The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists the rights that system holds against the others. The same cell is both at once - a responsibility from one side, a right from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be renegotiated.
+
+<div class="durf-matrix-wrap">
+<table class="durf-matrix">
+<thead>
+<tr><th>Responsibility of &darr; / Right of &rarr;</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
+</thead>
+<tbody>
+<tr><th>Repository / CRIS</th>
+<td class="d">&mdash;</td>
+<td class="u">Expose complete, standards-compliant metadata for harvesting</td>
+<td class="n">&ndash;</td>
+<td class="u">Correct records flagged by enrichment signals</td>
+<td class="n">&ndash;</td>
+<td class="u">Supply full text &amp; metadata for archiving</td>
+<td class="n">&ndash;</td>
+<td class="u">Expose crawlable, standards-compliant metadata</td>
+</tr>
+<tr><th>Provide (harvester)</th>
+<td class="l">Validate records; report errors back</td>
+<td class="d">&mdash;</td>
+<td class="u">Deliver validated, harvested records</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+</tr>
+<tr><th>Graph</th>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="d">&mdash;</td>
+<td class="u">Feed aggregated records for enrichment</td>
+<td class="u">Supply the aggregated, curated dataset</td>
+<td class="u">Route metadata &amp; full text toward preservation</td>
+<td class="n">&ndash;</td>
+<td class="u">Redistribute enriched metadata externally</td>
+</tr>
+<tr><th>Broker (enrichment)</th>
+<td class="l">Return quality &amp; enrichment signals to source</td>
+<td class="n">&ndash;</td>
+<td class="l">Return enriched, deduplicated records</td>
+<td class="d">&mdash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+</tr>
+<tr><th>Portal (Connect)</th>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="d">&mdash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+</tr>
+<tr><th>e-Depot</th>
+<td class="l">Archive &amp; safely back up the deposited content</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="d">&mdash;</td>
+<td class="u">Register preserved items for persistent IDs</td>
+<td class="n">&ndash;</td>
+</tr>
+<tr><th>URN:NBN resolver</th>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="l">Resolve URN:NBN to the current, preserved location</td>
+<td class="d">&mdash;</td>
+<td class="n">&ndash;</td>
+</tr>
+<tr><th>Other indexes</th>
+<td class="l">No formal obligation - outside DURF's own governance</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="d">&mdash;</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p class="durf-matrix-legend"><span><i class="u"></i> above the diagonal &mdash; read as a right</span><span><i class="l"></i> below the diagonal &mdash; read as a responsibility</span></p>
+
 ## 1. Integrate systems under shared governance
 
 Bringing Dutch repositories, CRIS's, the harvester, the graph, the portal and the e-Depot together is bigger than agreeing a metadata standard - that belongs mostly under theme 2, below. This theme is about organising DURF as a [research commons](https://doi.org/10.5281/zenodo.21468732): metadata, full text and the infrastructure that carries them become resources that the signing parties manage, maintain and are accountable for together, as a community, rather than separately.
