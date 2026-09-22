@@ -10,7 +10,7 @@ System](https://surfnet.github.io/DesignSystem/) look used by the
 index.html            the page -- self-contained, ready to publish
 position-paper.md      the source of truth for the text; edit this
 assets/                logo, favicon and the vendored markdown renderer
-LICENSE                CC BY 4.0 (Alastair Dunning)
+LICENSE                CC BY 4.0 (Alastair Dunning and Maurice Vanderfeesten)
 ```
 
 ## Editing the text
@@ -62,7 +62,7 @@ forward, no re-tracing required.
 
 ## License
 
-[CC BY 4.0](LICENSE) — Alastair Dunning. Third-party assets (the vendored
+[CC BY 4.0](LICENSE) — Alastair Dunning and Maurice Vanderfeesten. Third-party assets (the vendored
 `marked` library) keep their own license; see `assets/marked.LICENSE.md`.
 
 ## Publishing
