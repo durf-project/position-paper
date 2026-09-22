@@ -35,6 +35,25 @@ Therefore, the immediate focus of DURF, and this position paper, lies on the inf
 
 ![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver.](assets/durf-information-chain.svg)
 
+## Systems and parties
+
+The diagram above names systems: repositories, CRIS's, a harvester, a graph, a broker, a portal, an e-Depot, a resolver. Each has a distinct function in the chain. But a system cannot sign a position paper, hold a meeting, or make a pledge - only a party can. Every system in the diagram is operated by a party, and it is that party which takes on the obligations, and holds the rights, described throughout this paper.
+
+| System | Function | Operated by |
+| --- | --- | --- |
+| Institutional repository / CRIS | Captures and holds an institution's own research output and its metadata | Each university library |
+| Metadata harvester & validator (OpenAIRE PROVIDE) | Collects and checks records from repositories and CRIS's | OpenAIRE |
+| OpenAIRE Graph | Aggregates, deduplicates and cross-references records nationally and internationally | OpenAIRE |
+| Enrichment (OpenAIRE Broker) | Returns quality and enrichment signals to the source system | OpenAIRE |
+| Netherlands Research Portal (OpenAIRE Connect) | Curated, national outlet for Dutch research output | OpenAIRE, on behalf of DURF |
+| e-Depot | Long-term preservation of deposited files | KB (National Library of the Netherlands) |
+| URN:NBN resolver | Keeps preserved files reliably citable and linkable | KB |
+| Other research indexes (OpenAlex, Google, EOSC nodes) | External discovery channels | Parties outside DURF's own governance |
+
+This resembles what [data mesh architecture](https://www.datamesh-architecture.com/) - the approach SURF's Open Research Information programme is also exploring, for the ORI DuckLake - calls a **data product**: a bundle of a pipeline, the data it produces and a description of what it offers, with an owner who is responsible for it. Applied here: each system above is a shared building block, but the commitments in this position paper belong to the party operating it, not to the system itself.
+
+Bringing these parties together under one set of shared rules is what data mesh calls **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance theme 1, below, asks signees to commit to.
+
 ## 1. Integrate systems under shared governance
 
 Repository and CRIS systems across Dutch universities have grown independently since the early 2000s. Bringing them under shared governance does not mean replacing them with a single system; it means agreeing a core metadata standard, related thesauri and persistent identifiers, so that systems can interoperate regardless of which platform an institution runs.
@@ -49,7 +68,7 @@ Therefore, the signees of the DURF Position Paper agree to apply a core metadata
 
 Each university library pledges to create metadata according to an agreed standard, and to participate in the shared governance structure that oversees it.
 
-Repository/CRIS systems have adopted the updated metadata- and exchange-standards for high-quality research metadata that comply with international guidelines and meet national requirements.
+Each university library, as the party operating its repository/CRIS system, has adopted the updated metadata- and exchange-standards for high-quality research metadata that comply with international guidelines and meet national requirements.
 
 ## 2. Enable enriched metadata feedback via the OpenAIRE Graph
 
@@ -63,7 +82,7 @@ Therefore, the signees of the DURF Position Paper agree to connect their reposit
 
 ### Outputs
 
-Repository/CRIS systems regularly harvest into, and receive enriched metadata back from, the OpenAIRE Graph.
+University libraries regularly harvest their repository/CRIS content into, and receive enriched metadata back from, the OpenAIRE Graph - maintained by OpenAIRE on the federation's behalf.
 
 ## 3. Increase full-text collection
 

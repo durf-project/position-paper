@@ -161,6 +161,25 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 .durf-content figure { margin: 0; }
 
+.durf-content table {
+  width: 100%;
+  margin: 1.25rem 0 1.75rem;
+  border-collapse: collapse;
+  font-size: .9375rem;
+}
+.durf-content th, .durf-content td {
+  padding: .625rem .875rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: .0625rem solid var(--sds--color--gray--200);
+}
+.durf-content th {
+  font-weight: 700;
+  color: var(--sds--color--black);
+  border-bottom: .125rem solid var(--durf--blue);
+}
+.durf-content tbody tr:nth-child(even) { background: var(--sds--color--gray--100); }
+
 .durf-content blockquote {
   margin: 1.25rem 0;
   padding: .75rem 1.25rem;
