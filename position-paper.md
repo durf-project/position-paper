@@ -26,6 +26,8 @@ Therefore, the immediate focus of DURF, and this position paper, lies on the inf
 
 # The DURF Information Chain
 
+![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver.](assets/durf-information-chain.svg)
+
 ## 1. Create and enrich standardised metadata
 
 High-quality metadata is a condition for a successful repository. Poor metadata can mean broken links or context-free content. It erodes trust, one of the most important values that university repositories should embody.
