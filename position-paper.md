@@ -56,19 +56,27 @@ Bringing these parties together under one set of shared rules is what data mesh 
 
 ## 1. Integrate systems under shared governance
 
-Repository and CRIS systems across Dutch universities have grown independently since the early 2000s. Bringing them under shared governance does not mean replacing them with a single system; it means agreeing a core metadata standard, related thesauri and persistent identifiers, so that systems can interoperate regardless of which platform an institution runs.
+Bringing Dutch repositories, CRIS's, the harvester, the graph, the portal and the e-Depot together is bigger than agreeing a metadata standard - that belongs mostly under theme 2, below. This theme is about organising DURF as a [research commons](https://doi.org/10.5281/zenodo.21468732): metadata, full text and the infrastructure that carries them become resources that the signing parties manage, maintain and are accountable for together, as a community, rather than separately.
 
-Standardisation is the first step to better metadata management at a national level. Deduplication, and the export and import of records, is far smoother with a consistent approach to metadata.
+That takes more than good intentions. It takes the right legal structures - to share all fields of metadata openly, to capture and share full text, to jointly maintain and financially uphold the Netherlands Research Portal and OpenAIRE's services, and to commit to backing up content in the KB's e-Depot. It is these commitments, brought together across all six themes above, that this position paper asks its signees to make.
 
-> _Draft note: (something about persistent identifiers)_
+Therefore, the signees of the DURF Position Paper agree to:
 
-Therefore, the signees of the DURF Position Paper agree to apply a core metadata standard, and related thesauri and persistent identifiers, under a shared governance structure. The precise nature of this standard, and the governance model itself, will be determined in discussion with all DURF partners / stakeholders during the course of the project. By M?, this standard will be agreed and institutes will start its implementation.
+* establish a National Membership Consortium (NaMeCo), giving Dutch institutions formal representation within OpenAIRE;
+* draft and finalise formal agreements on roles and responsibilities between SURF, NaMeCo institutions, the KB, publishers and OpenAIRE;
+* define a legal structure under which all fields of metadata are shared as CC0, so they can move freely between systems;
+* create a governance framework covering all six themes, reviewed toward the end of the project to keep it sustainable beyond it;
+* jointly fund the shared infrastructure - contributing to the licences that cover OpenAIRE's operating costs, shared among federation members - rather than leaving that cost to a single party;
+* meet annually, at a National Symposium and General Assembly, to hold each other to these commitments.
 
 ### Outputs
 
-Each university library pledges to create metadata according to an agreed standard, and to participate in the shared governance structure that oversees it.
-
-Each university library, as the party operating its repository/CRIS system, has adopted the updated metadata- and exchange-standards for high-quality research metadata that comply with international guidelines and meet national requirements.
+* This position paper, developed and signed by the federation's signatories.
+* A National Membership Consortium (NaMeCo), giving Dutch institutions formal representation within OpenAIRE.
+* Formal agreements on roles and responsibilities between SURF, NaMeCo institutions, the KB, publishers and OpenAIRE.
+* A legal structure for sharing all fields of metadata as CC0.
+* A governance framework covering all six themes, reviewed and updated to ensure it is sustainable after the project ends.
+* An annual National Symposium and General Assembly for federation members.
 
 ## 2. Enable enriched metadata feedback via the OpenAIRE Graph
 
@@ -78,11 +86,21 @@ High-quality metadata is a condition for a successful repository. Poor metadata 
 
 A metadata harvester and validator (OpenAIRE PROVIDE) collects records from institutional repositories and CRIS systems into the OpenAIRE Graph, where they are deduplicated, cross-referenced and enriched (OpenAIRE Broker) - with the results fed back to the originating repositories rather than disappearing into a one-way pipeline. Aggregation and dissemination of metadata and the related content also becomes much easier if each institute registering research output does so in a unified manner.
 
-Therefore, the signees of the DURF Position Paper agree to connect their repositories to this feedback loop, and to act on the enrichment and validation signals it returns.
+Therefore, the signees of the DURF Position Paper agree to:
+
+* form a NL Research Information Content Board, through EduStandaard, to steward the shared metadata standard;
+* develop an updated metadata application profile, translating the current NL-DIDL-MODS requirements to OpenAIRE's CERIF and DC guidelines;
+* support repositories, CRIS systems and the KB's e-Depot in adopting that profile, and monitor compliance;
+* monitor the use of core persistent identifiers (ROR, ORCID, DOI) and promote their local implementation;
+* connect their repositories to the OpenAIRE Graph's enrichment feedback loop, and act on the signals it returns.
 
 ### Outputs
 
-University libraries regularly harvest their repository/CRIS content into, and receive enriched metadata back from, the OpenAIRE Graph - maintained by OpenAIRE on the federation's behalf.
+* A NL Research Information Content Board, formalised through EduStandaard.
+* An updated metadata application profile, aligned with OpenAIRE's CERIF and DC guidelines.
+* Each university library, as the party operating its repository/CRIS system, has adopted the updated metadata- and exchange-standards for high-quality research metadata that comply with international guidelines and meet national requirements.
+* Monitoring of core PID (ROR, ORCID, DOI) usage, with shared compliance and best-practice reports.
+* University libraries regularly harvesting their repository/CRIS content into, and receiving enriched metadata back from, the OpenAIRE Graph.
 
 ## 3. Increase full-text collection
 
@@ -98,6 +116,13 @@ Despite this, there are various challenges to importing full-text of research ou
 
 Therefore, the signees of the DURF Position Paper agree to add full text to metadata records. They will first agree the detail of any full-text policy - for which records and to which level of completeness do we wish to achieve this aim. They will then use and implement the tools, methods and services developed in the DURF project to meet these agreed targets.
 
+### Outputs
+
+* Baseline metrics and a reporting system for full-text uptake.
+* An inventory of existing tools and methods for full-text capture.
+* A piloted, shareable full-text capture service - code and practices - ready to roll out ecosystem-wide.
+* Measurable, ecosystem-wide improvement in full-text availability by the end of the project.
+
 ## 4. Preserve output via the KB's e-Depot
 
 While university libraries have capacity to manage their research outputs, tasks related to the functional preservation of digital files are undertaken by the National Library of the Netherlands (KB). The KB's e-Depot service ensures that files remain accessible in the long term, that they are associated with the right metadata, and - in the event of any digital disaster - that there is also a safe copy of the deposited material. A persistent URN:NBN resolver, also maintained by the KB, keeps preserved files reliably citable and linkable over time. This gives the KB a unique role in relation to university repositories.
@@ -106,14 +131,10 @@ Signatories of the DURF Position Paper pledge that they will share their reposit
 
 ### Outputs
 
-The DURF project will ensure that there is agreement between the KB and all universities for:
-
-* which content is shared with e-Depot
-* which metadata is shared with the e-Depot
-* the underlying processes and protocols for sharing the digital files
-* and other issues of relevance, such as university's participation in an agreed governance structure
-
-By the end of the project, all universities will be successfully sharing their content with the e-Depot for long-term preservation.
+* A pull mechanism, partly via OpenAIRE, that brings metadata and full-text publications into the e-Depot.
+* All Dutch CRIS and repository content archived and backed up at the KB's e-Depot.
+* A monitoring system tracking the preservation status of publications and their metadata.
+* A maintained, up-to-date URN:NBN resolver.
 
 ## 5. Maximise discoverability through multiple channels
 
@@ -125,6 +146,12 @@ At the moment, universities do their best efforts, but without a standardised ap
 
 Therefore, the signees of the DURF Position Paper agree to work towards a shared approach for maximising the discoverability of Dutch research output, across OpenAlex, Google, EOSC nodes and other relevant channels, building on the metadata and full-text work above.
 
+### Outputs
+
+* Mappings and best practices for the major indexes, improving the visibility of Dutch research output.
+* DOI-minting for grey literature held in DURF repositories.
+* A monitoring system tracking DURF content's visibility across the major indexes.
+
 ## 6. Provide a Dutch Portal as the outlet for curated research output
 
 Alongside the many channels through which Dutch research output can be discovered, DURF partners also commit to the Netherlands Research Portal (built on OpenAIRE Connect) as the national, curated showcase of that output - a single outlet where the results of shared governance, enriched metadata and full-text collection come together for a Dutch and international audience.
@@ -133,7 +160,11 @@ Therefore, the signees of the DURF Position Paper agree to share their curated r
 
 ### Outputs
 
-All DURF signatories have their institutional research output represented, and kept up to date, on the Netherlands Research Portal.
+* A Netherlands Research Portal Steering Committee, with rotating NaMeCo membership.
+* Regular stakeholder needs assessments, feeding development roadmaps aligned with OpenAIRE Connect.
+* Quarterly portal updates, with a major version released annually.
+* Single sign-on to OpenAIRE's PROVIDE, CONNECT and MONITOR services via SURFconext.
+* All DURF signatories have their institutional research output represented, and kept up to date, on the Netherlands Research Portal.
 
 # Rough Ideas and Notes
 
