@@ -192,6 +192,30 @@ a:hover { color: var(--sds--color--blue--500); }
 .durf-content blockquote p:last-child { margin-bottom: 0; }
 .durf-content blockquote em { color: inherit; opacity: .85; }
 
+.durf-content .durf-pledge {
+  margin: 1.5rem 0;
+  padding: 1.125rem 1.375rem;
+  background: var(--sds--color--blue--100);
+  border-left: .25rem solid var(--durf--blue);
+  border-radius: 0 .5rem .5rem 0;
+}
+.durf-content .durf-pledge p,
+.durf-content .durf-pledge ul,
+.durf-content .durf-pledge ol { margin-bottom: 0; }
+.durf-content .durf-pledge p + ul,
+.durf-content .durf-pledge p + ol { margin-top: .75rem; }
+.durf-content .durf-pledge p:first-of-type::before {
+  content: "Pledge";
+  display: block;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--durf--blue);
+  margin-bottom: .4rem;
+}
+.durf-content .durf-pledge li::marker { color: var(--durf--blue); }
+
 .durf-loading {
   color: var(--sds--color--gray--500);
   font-style: italic;
@@ -273,8 +297,37 @@ a:hover { color: var(--sds--color--blue--500); }
     return markdown.replace(/^#\s+.+\n+_[^\n]+_\n+/, '');
   }
 
+  var PLEDGE_PREFIXES = [
+    'Therefore, the signees of the DURF Position Paper agree',
+    'Signatories of the DURF Position Paper pledge'
+  ];
+
+  function markPledges() {
+    // Give the "signees agree" / "signatories pledge" paragraphs (and any
+    // list of commitments right after them) a distinct callout, so the
+    // actual pledges stand out from the surrounding explanatory prose.
+    var paragraphs = contentEl.querySelectorAll('p');
+    for (var i = 0; i < paragraphs.length; i++) {
+      var p = paragraphs[i];
+      var text = p.textContent.trim();
+      var isPledge = PLEDGE_PREFIXES.some(function (prefix) { return text.indexOf(prefix) === 0; });
+      if (!isPledge) continue;
+
+      var wrapper = document.createElement('div');
+      wrapper.className = 'durf-pledge';
+      p.parentNode.insertBefore(wrapper, p);
+      wrapper.appendChild(p);
+
+      var next = wrapper.nextElementSibling;
+      if (next && (next.tagName === 'UL' || next.tagName === 'OL')) {
+        wrapper.appendChild(next);
+      }
+    }
+  }
+
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
+    markPledges();
   }
 
   function showError() {
