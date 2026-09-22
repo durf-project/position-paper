@@ -41,6 +41,7 @@ The diagram above names systems: repositories, CRIS's, a harvester, a graph, a b
 
 | System | Function | Operated by |
 | --- | --- | --- |
+| Publishing platforms | Original source of full texts and CC0 metadata (publishers, preprint servers) that feed into repositories | Parties outside DURF's own governance |
 | Institutional repository / CRIS | Captures and holds an institution's own research output and its metadata | Each university library |
 | Metadata harvester & validator (OpenAIRE PROVIDE) | Collects and checks records from repositories and CRIS's | OpenAIRE |
 | OpenAIRE Graph | Aggregates, deduplicates and cross-references records nationally and internationally | OpenAIRE |
@@ -63,10 +64,22 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <div class="durf-matrix-wrap">
 <table class="durf-matrix">
 <thead>
-<tr><th>Responsibility of &darr; / Right of &rarr;</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
+<tr><th>Responsibility of &darr; / Right of &rarr;</th><th>Publishing</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
 </thead>
 <tbody>
+<tr><th>Publishing platforms</th>
+<td class="d">&mdash;</td>
+<td class="u">Supply full texts and CC0 metadata</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
+</tr>
 <tr><th>Repository / CRIS</th>
+<td class="l">No formal obligation - outside DURF's own governance</td>
 <td class="d">&mdash;</td>
 <td class="u">Expose complete, standards-compliant metadata for harvesting</td>
 <td class="n">&ndash;</td>
@@ -77,6 +90,7 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <td class="u">Expose crawlable, standards-compliant metadata</td>
 </tr>
 <tr><th>Provide (harvester)</th>
+<td class="n">&ndash;</td>
 <td class="l">Validate records; report errors back</td>
 <td class="d">&mdash;</td>
 <td class="u">Deliver validated, harvested records</td>
@@ -89,6 +103,7 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <tr><th>Graph</th>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="u">Feed aggregated records for enrichment</td>
 <td class="u">Supply the aggregated, curated dataset</td>
@@ -97,6 +112,7 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <td class="u">Redistribute enriched metadata externally</td>
 </tr>
 <tr><th>Broker (enrichment)</th>
+<td class="n">&ndash;</td>
 <td class="l">Return quality &amp; enrichment signals to source</td>
 <td class="n">&ndash;</td>
 <td class="l">Return enriched, deduplicated records</td>
@@ -111,12 +127,14 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>e-Depot</th>
+<td class="n">&ndash;</td>
 <td class="l">Archive &amp; safely back up the deposited content</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -132,11 +150,13 @@ The matrix below can be read two ways. Along a **row**, it lists a system's resp
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
+<td class="n">&ndash;</td>
 <td class="l">Resolve URN:NBN to the current, preserved location</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>Other indexes</th>
+<td class="n">&ndash;</td>
 <td class="l">No formal obligation - outside DURF's own governance</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>

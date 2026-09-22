@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 990" font-family="Kalam, 'Comic Sans MS', cursive">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 990" font-family="'Segoe UI', Nunito, Arial, sans-serif">
 <rect x="0" y="0" width="1900" height="990" fill="#ffffff" />
-<defs>
-  <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto">
-    <path d="M0,0 L10,5 L0,10 Z" fill="#177ABF" />
-  </marker>
-</defs>
 <rect x="84" y="-4" width="340" height="150" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" />
 <rect x="77" y="3" width="340" height="150" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" />
 <rect x="70" y="10" width="340" height="150" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="3" />
@@ -43,12 +38,12 @@
 <rect x="1020" y="300" width="300" height="160" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="3" />
 <text x="1170.0" y="380.0" font-size="27" font-weight="700" fill="#0B2540" text-anchor="middle" dominant-baseline="middle" style="">[OpenAIRE GRAPH]</text>
 <path d="M 914.0,389.0 L 972.0,389.0 L 972.0,397.0 L 1006.0,380.0 L 972.0,363.0 L 972.0,371.0 L 914.0,371.0 Z" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" stroke-linejoin="round" />
-<path d="M 640,460 C 640,550 578,565 442,565" fill="none" stroke="#177ABF" stroke-width="4" marker-end="url(#arrowhead)" />
-<circle cx="660" cy="520" r="22" fill="#ffffff" stroke="#177ABF" stroke-width="3" /><text x="660" y="521" font-size="24" font-weight="700" fill="#177ABF" text-anchor="middle" dominant-baseline="middle">2</text>
 <rect x="1020" y="560" width="300" height="160" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="3" />
 <text x="1170.0" y="626.0" font-size="27" font-weight="700" fill="#0B2540" text-anchor="middle" dominant-baseline="middle" style="">Enriched Metadata</text>
 <text x="1170.0" y="662.0" font-size="20" font-weight="400" fill="#3B5670" text-anchor="middle" dominant-baseline="middle" style="">[OpenAIRE BROKER]</text>
 <path d="M 1161.0,464.0 L 1161.0,524.0 L 1154.0,524.0 L 1170.0,556.0 L 1186.0,524.0 L 1179.0,524.0 L 1179.0,464.0 Z" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" stroke-linejoin="round" />
+<path d="M 1028.0,640.0 L 1028.0,510.0 L 1020.0,502.0 L 442.0,502.0 L 434.0,510.0 L 434.0,535.0 L 450.0,535.0 L 450.0,510.0 L 442.0,518.0 L 1020.0,518.0 L 1012.0,510.0 L 1012.0,640.0 Z" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" stroke-linejoin="round" /><path d="M 427.0,535.0 L 442.0,565.0 L 457.0,535.0 Z" fill="#EEF0F2" stroke="#177ABF" stroke-width="2.5" stroke-linejoin="round" />
+<circle cx="731.0" cy="476.0" r="22" fill="#ffffff" stroke="#177ABF" stroke-width="3" /><text x="731.0" y="477.0" font-size="24" font-weight="700" fill="#177ABF" text-anchor="middle" dominant-baseline="middle">2</text>
 <rect x="1440" y="245" width="340" height="160" rx="16" fill="#EEF0F2" stroke="#177ABF" stroke-width="3" />
 <text x="1610.0" y="311.0" font-size="26" font-weight="700" fill="#0B2540" text-anchor="middle" dominant-baseline="middle" style="">Netherlands Research</text>
 <text x="1610.0" y="345.0" font-size="26" font-weight="700" fill="#0B2540" text-anchor="middle" dominant-baseline="middle" style="">Portal</text>
