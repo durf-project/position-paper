@@ -20,9 +20,9 @@ Additional challenges now loom large. The rise of agentic AI offers both threats
 
 This position paper is a call for university libraries to commit to working together so as to help develop an infrastructure for Dutch scientific output that is shared, mature and resilient.
 
-The Dutch Repository Federation (DURF) will reinforce the existing Netherlands Research Portal and existing institutional repositories/CRIS systems to make the availability of Dutch research output more robust, increasing our resilience and sovereignty. Many article PDFs are still missing from repositories.
+It is based on the concept of a federation. It acknowledges that university libraries are of different sizes, serve varied communities and have access to different levels of technical skills. It acknowledges that universities use different systems to manage publications, which are all at different levels of sophistication. This makes the creation of a shared technical infrastructure difficult.
 
-DURF will:
+Therefore, the immediate focus of DURF, and this position paper, lies on the information chain that is supported by the various repositories and CRIS's, and can do so independent of technical choices that are made about these systems. DURF will create a shared approach for the policies concerning these systems - for metadata entry, for full text harvesting, for dissemination, and for long-term preservation. These are explained in more detail below:
 
 1. Integrate systems under shared governance
 2. Enable enriched metadata feedback via the OpenAIRE Graph
@@ -30,10 +30,6 @@ DURF will:
 4. Preserve output via the KB's e-Depot
 5. Maximise discoverability through multiple channels, such as OpenAlex, Google and EOSC nodes
 6. Provide a Dutch Portal as the outlet for curated research output
-
-**This federation creates a robust backbone for Open Science, ensuring FAIR Dutch research amid diminishing trust in academia.**
-
-It is based on the concept of a federation. It acknowledges that university libraries are of different sizes, serve varied communities and have access to different levels of technical skills, and that universities use different systems to manage publications, which are all at different levels of sophistication. This makes the creation of a single shared technical infrastructure difficult - so, as shown in the diagram below, DURF instead focuses on the information chain that connects these systems, independent of each institution's own technical choices. The six areas above are explained in more detail below.
 
 # The DURF Information Chain
 
