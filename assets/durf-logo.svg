@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1154 1154">
+  <defs>
+    <path id="topArc" d="M 77,577 A 500,500 0 0 1 1077,577" />
+    <path id="bottomArc" d="M 77,577 A 500,500 0 0 0 1077,577" />
+  </defs>
+  <image href="durf-icon.png" x="167" y="167" width="821" height="821" />
+  <text font-family="Nunito, sans-serif" font-weight="800" font-size="56" fill="#177ABF" letter-spacing="2">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">DUTCH REPOSITORY FEDERATION</textPath>
+  </text>
+  <text font-family="Nunito, sans-serif" font-weight="800" font-size="40" fill="#177ABF" letter-spacing="1.5">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">MAKING DUTCH RESEARCH GLOBAL, OPEN AND RESILIENT</textPath>
+  </text>
+  <path d="M 80.0,577.0 L 68.5,580.5 L 65.0,592.0 L 61.5,580.5 L 50.0,577.0 L 61.5,573.5 L 65.0,562.0 L 68.5,573.5 Z" fill="#177ABF" />
+  <path d="M 1104.0,577.0 L 1092.5,580.5 L 1089.0,592.0 L 1085.5,580.5 L 1074.0,577.0 L 1085.5,573.5 L 1089.0,562.0 L 1092.5,573.5 Z" fill="#177ABF" />
+</svg>
