@@ -422,6 +422,7 @@ a:hover { color: var(--sds--color--blue--500); }
           <a href="https://github.com/durf-project/position-paper/edit/main/position-paper.md" target="_blank" rel="noopener">Edit this paper</a>
           <a href="https://github.com/durf-project/position-paper/commits/main/position-paper.md" target="_blank" rel="noopener">Version history</a>
           <a href="https://durf-project.github.io/durf-gantt/" target="_blank" rel="noopener">DURF roadmap</a>
+          <a href="https://durf-project.github.io/durf-data-mesh-architecture/" target="_blank" rel="noopener">Data contracts</a>
         </nav>
       </div>
       <div class="durf-theme-toggle" role="group" aria-label="Colour theme">
@@ -539,9 +540,33 @@ a:hover { color: var(--sds--color--blue--500); }
     }
   }
 
+  function addHeadingIds() {
+    // Stable anchors such as #systems-and-parties, so other DURF pages
+    // (e.g. the data contracts post) can link straight to a section.
+    var headings = contentEl.querySelectorAll('h1, h2, h3');
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      if (h.id) continue;
+      var slug = h.textContent.toLowerCase().trim()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-');
+      if (slug && !document.getElementById(slug)) h.id = slug;
+    }
+  }
+
+  function scrollToHash() {
+    // The content arrives after the browser already tried to jump to the
+    // #fragment, so jump again once the headings exist.
+    if (!location.hash) return;
+    var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (target) target.scrollIntoView();
+  }
+
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
     markPledges();
+    addHeadingIds();
+    scrollToHash();
   }
 
   function showError() {

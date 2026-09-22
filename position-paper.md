@@ -55,6 +55,8 @@ This resembles what [data mesh architecture](https://www.datamesh-architecture.c
 
 Bringing these parties together under one set of shared rules is what data mesh calls **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance theme 1, below, asks signees to commit to.
 
+The blog post [No lake required: data products and data contracts for DURF](https://durf-project.github.io/durf-data-mesh-architecture/) works this out further. It shows how each party's data team can deliver its part as a data product, and how the handoffs between parties can be written down as **data contracts**. It includes example contracts for every arrow in the diagram, such as a Dutch application profile of the OpenAIRE Guidelines for CRIS Managers, and the feeds between the OpenAIRE Graph and the KB e-Depot.
+
 ### Rights and responsibilities
 
 Being part of the federation is not only a duty to the whole - it is a set of specific, bilateral obligations between the parties operating each system, and the rights that come with them. The KB's e-Depot, for example, has the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it only holds that responsibility because it also has the *right* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
