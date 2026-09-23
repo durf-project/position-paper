@@ -53,9 +53,17 @@ The diagram above names systems: repositories, CRIS's, a harvester, a graph, a b
 
 This resembles what [data mesh architecture](https://www.datamesh-architecture.com/) - the approach SURF's Open Research Information programme is also exploring, for the ORI DuckLake - calls a **data product**: a bundle of a pipeline, the data it produces and a description of what it offers, with an owner who is responsible for it. Applied here: each system above is a shared building block, but the commitments in this position paper belong to the party operating it, not to the system itself.
 
+Data mesh also has a place for a **data lake**, where data is refined in layers often called bronze, silver and gold. DURF builds no lake of its own, but the OpenAIRE Graph plays that role for the metadata of Dutch research output:
+
+- it harvests the metadata from every Dutch repository and CRIS as delivered (bronze);
+- it unites and deduplicates it with what it knows from other sources (silver);
+- it serves it out for specific uses: the Netherlands Research Portal, the KB e-Depot and, through the e-Depot, the URN:NBN resolver (gold).
+
+The full texts and the authoritative records stay with the institutions, so the Graph can always be rebuilt from the sources. This shows where DURF's influence lies: not inside the lake, which OpenAIRE runs, but at its edges: in what the institutions deliver into it, and in what OpenAIRE delivers out of it.
+
 Bringing these parties together under one set of shared rules is what data mesh calls **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance theme 1, below, asks signees to commit to.
 
-The blog post [Data governance for a federated repository ecosystem](https://durf-project.github.io/durf-data-mesh-architecture/) works this out further. It shows how each party's data team can deliver its part as a data product, and how the handoffs between parties can be written down as **data contracts**. It includes example contracts for every arrow in the diagram, such as a Dutch application profile of the OpenAIRE Guidelines for CRIS Managers, and the feeds between the OpenAIRE Graph and the KB e-Depot.
+The blog post [Data governance for a federated repository ecosystem](https://durf-project.github.io/durf-data-mesh-architecture/) works this out further. It shows how each party's data team can deliver its part as a data product, and how the OpenAIRE Graph works as the shared lake. It also shows how the handoffs between parties, including those into and out of the lake, can be written down as **data contracts**. It includes example contracts for every arrow in the diagram, such as a Dutch application profile of the OpenAIRE Guidelines for CRIS Managers, and the feeds between the OpenAIRE Graph and the KB e-Depot.
 
 ### Rights and responsibilities
 
