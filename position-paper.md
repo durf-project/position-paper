@@ -191,26 +191,26 @@ Therefore, the signees of the DURF Position Paper agree to:
 
 ## A. Roles and responsibilities matrix
 
-The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists what that system can expect from the others. The same cell is both at once - a responsibility from one side, an expectation from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be revisited.
+Each filled cell reads as a sentence. The small label at the top says who it is **from** (the row) and **to** (the column): the role in the row takes on that responsibility, and the role in the column can expect it in return. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be revisited.
 
 Two examples:
 
-- Find the row **Repository / CRIS** and follow it to the column **e-Depot**. The cell reads "Supply full text & metadata for archiving". So the repository is *responsible* for supplying its full texts and metadata, and the e-Depot can *expect* to receive them.
-- Now find the row **e-Depot** and follow it to the column **Repository**. The cell reads "Archive & safely back up the deposited content". So the e-Depot is *responsible* for archiving and backing up, and the repository can *expect* its content to be kept safe.
+- **Repository &rarr; e-Depot**: the repository supplies its full text and metadata for archiving, and the e-Depot can expect to receive them.
+- **e-Depot &rarr; Repository**: the e-Depot archives and safely backs up that content, and the repository can expect it to be kept safe.
 
-Together, these two cells, mirrored across the diagonal, show the reciprocity: each side takes something on, and each side gets something back.
+Together, these two cells, mirrored across the diagonal, show the reciprocity: each side takes something on, and each side gets something back. Blue cells deliver something onward along the chain; purple cells return something to an earlier link.
 
 The matrix is an illustration of the relationships in the chain, not a legal agreement. How it relates to existing agreements, such as those between the KB and the institutions, will be worked out under theme 1.
 
 <div class="durf-matrix-wrap">
 <table class="durf-matrix">
 <thead>
-<tr><th>Responsibility of &darr; / Expected by &rarr;</th><th>Publishing</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
+<tr><th>From &darr; / To &rarr;</th><th>Publishing</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
 </thead>
 <tbody>
 <tr><th>Publishing platforms</th>
 <td class="d">&mdash;</td>
-<td class="u">Supply full texts and CC0 metadata</td>
+<td class="u" title="Publishing → Repository: Supplies full texts and CC0 metadata"><span class="durf-matrix-from">Publishing &rarr; Repository</span>Supplies full texts and CC0 metadata</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -220,21 +220,21 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>Repository / CRIS</th>
-<td class="l">No formal commitment - outside DURF's own governance</td>
+<td class="l" title="Repository → Publishing: No formal commitment - outside DURF's own governance"><span class="durf-matrix-from">Repository &rarr; Publishing</span>No formal commitment - outside DURF's own governance</td>
 <td class="d">&mdash;</td>
-<td class="u">Expose complete, standards-compliant metadata for harvesting</td>
+<td class="u" title="Repository → Provide: Exposes complete, standards-compliant metadata for harvesting"><span class="durf-matrix-from">Repository &rarr; Provide</span>Exposes complete, standards-compliant metadata for harvesting</td>
 <td class="n">&ndash;</td>
-<td class="u">Review enrichment suggestions; apply the ones it accepts</td>
-<td class="u">Keep its output up to date; share in editorial care &amp; functional management</td>
-<td class="u">Supply full text &amp; metadata for archiving</td>
+<td class="u" title="Repository → Broker: Reviews enrichment suggestions; applies the ones it accepts"><span class="durf-matrix-from">Repository &rarr; Broker</span>Reviews enrichment suggestions; applies the ones it accepts</td>
+<td class="u" title="Repository → Portal: Keeps its output up to date; shares in editorial care & functional management"><span class="durf-matrix-from">Repository &rarr; Portal</span>Keeps its output up to date; shares in editorial care &amp; functional management</td>
+<td class="u" title="Repository → e-Depot: Supplies full text & metadata for archiving"><span class="durf-matrix-from">Repository &rarr; e&#8209;Depot</span>Supplies full text &amp; metadata for archiving</td>
 <td class="n">&ndash;</td>
-<td class="u">Expose crawlable, standards-compliant metadata</td>
+<td class="u" title="Repository → Indexes: Exposes crawlable, standards-compliant metadata"><span class="durf-matrix-from">Repository &rarr; Indexes</span>Exposes crawlable, standards-compliant metadata</td>
 </tr>
 <tr><th>Provide (harvester)</th>
 <td class="n">&ndash;</td>
-<td class="l">Validate records; report errors back</td>
+<td class="l" title="Provide → Repository: Validates records; reports errors back"><span class="durf-matrix-from">Provide &rarr; Repository</span>Validates records; reports errors back</td>
 <td class="d">&mdash;</td>
-<td class="u">Deliver validated, harvested records</td>
+<td class="u" title="Provide → Graph: Delivers validated, harvested records"><span class="durf-matrix-from">Provide &rarr; Graph</span>Delivers validated, harvested records</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -246,17 +246,17 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
-<td class="u">Feed aggregated records for enrichment</td>
-<td class="u">Supply the aggregated, curated dataset</td>
-<td class="u">Route metadata &amp; full text toward preservation</td>
+<td class="u" title="Graph → Broker: Feeds aggregated records for enrichment"><span class="durf-matrix-from">Graph &rarr; Broker</span>Feeds aggregated records for enrichment</td>
+<td class="u" title="Graph → Portal: Supplies the aggregated, curated dataset"><span class="durf-matrix-from">Graph &rarr; Portal</span>Supplies the aggregated, curated dataset</td>
+<td class="u" title="Graph → e-Depot: Routes metadata & full text toward preservation"><span class="durf-matrix-from">Graph &rarr; e&#8209;Depot</span>Routes metadata &amp; full text toward preservation</td>
 <td class="n">&ndash;</td>
-<td class="u">Redistribute enriched metadata externally</td>
+<td class="u" title="Graph → Indexes: Redistributes enriched metadata externally"><span class="durf-matrix-from">Graph &rarr; Indexes</span>Redistributes enriched metadata externally</td>
 </tr>
 <tr><th>Broker (enrichment)</th>
 <td class="n">&ndash;</td>
-<td class="l">Return quality &amp; enrichment signals to source</td>
+<td class="l" title="Broker → Repository: Returns quality & enrichment suggestions to the source"><span class="durf-matrix-from">Broker &rarr; Repository</span>Returns quality &amp; enrichment suggestions to the source</td>
 <td class="n">&ndash;</td>
-<td class="l">Return enriched, deduplicated records</td>
+<td class="l" title="Broker → Graph: Returns enriched, deduplicated records"><span class="durf-matrix-from">Broker &rarr; Graph</span>Returns enriched, deduplicated records</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -265,9 +265,9 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>Portal (Connect)</th>
 <td class="n">&ndash;</td>
-<td class="l">Present each institution's output clearly to researchers, policy makers, professionals &amp; citizens</td>
+<td class="l" title="Portal → Repository: Presents each institution's output clearly to researchers, policy makers, professionals & citizens"><span class="durf-matrix-from">Portal &rarr; Repository</span>Presents each institution's output clearly to researchers, policy makers, professionals &amp; citizens</td>
 <td class="n">&ndash;</td>
-<td class="l">Report errors &amp; curation needs spotted in the portal</td>
+<td class="l" title="Portal → Graph: Reports errors & curation needs spotted in the portal"><span class="durf-matrix-from">Portal &rarr; Graph</span>Reports errors &amp; curation needs spotted in the portal</td>
 <td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
@@ -276,13 +276,13 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>e-Depot</th>
 <td class="n">&ndash;</td>
-<td class="l">Archive &amp; safely back up the deposited content</td>
+<td class="l" title="e-Depot → Repository: Archives & safely backs up the deposited content"><span class="durf-matrix-from">e&#8209;Depot &rarr; Repository</span>Archives &amp; safely backs up the deposited content</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
-<td class="u">Register preserved items for persistent IDs</td>
+<td class="u" title="e-Depot → Resolver: Registers preserved items for persistent IDs"><span class="durf-matrix-from">e&#8209;Depot &rarr; Resolver</span>Registers preserved items for persistent IDs</td>
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>URN:NBN resolver</th>
@@ -292,13 +292,13 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
-<td class="l">Resolve URN:NBN to the current, preserved location</td>
+<td class="l" title="Resolver → e-Depot: Resolves URN:NBN to the current, preserved location"><span class="durf-matrix-from">Resolver &rarr; e&#8209;Depot</span>Resolves URN:NBN to the current, preserved location</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>Other indexes</th>
 <td class="n">&ndash;</td>
-<td class="l">No formal commitment - outside DURF's own governance</td>
+<td class="l" title="Indexes → Repository: No formal commitment - outside DURF's own governance"><span class="durf-matrix-from">Indexes &rarr; Repository</span>No formal commitment - outside DURF's own governance</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -311,7 +311,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </table>
 </div>
 
-<p class="durf-matrix-legend"><span><i class="u"></i> above the diagonal &mdash; read as an expectation</span><span><i class="l"></i> below the diagonal &mdash; read as a responsibility</span></p>
+<p class="durf-matrix-legend"><span><i class="u"></i> onward along the chain</span><span><i class="l"></i> back to an earlier link</span></p>
 
 ## B. Technical background: data products, data lake and data contracts
 
