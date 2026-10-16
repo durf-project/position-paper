@@ -247,24 +247,38 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 .durf-content tbody tr:nth-child(even) { background: var(--sds--color--gray--100); }
 
-.durf-matrix-wrap { overflow-x: auto; margin: 1.5rem 0 1.75rem; }
-.durf-matrix { border-collapse: collapse; width: 100%; min-width: 52rem; font-size: .8125rem; line-height: 1.35; }
+/* The matrix breaks out of the 46rem text column: up to 76rem wide, or the
+   viewport minus a 1rem gutter on each side, centred on the text. Only on
+   narrow screens does it still scroll sideways. */
+.durf-matrix-wrap {
+  overflow-x: auto;
+  margin: 1.5rem calc(50% - min(38rem, 50vw - 1rem)) 1.75rem;
+}
+.durf-content .durf-matrix { border-collapse: collapse; width: 100%; min-width: 48rem; margin: 0; font-size: .75rem; line-height: 1.35; }
 .durf-matrix th, .durf-matrix td {
   border: .0625rem solid var(--sds--color--gray--200);
-  padding: .5rem .625rem;
+  padding: .375rem .5rem;
   text-align: left;
   vertical-align: top;
 }
 .durf-matrix thead th {
   background: var(--sds--color--gray--100);
   font-weight: 700;
-  font-size: .75rem;
+  font-size: .6875rem;
   white-space: nowrap;
 }
+.durf-matrix thead th:first-child { white-space: normal; min-width: 7.5rem; }
+.durf-matrix td { hyphens: auto; -webkit-hyphens: auto; }
+/* Ordinary markdown tables scroll inside themselves on narrow screens
+   instead of widening the whole page. */
+@media (max-width: 40rem) {
+  .durf-content > table { display: block; overflow-x: auto; }
+}
+.durf-content code { overflow-wrap: anywhere; }
 .durf-matrix tbody th {
   background: var(--sds--color--gray--100);
   font-weight: 700;
-  white-space: nowrap;
+  min-width: 6.5rem;
 }
 .durf-matrix td.d { background: var(--sds--color--gray--200); text-align: center; color: var(--sds--color--gray--400); }
 .durf-matrix td.u { background: var(--sds--color--blue--100); }
