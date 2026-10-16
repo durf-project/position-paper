@@ -196,7 +196,7 @@ Each filled cell reads as a sentence. The small label at the top says who it is 
 Two examples:
 
 - **Repository &rarr; e-Depot**: the repository supplies its full text and metadata for archiving, and the e-Depot can expect to receive them.
-- **e-Depot &rarr; Repository**: the e-Depot archives and safely backs up that content, and the repository can expect it to be kept safe.
+- **e-Depot &rarr; Repository**: the e-Depot shows the repository that this content is safely backed up and archived, so the repository can count on it being kept safe.
 
 Together, these two cells, mirrored across the diagonal, show the reciprocity: each side takes something on, and each side gets something back. Blue cells deliver something onward along the chain; purple cells return something to an earlier link.
 
@@ -232,7 +232,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>Provide (harvester)</th>
 <td class="n">&ndash;</td>
-<td class="l" title="Provide → Repository: Validates records; reports errors back"><span class="durf-matrix-from">Provide &rarr; Repository</span>Validates records; reports errors back</td>
+<td class="l" title="Provide → Repository: Validates harvested records; reports errors back"><span class="durf-matrix-from">Provide &rarr; Repository</span>Validates harvested records; reports errors back</td>
 <td class="d">&mdash;</td>
 <td class="u" title="Provide → Graph: Delivers validated, harvested records"><span class="durf-matrix-from">Provide &rarr; Graph</span>Delivers validated, harvested records</td>
 <td class="n">&ndash;</td>
@@ -256,7 +256,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="n">&ndash;</td>
 <td class="l" title="Broker → Repository: Returns quality & enrichment suggestions to the source"><span class="durf-matrix-from">Broker &rarr; Repository</span>Returns quality &amp; enrichment suggestions to the source</td>
 <td class="n">&ndash;</td>
-<td class="l" title="Broker → Graph: Returns enriched, deduplicated records"><span class="durf-matrix-from">Broker &rarr; Graph</span>Returns enriched, deduplicated records</td>
+<td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -265,9 +265,9 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>Portal (Connect)</th>
 <td class="n">&ndash;</td>
-<td class="l" title="Portal → Repository: Presents each institution's output clearly to researchers, policy makers, professionals & citizens"><span class="durf-matrix-from">Portal &rarr; Repository</span>Presents each institution's output clearly to researchers, policy makers, professionals &amp; citizens</td>
+<td class="l" title="Portal → Repository: Presents each institution's output clearly to researchers, policy makers, professionals & citizens; showcases repositories to deposit output in"><span class="durf-matrix-from">Portal &rarr; Repository</span>Presents each institution's output clearly to researchers, policy makers, professionals &amp; citizens; showcases repositories to deposit output in</td>
 <td class="n">&ndash;</td>
-<td class="l" title="Portal → Graph: Reports errors & curation needs spotted in the portal"><span class="durf-matrix-from">Portal &rarr; Graph</span>Reports errors &amp; curation needs spotted in the portal</td>
+<td class="l" title="Portal → Graph: Links entities claimed by users & reports graph errors"><span class="durf-matrix-from">Portal &rarr; Graph</span>Links entities claimed by users &amp; reports graph errors</td>
 <td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
@@ -276,7 +276,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>e-Depot</th>
 <td class="n">&ndash;</td>
-<td class="l" title="e-Depot → Repository: Archives & safely backs up the deposited content"><span class="durf-matrix-from">e&#8209;Depot &rarr; Repository</span>Archives &amp; safely backs up the deposited content</td>
+<td class="l" title="e-Depot → Repository: Shows the repository its content is safely backed up and archived"><span class="durf-matrix-from">e&#8209;Depot &rarr; Repository</span>Shows the repository its content is safely backed up and archived</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
