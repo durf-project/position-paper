@@ -250,7 +250,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="u" title="Graph → Portal: Supplies the aggregated, curated dataset"><span class="durf-matrix-from">Graph &rarr; Portal</span>Supplies the aggregated, curated dataset</td>
 <td class="u" title="Graph → e-Depot: Routes metadata & full text toward preservation"><span class="durf-matrix-from">Graph &rarr; e&#8209;Depot</span>Routes metadata &amp; full text toward preservation</td>
 <td class="n">&ndash;</td>
-<td class="u" title="Graph → Indexes: Redistributes enriched metadata externally"><span class="durf-matrix-from">Graph &rarr; Indexes</span>Redistributes enriched metadata externally</td>
+<td class="u" title="Graph → Indexes: Makes its data openly available via the Graph API and data dumps on Zenodo"><span class="durf-matrix-from">Graph &rarr; Indexes</span>Makes its data openly available via the Graph API and data dumps on Zenodo</td>
 </tr>
 <tr><th>Broker (enrichment)</th>
 <td class="n">&ndash;</td>
