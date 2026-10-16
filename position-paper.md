@@ -193,6 +193,13 @@ Therefore, the signees of the DURF Position Paper agree to:
 
 The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists what that system can expect from the others. The same cell is both at once - a responsibility from one side, an expectation from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be revisited.
 
+Two examples:
+
+- Find the row **Repository / CRIS** and follow it to the column **e-Depot**. The cell reads "Supply full text & metadata for archiving". So the repository is *responsible* for supplying its full texts and metadata, and the e-Depot can *expect* to receive them.
+- Now find the row **e-Depot** and follow it to the column **Repository**. The cell reads "Archive & safely back up the deposited content". So the e-Depot is *responsible* for archiving and backing up, and the repository can *expect* its content to be kept safe.
+
+Together, these two cells, mirrored across the diagonal, show the reciprocity: each side takes something on, and each side gets something back.
+
 The matrix is an illustration of the relationships in the chain, not a legal agreement. How it relates to existing agreements, such as those between the KB and the institutions, will be worked out under theme 1.
 
 <div class="durf-matrix-wrap">
