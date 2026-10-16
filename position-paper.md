@@ -1,6 +1,6 @@
 # DURF Position Paper - Draft
 
-_Alastair Dunning and Maurice Vanderfeesten, September 2026_
+_Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam), September 2026_
 
 ## Dutch Science and the Role of Libraries
 
@@ -24,7 +24,7 @@ There are six themes in the DURF project:
 2. Enable enriched metadata feedback via the OpenAIRE Graph
 3. Increase full-text collection
 4. Preserve output via the KB's e-Depot
-5. Maximise discoverability through multiple channels, such as OpenAlex, Google and EOSC nodes
+5. Maximise discoverability through multiple channels, such as OpenAlex, Google, Wikidata and EOSC nodes
 6. Provide a Dutch Portal as the outlet for curated research output
 
 These themes will be explained in more detail below.
@@ -33,21 +33,21 @@ These themes will be explained in more detail below.
 
 ![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver.](assets/durf-information-chain.svg)
 
-## Systems and parties
+## Roles and parties
 
-The diagram above names systems: repositories, CRIS's, a harvester, a graph, a broker, a portal, an e-Depot, a resolver. Each has a distinct function in the chain. But a system cannot sign a position paper, hold a meeting, or make a pledge - only a party can. Every system in the diagram is operated by a party, and it is that party which takes on the responsibilities described throughout this paper, and which can count on the other parties in return.
+Every box in the diagram above plays a **role** in the chain: the repositories and CRIS's, the harvester, the graph, the broker, the portal, the e-Depot, the resolver. Each role comes with a **responsibility** towards the rest of the chain, as the table below shows. But a role cannot sign a position paper, hold a meeting, or make a pledge - only a **party** can. Every role is taken on by a party, and it is that party which carries the responsibility described throughout this paper, and which can count on the other parties in return.
 
-| System | Function | Operated by |
+| Role | Responsibility | Party |
 | --- | --- | --- |
-| Publishing platforms | Original source of full texts and CC0 metadata (publishers, preprint servers) that feed into repositories | Parties outside DURF's own governance |
-| Institutional repository / CRIS | Captures and holds an institution's own research output and its metadata | Each university library |
-| Metadata harvester & validator (OpenAIRE PROVIDE) | Collects and checks records from repositories and CRIS's | OpenAIRE |
-| OpenAIRE Graph | Aggregates, deduplicates and cross-references records nationally and internationally | OpenAIRE |
-| Enrichment (OpenAIRE Broker) | Returns quality and enrichment signals to the source system | OpenAIRE |
-| Netherlands Research Portal (OpenAIRE Connect) | Curated, national outlet for Dutch research output | OpenAIRE, on behalf of DURF |
-| e-Depot | Long-term preservation of deposited files | KB (National Library of the Netherlands) |
-| URN:NBN resolver | Keeps preserved files reliably citable and linkable | KB |
-| Other research indexes (OpenAlex, Google, EOSC nodes) | External discovery channels | Parties outside DURF's own governance |
+| Publishing platforms | Supply full texts and CC0 metadata (publishers, preprint servers) to the repositories | Parties outside DURF's own governance |
+| Institutional repository / CRIS | Capture and hold an institution's own research output and its metadata | Each university library |
+| Metadata harvester & validator (OpenAIRE PROVIDE) | Collect and check records from repositories and CRIS's | OpenAIRE |
+| OpenAIRE Graph | Aggregate, deduplicate and cross-reference records nationally and internationally | OpenAIRE |
+| Enrichment (OpenAIRE Broker) | Return quality and enrichment suggestions to the source system | OpenAIRE |
+| Netherlands Research Portal (OpenAIRE Connect) | Offer a curated, national outlet for Dutch research output | OpenAIRE, with editorial and functional management by the DURF partners |
+| e-Depot | Preserve deposited files for the long term | KB (National Library of the Netherlands) |
+| URN:NBN resolver | Keep preserved files reliably citable and linkable | KB |
+| Other research indexes (OpenAlex, Google, Wikidata, EOSC nodes) | Offer external discovery channels | Parties outside DURF's own governance |
 
 The OpenAIRE Graph plays a central role in this chain. For the metadata of Dutch research output, the OpenAIRE Graph:
 
@@ -151,11 +151,13 @@ Signatories of the DURF Position Paper pledge that they will share their reposit
 
 ## 5. Maximise discoverability through multiple channels
 
-Good metadata is only useful if it reaches researchers where they actually search. Dutch research output should be discoverable not only through institutional repositories, but through the channels researchers actually use: aggregators such as OpenAlex, general search engines such as Google (Scholar), and the network of EOSC nodes that connects European research infrastructure. Poor-quality metadata endangers findability across every one of these channels, which is why the standardisation and enrichment work above matters here too.
+Good metadata is only useful if it reaches researchers where they actually search. Dutch research output should be discoverable not only through institutional repositories, but through the channels researchers actually use: aggregators such as OpenAlex, general search engines such as Google (Scholar), open knowledge bases such as Wikidata, and the network of EOSC nodes that connects European research infrastructure. Wikidata is a particularly strong candidate: it is open, widely reused by other services, and one of the sources used to train AI. Poor-quality metadata endangers findability across every one of these channels, which is why the standardisation and enrichment work above matters here too.
 
 At the moment, universities do their best efforts, but without a standardised approach across these channels that leads to consistently high-quality discoverability.
 
-Therefore, the signees of the DURF Position Paper agree to work towards a shared approach for maximising the discoverability of Dutch research output, across OpenAlex, Google, EOSC nodes and other relevant channels, building on the metadata and full-text work above.
+Discoverability is no longer only about people. DURF wants all publicly funded Dutch research to be open to people and machines alike, including as material on which AI is trained. That openness needs the right conditions. We want to offer it lawfully and on fair terms, and in a way that keeps it accessible to people: the growing traffic from AI - crawlers, bulk downloads to train language models, and AI assistants searching on someone's behalf - should never make our repositories slow or unreachable for the researchers, students and citizens they are there for.
+
+Therefore, the signees of the DURF Position Paper agree to work towards a shared approach for maximising the discoverability of Dutch research output, for people and machines alike, across OpenAlex, Google, Wikidata, EOSC nodes and other relevant channels, building on the metadata and full-text work above.
 
 ### Outputs
 
@@ -167,7 +169,14 @@ Therefore, the signees of the DURF Position Paper agree to work towards a shared
 
 Alongside the many channels through which Dutch research output can be discovered, DURF partners also commit to the Netherlands Research Portal (built on OpenAIRE Connect) as the national, curated showcase of that output - a single outlet where the results of shared governance, enriched metadata and full-text collection come together for a Dutch and international audience.
 
-Therefore, the signees of the DURF Position Paper agree to share their curated research output with the Netherlands Research Portal, and to support its role as DURF's public-facing outlet.
+A portal is only as good as the care it gets. The DURF partners therefore do more than deliver their output to it: they share the responsibility for running it, through its editorial care and functional management, and for developing it further. The aim is a portal that serves not only libraries, but everyone who wants clear, understandable access to Dutch research and to the researchers behind it: researchers, policy makers, professionals and citizens looking for knowledge or expertise.
+
+Therefore, the signees of the DURF Position Paper agree to:
+
+* share their curated research output with the Netherlands Research Portal, and keep it up to date;
+* take shared responsibility for the portal's editorial care and functional management;
+* help develop the portal further, so that researchers, policy makers, professionals and citizens can find and understand Dutch research and the experts behind it;
+* support its role as DURF's public-facing outlet.
 
 ### Outputs
 
@@ -316,11 +325,3 @@ The Dutch slice of the OpenAIRE Graph is available as the `netherlands` communit
 6. OCLC Research, _Improving Open Access Discovery for Academic Library Users_. Dublin, Ohio: OCLC Research. <https://doi.org/10.25333/4xem-xr80> - background to theme 5.
 7. [Data governance for a federated repository ecosystem](https://durf-project.github.io/durf-data-mesh-architecture/) - how the parties in the chain can deliver their data as data products, with example data contracts.
 8. [Netherlands Research Portal - for developers](https://netherlands.openaire.eu/develop) - API access to the Dutch slice of the OpenAIRE Graph.
-
-# Rough Ideas and Notes
-
-> _Position Paper does not have to be binding legally; it shows commitment from the library._
->
-> _Other deals:_
->
-> _Library recognises its role in a shared information chain. Library commits to playing a role in this chain and supporting the other stakeholders. It does this by means of:_
