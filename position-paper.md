@@ -59,11 +59,11 @@ The full texts and the authoritative records stay with the institutions. This sh
 
 Bringing these parties together under one set of shared rules is called **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance that the DURF project, under theme 1 below, asks signees to commit to.
 
-### Responsibilities and expectations
+### Roles and responsibilities
 
 Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
 
-[Appendix A](#a-responsibilities-and-expectations-matrix) sets these responsibilities and expectations out for every pair of parties in the chain. This position paper is not itself a legal agreement. How they relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
+[Appendix A](#a-roles-and-responsibilities-matrix) sets these roles and responsibilities out for every pair of parties in the chain. This position paper is not itself a legal agreement. How they relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
 
 # The six themes
 
@@ -179,7 +179,7 @@ Therefore, the signees of the DURF Position Paper agree to share their curated r
 
 # Appendix
 
-## A. Responsibilities and expectations matrix
+## A. Roles and responsibilities matrix
 
 The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists what that system can expect from the others. The same cell is both at once - a responsibility from one side, an expectation from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be revisited.
 
