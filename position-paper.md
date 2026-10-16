@@ -169,13 +169,13 @@ Therefore, the signees of the DURF Position Paper agree to work towards a shared
 
 Alongside the many channels through which Dutch research output can be discovered, DURF partners also commit to the Netherlands Research Portal (built on OpenAIRE Connect) as the national, curated showcase of that output - a single outlet where the results of shared governance, enriched metadata and full-text collection come together for a Dutch and international audience.
 
-A portal is only as good as the care it gets. The DURF partners therefore do more than deliver their output to it: they share the responsibility for running it, through its editorial care and functional management, and for developing it further. The aim is a portal that serves not only libraries, but everyone who wants clear, understandable access to Dutch research and to the researchers behind it: researchers, policy makers, professionals and citizens looking for knowledge or expertise.
+A portal is only as good as the care it gets. The DURF partners therefore do more than deliver their output to it: they share the responsibility for running it, through its editorial care and functional management, and for developing it further. The signees provide the input for new functionality, and so decide together where the portal goes next. If they want to take it in the direction of a public portal, as envisaged by the KB's WijsNL project, that is possible. The aim is a portal that serves not only libraries, but everyone who wants clear, understandable access to Dutch research and to the researchers behind it: researchers, policy makers, professionals and citizens looking for knowledge or expertise.
 
 Therefore, the signees of the DURF Position Paper agree to:
 
 * share their curated research output with the Netherlands Research Portal, and keep it up to date;
 * take shared responsibility for the portal's editorial care and functional management;
-* help develop the portal further, so that researchers, policy makers, professionals and citizens can find and understand Dutch research and the experts behind it;
+* provide input for new functionality and help develop the portal further, so that researchers, policy makers, professionals and citizens can find and understand Dutch research and the experts behind it;
 * support its role as DURF's public-facing outlet.
 
 ### Outputs
@@ -258,9 +258,9 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>Portal (Connect)</th>
 <td class="n">&ndash;</td>
+<td class="l">Present each institution's output clearly to researchers, policy makers, professionals &amp; citizens</td>
 <td class="n">&ndash;</td>
-<td class="n">&ndash;</td>
-<td class="n">&ndash;</td>
+<td class="l">Report errors &amp; curation needs spotted in the portal</td>
 <td class="n">&ndash;</td>
 <td class="d">&mdash;</td>
 <td class="n">&ndash;</td>
@@ -326,3 +326,4 @@ The Dutch slice of the OpenAIRE Graph is available as the `netherlands` communit
 6. OCLC Research, _Improving Open Access Discovery for Academic Library Users_. Dublin, Ohio: OCLC Research. <https://doi.org/10.25333/4xem-xr80> - background to theme 5.
 7. [Data governance for a federated repository ecosystem](https://durf-project.github.io/durf-data-mesh-architecture/) - how the parties in the chain can deliver their data as data products, with example data contracts.
 8. [Netherlands Research Portal - for developers](https://netherlands.openaire.eu/develop) - API access to the Dutch slice of the OpenAIRE Graph.
+9. KB, [WijsNL](https://www.kb.nl/over-ons/projecten/wijsnl) - a possible direction for the portal as a public portal; background to theme 6.
