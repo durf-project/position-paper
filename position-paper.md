@@ -155,7 +155,7 @@ Good metadata is only useful if it reaches researchers where they actually searc
 
 At the moment, universities do their best efforts, but without a standardised approach across these channels that leads to consistently high-quality discoverability.
 
-Discoverability is no longer only about people. DURF wants all publicly funded Dutch research to be open to people and machines alike, including as material on which AI is trained. That openness needs the right conditions. We want to offer it lawfully and on fair terms, and in a way that keeps it accessible to people: the growing traffic from AI - crawlers, bulk downloads to train language models, and AI assistants searching on someone's behalf - should never make our repositories slow or unreachable for the researchers, students and citizens they are there for.
+Discoverability is no longer only about people. DURF wants all publicly funded Dutch research to be open to people and machines alike, including as material on which AI is trained. This is of strategic importance. AI models, wherever in the world they are built, increasingly shape how people find and understand knowledge. Dutch research should be well represented in them, so that the value of Dutch science, and its careful search for what is true, stays present in those models and in the answers they give. That openness needs the right conditions. We want to offer it lawfully and on fair terms, and in a way that keeps it accessible to people: the growing traffic from AI - crawlers, bulk downloads to train language models, and AI assistants searching on someone's behalf - should never make our repositories slow or unreachable for the researchers, students and citizens they are there for.
 
 Therefore, the signees of the DURF Position Paper agree to work towards a shared approach for maximising the discoverability of Dutch research output, for people and machines alike, across OpenAlex, Google, Wikidata, EOSC nodes and other relevant channels, building on the metadata and full-text work above.
 
@@ -185,6 +185,7 @@ Therefore, the signees of the DURF Position Paper agree to:
 * Quarterly portal updates, with a major version released annually.
 * Single sign-on to OpenAIRE's PROVIDE, CONNECT and MONITOR services via SURFconext.
 * All DURF signatories have their institutional research output represented, and kept up to date, on the Netherlands Research Portal.
+* Shared editorial care and functional management of the Netherlands Research Portal by the DURF partners.
 
 # Appendix
 
@@ -216,8 +217,8 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="d">&mdash;</td>
 <td class="u">Expose complete, standards-compliant metadata for harvesting</td>
 <td class="n">&ndash;</td>
-<td class="u">Correct records flagged by enrichment signals</td>
-<td class="n">&ndash;</td>
+<td class="u">Review enrichment suggestions; apply the ones it accepts</td>
+<td class="u">Keep its output up to date; share in editorial care &amp; functional management</td>
 <td class="u">Supply full text &amp; metadata for archiving</td>
 <td class="n">&ndash;</td>
 <td class="u">Expose crawlable, standards-compliant metadata</td>
