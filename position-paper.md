@@ -35,7 +35,7 @@ These themes will be explained in more detail below.
 
 ## Systems and parties
 
-The diagram above names systems: repositories, CRIS's, a harvester, a graph, a broker, a portal, an e-Depot, a resolver. Each has a distinct function in the chain. But a system cannot sign a position paper, hold a meeting, or make a pledge - only a party can. Every system in the diagram is operated by a party, and it is that party which takes on the obligations, and holds the rights, described throughout this paper.
+The diagram above names systems: repositories, CRIS's, a harvester, a graph, a broker, a portal, an e-Depot, a resolver. Each has a distinct function in the chain. But a system cannot sign a position paper, hold a meeting, or make a pledge - only a party can. Every system in the diagram is operated by a party, and it is that party which takes on the responsibilities described throughout this paper, and which can count on the other parties in return.
 
 | System | Function | Operated by |
 | --- | --- | --- |
@@ -59,11 +59,11 @@ The full texts and the authoritative records stay with the institutions. This sh
 
 Bringing these parties together under one set of shared rules is called **federated governance**: rather than one central authority controlling every system, each party - a university library, OpenAIRE, the KB - agrees to a small set of common rules (a shared metadata standard, clear interfaces between systems, how disagreements get resolved), and is then responsible for meeting them within the system it operates. That is the shared governance that the DURF project, under theme 1 below, asks signees to commit to.
 
-### Rights and responsibilities
+### Responsibilities and expectations
 
-Being part of the federation is not only a duty to the whole - it is a set of specific, bilateral obligations between the parties operating each system, and the rights that come with them. The KB's e-Depot, for example, has the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it only holds that responsibility because it also has the *right* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
+Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
 
-[Appendix A](#a-rights-and-responsibilities-matrix) sets these rights and responsibilities out for every pair of parties in the chain. This position paper is not itself a legal agreement. How these rights and responsibilities relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
+[Appendix A](#a-responsibilities-and-expectations-matrix) sets these responsibilities and expectations out for every pair of parties in the chain. This position paper is not itself a legal agreement. How they relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
 
 # The six themes
 
@@ -179,16 +179,16 @@ Therefore, the signees of the DURF Position Paper agree to share their curated r
 
 # Appendix
 
-## A. Rights and responsibilities matrix
+## A. Responsibilities and expectations matrix
 
-The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists the rights that system holds against the others. The same cell is both at once - a responsibility from one side, a right from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be renegotiated.
+The matrix below can be read two ways. Along a **row**, it lists a system's responsibilities to each system it interacts with. Down a **column**, it lists what that system can expect from the others. The same cell is both at once - a responsibility from one side, an expectation from the other. Blank cells mean no direct relationship in this chain. If any one party cannot commit to its cell, the balance in that relationship - and often others downstream of it - needs to be revisited.
 
 The matrix is an illustration of the relationships in the chain, not a legal agreement. How it relates to existing agreements, such as those between the KB and the institutions, will be worked out under theme 1.
 
 <div class="durf-matrix-wrap">
 <table class="durf-matrix">
 <thead>
-<tr><th>Responsibility of &darr; / Right of &rarr;</th><th>Publishing</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
+<tr><th>Responsibility of &darr; / Expected by &rarr;</th><th>Publishing</th><th>Repository</th><th>Provide</th><th>Graph</th><th>Broker</th><th>Portal</th><th>e-Depot</th><th>Resolver</th><th>Indexes</th></tr>
 </thead>
 <tbody>
 <tr><th>Publishing platforms</th>
@@ -203,7 +203,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 <td class="n">&ndash;</td>
 </tr>
 <tr><th>Repository / CRIS</th>
-<td class="l">No formal obligation - outside DURF's own governance</td>
+<td class="l">No formal commitment - outside DURF's own governance</td>
 <td class="d">&mdash;</td>
 <td class="u">Expose complete, standards-compliant metadata for harvesting</td>
 <td class="n">&ndash;</td>
@@ -281,7 +281,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </tr>
 <tr><th>Other indexes</th>
 <td class="n">&ndash;</td>
-<td class="l">No formal obligation - outside DURF's own governance</td>
+<td class="l">No formal commitment - outside DURF's own governance</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
 <td class="n">&ndash;</td>
@@ -294,7 +294,7 @@ The matrix is an illustration of the relationships in the chain, not a legal agr
 </table>
 </div>
 
-<p class="durf-matrix-legend"><span><i class="u"></i> above the diagonal &mdash; read as a right</span><span><i class="l"></i> below the diagonal &mdash; read as a responsibility</span></p>
+<p class="durf-matrix-legend"><span><i class="u"></i> above the diagonal &mdash; read as an expectation</span><span><i class="l"></i> below the diagonal &mdash; read as a responsibility</span></p>
 
 ## B. Technical background: data products, data lake and data contracts
 
