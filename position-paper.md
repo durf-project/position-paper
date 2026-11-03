@@ -21,7 +21,7 @@ These distributed but loosely connected systems are still maturing. While progre
 * But at the core is that **we do not have autonomy of accessing the fulltext** of our own Dutch scientific  knowledge corpus freely at any moment. 67% of the records do not have a file in the repository, which makes us as an academic community  very vulnerable to commercial and geopolitical turbulence. Having the complete full texts also opens new opportunities that grounds a metadata record in truth, allowing us to e.g. custom classification of research and training our own AI models.
 
 <figure class="durf-embed">
-<iframe src="https://durf-project.github.io/dashboards/03-full-text-capture.html?embed=kpis,filestatus-inst&amp;mode=relative&amp;sort=nofile-desc" title="DURF Full Text Monitor: file status per institution" loading="lazy" style="width:100%;height:860px;border:0"></iframe>
+<iframe src="https://durf-project.github.io/dashboards/03-full-text-capture.html?embed=kpis,filestatus-inst&mode=relative&sort=total-desc" title="DURF Full Text Monitor: File status per institution" loading="lazy" style="width:100%;height:1000px;border:0"></iframe>
 <figcaption>DURF Full Text Monitor: share of records with an open file, an embargoed file or no file in the repository, per institution (publications 1995&ndash;2025, snapshot of 4 March 2026). Open the <a href="https://durf-project.github.io/dashboards/03-full-text-capture.html">interactive dashboard</a> to filter by institution, publication type, open access status, licence and publisher.</figcaption>
 </figure>
 
