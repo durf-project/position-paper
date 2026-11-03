@@ -20,7 +20,10 @@ These distributed but loosely connected systems are still maturing. While progre
 * Metadata in our repositories and CRIS systems are incomplete, on average 50% of the records are missing essential elements like DOI’s and ORCiDs, making it hard to find and connect literature and use the Dutch knowledge corpus for strategic analysis using overpriced commercial databases that come with their biases underrepresenting numerous fields of sciences. 
 * But at the core is that **we do not have autonomy of accessing the fulltext** of our own Dutch scientific  knowledge corpus freely at any moment. 67% of the records do not have a file in the repository, which makes us as an academic community  very vulnerable to commercial and geopolitical turbulence. Having the complete full texts also opens new opportunities that grounds a metadata record in truth, allowing us to e.g. custom classification of research and training our own AI models.
 
-> _Figure to come: DURF Full Text Monitor._
+<figure class="durf-embed">
+<iframe src="https://durf-project.github.io/dashboards/03-full-text-capture.html?embed=kpis,filestatus-inst&mode=relative&sort=total-desc" title="DURF Full Text Monitor: File status per institution" loading="lazy" style="width:100%;height:1000px;border:0"></iframe>
+<figcaption>Share of records per institution with an open file, an embargoed file or no file in the repository (publications 1995&ndash;2025). Figures and sources: <a href="#a-data-supporting-the-problem-statement">Appendix A</a>. Open the <a href="https://durf-project.github.io/dashboards/03-full-text-capture.html">interactive dashboard</a> to filter by institution, publication type, open access status, licence and publisher.</figcaption>
+</figure>
 
 Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our Dutch science can be well represented in AI models by offering our high quality open knowledge corpus.
 
@@ -240,8 +243,18 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 ## A. Data supporting the problem statement
 
-> _To be completed: the sources and figures behind the problem statement - the size of the Corpus (3.4 million publications; 1.9 million from 1995 until 2025), the share of records missing a DOI or ORCID (about 50%), and the share of records without a full-text file (67%), from the DURF Full Text Monitor._
+| Statement in the paper | Figure | Source |
+| --- | --- | --- |
+| Size of the Dutch Scientific Knowledge Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication |
+| Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
+| Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
+| Records missing a DOI or ORCID | about 50% | _source to be added_ |
+| Impact of Dutch science | 72% above the global average | [Nederland als wetenschapsland 2024](#ref-1) |
+| Articles published by Dutch research institutes | over 127,000 a year | [OpenAIRE Monitor](#ref-2) |
 
+(1) The DURF Full Text Monitor is a proof of concept built on the `cris.publications` table of the SURF ORI DuckLake, a static snapshot loaded on 4 March 2026, covering publications from 1995 to 2025. A record counts as having a file when it lists at least one file location, whatever its format or web address; "open file" means at least one of its files is openly accessible, "embargoed file" that all its files are under embargo.
+
+> _To be completed: a source for the share of records missing a DOI or ORCID, for example from the ORI Quality Monitoring dashboard or a query on the same DuckLake snapshot._
 
 ## B. Roles and responsibilities matrix
 
