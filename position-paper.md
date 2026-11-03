@@ -28,9 +28,9 @@ Additional challenges now loom large. The rise of agentic AI offers both threats
 
 **This position paper is initially a call for university libraries, KB and OpenAIRE to commit to working together to help develop and sustain a robust backbone infrastructure for Dutch scientific output that is shared, mature and resilient.**  
 
-**Mandate and Context:** This commitment will give aim to the vision of [NPOS2030](https://doi.org/10.5281/zenodo.7433767) signed by the [Dutch covenant parties in 2023](https://www.rijksoverheid.nl/documenten/2023/03/29/open-science-nl-versnelt-transitie-naar-open-science), and the [UNL Open Science Agenda in 2023](https://doi.org/10.5281/zenodo.10362464), and gives aim to the [“academic freedom statement”](https://www.universiteitenvannederland.nl/en/current/news/statement-on-academic-freedom-the-rectors-of-the-dutch-universities-2025) in 2025 by the Dutch university rectors.
+**Mandate and Context:** This commitment will contribute to the vision of [NPOS2030](https://doi.org/10.5281/zenodo.7433767) signed by the [Dutch covenant parties in 2023](https://www.rijksoverheid.nl/documenten/2023/03/29/open-science-nl-versnelt-transitie-naar-open-science), and the [UNL Open Science Agenda in 2023](https://doi.org/10.5281/zenodo.10362464), and to the [“academic freedom statement”](https://www.universiteitenvannederland.nl/en/current/news/statement-on-academic-freedom-the-rectors-of-the-dutch-universities-2025) in 2025 by the Dutch university rectors.
 
-**Institutional autonomy challenges**: This backbone is based on the concept of a [federation](https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/europe-expands-access-sharing-and-use-research-data-and-digital-services-through-first-13-open-2026-10-16_en). It acknowledges the value of “institutional autonomy”; translating in that university libraries are of different sizes, serve varied communities and have access to different levels of technical skills. It acknowledges that universities use different systems to manage publications, which are all at different levels of sophistication. But at the same time this makes the creation of a shared information infrastructure a challenge.
+**Institutional autonomy challenges**: This backbone is based on the concept of a [federation](https://en.wikipedia.org/wiki/Federation_(information_technology)). It acknowledges the value of “institutional autonomy”; translating in that university libraries are of different sizes, serve varied communities and have access to different levels of technical skills. It acknowledges that universities use different systems to manage publications, which are all at different levels of sophistication. But at the same time this makes the creation of a shared information infrastructure a challenge.
 
 **Building a Strong Federation:** Therefore, the immediate focus of DURF, and this position paper, lies on the information chain that is supported by the various repositories and CRIS's, and can do so independent of technical choices that are made about these systems. DURF will create shared approaches, standards and tools for: the policies (theme 1) concerning these systems: for metadata exchange (theme 2), for full text harvesting (theme 3), for dissemination (theme 5), for long-term preservation (theme 4), and for co-management of the Netherlands Research Portal (theme 6).
 
@@ -40,7 +40,7 @@ There are six themes in the DURF project:
 - **Theme 2 - Metadata:** Enable enriched metadata feedback-loop via the OpenAIRE Graph
 - **Theme 3 - Fulltext:** Increase full-text collection
 - **Theme 4 - Archive:** Preserve output via the KB's e-Depot
-- **Theme 5 - Discovery:** Maximize discoverability through multiple channels, such as OpenAlex, Google, Wikidata and EOSC nodes
+- **Theme 5 - Discovery:** Maximise discoverability through multiple channels, such as OpenAlex, Google, Wikidata and EOSC nodes
 - **Theme 6 - Portal:** Provide a Dutch Portal as the outlet for curated research output
 
 These themes will be explained in more detail below.
@@ -54,9 +54,9 @@ These themes will be explained in more detail below.
 
 Every box in the diagram above plays a **role** in the information chain: the repositories and CRIS's, the harvester, the graph, the broker, the portal, the e-Depot, the resolver, the publishers and the scientific indexes. Each role comes with a **responsibility** towards the rest of the chain, as the table below shows. But a role cannot sign a position paper, hold a meeting, or make a pledge - only a **party** can. Every role is taken on by a party, and it is that party which carries the responsibility described throughout this paper, and which can count on the other parties in return.
 
-This is why we need to form a Dutch Repository Federation, where we can hold each other accountable. The **core parties** in this federation are: the 13 University Libraries **{Hereafter called: UB}** and KB National Library (as [members of UKB](https://ukb.nl/en/about-ukb/participating-members/)) **{Hereafter called: KB}**, and OpenAIRE AMKE (non-profit) **{Hereafter called: OpenAIRE}**. 
+This is why we need to form a Dutch Repository Federation, where we can hold each other accountable. The **core parties** in this federation are: the 13 University Libraries (hereafter: **UBs**) and KB National Library (hereafter: **KB**), both [members of UKB](https://ukb.nl/en/about-ukb/participating-members/), and OpenAIRE AMKE, a non-profit (hereafter: **OpenAIRE**). 
 The core parties administer the biggest portion of the content in the OpenAIRE Graph that are associated to Dutch research performing organisations as a whole, and therefore form the backbone of this federation.
-The federation welcomes all other Dutch (RPO’s) to join on their own pace; these include: UKB associate members (KNAW, OU), University Medical Centers, Universities of Applied Sciences. That are also the co-operation parties of the DURF Project., and also welcomes all the other Research performing organisations that are currently not a co-operation partner of the DURF project. ([listed here](https://www.surf.nl/en/about/members-of-surf))
+The federation welcomes all other Dutch research performing organisations (RPOs) to join on their own pace; these include: UKB associate members (KNAW, OU), University Medical Centres, Universities of Applied Sciences. That are also the co-operation parties of the DURF Project., and also welcomes all the other Research performing organisations that are currently not a co-operation partner of the DURF project. ([listed here](https://www.surf.nl/en/about/members-of-surf))
 
 | Role | Responsibility | Party |
 | --- | --- | --- |
@@ -102,18 +102,18 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s and KB believe they are the custodians of the Scientific Knowledge Corpus (metadata and full texts), and committed to the same **central aim** stated above.
+* UBs and KB believe they are the custodians of the Scientific Knowledge Corpus (metadata and full texts), and are committed to the same **central aim** stated above.
 
 *TACTICAL:*
 
-* Dutch University Libraries (UB’s) and KB become member of OpenAIRE AMKE (non-profit), and organize themselves in a National Membership Consortium (NaMeCo), giving Dutch institutions formal representation within OpenAIRE;
+* Dutch University Libraries (UBs) and KB become member of OpenAIRE AMKE (non-profit), and organise themselves in a National Membership Consortium (NaMeCo), giving Dutch institutions formal representation within OpenAIRE;
 
 *OPERATIONAL:*
 
 * We draft and finalise formal agreements (“afspraken stelsel”) on roles and responsibilities  between the parties that operate the systems they maintain to keep the federated infrastructure operational;
-* UB’s draft a legal structure (model contract for publisher negotiations)  under which all fields of metadata are shared as CC0, so they can move freely between systems;
-* UB’s and KB create a governance framework covering all six themes, reviewed toward the end of the project to keep it sustainable beyond it;
-* UB’s and KB jointly fund the shared infrastructure - contributing to the subscription licenses that cover OpenAIRE's operating costs, and costs for functional management of the portal.
+* UBs draft a legal structure (model contract for publisher negotiations)  under which all fields of metadata are shared as CC0, so they can move freely between systems;
+* UBs and KB create a governance framework covering all six themes, reviewed toward the end of the project to keep it sustainable beyond it;
+* UBs and KB jointly fund the shared infrastructure - contributing to the subscription licences that cover OpenAIRE's operating costs, and costs for functional management of the portal.
 * We meet annually, at “DURF Federation Day” a National Symposium and General Assembly, to hold each other to these commitments.
 
 
@@ -129,19 +129,19 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s believe the Scientific Knowledge Corpus is potentially a highly valuable asset when it has high quality metadata. 
+* UBs believe the Scientific Knowledge Corpus is potentially a highly valuable asset when it has high quality metadata. 
 
 *TACTICAL:*
 
-* UB’s make the Scientific Knowledge Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
+* UBs make the Scientific Knowledge Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
 
 *OPERATIONAL:*
 
-* UB’s and KB form a NL Research Information Content Board (formerly known as ‘WISH’), through EduStandaard.nl, to steward the new shared metadata standard;
-* UB’s will contribute to develop an updated metadata application profile, translating the current NL-DIDL-MODS requirements to OpenAIRE's CERIF and DC guidelines;
-* UB’s support each other in adopting that new profile, and monitor compliance;
-* UB’s will monitor the completeness of core persistent identifiers (ROR, ORCID, DOI) within their records and improve the completeness;
-* UB’s will test the OpenAIRE’s metadata enrichment feedback-loop to improve completeness, and OpenAIRE will use the evaluation of the test to improve the graph enrichment algorithms.
+* UBs and KB form a NL Research Information Content Board (formerly known as ‘WISH’), through EduStandaard.nl, to steward the new shared metadata standard;
+* UBs will contribute to develop an updated metadata application profile, translating the current NL-DIDL-MODS requirements to OpenAIRE's CERIF and DC guidelines;
+* UBs support each other in adopting that new profile, and monitor compliance;
+* UBs will monitor the completeness of core persistent identifiers (ROR, ORCID, DOI) within their records and improve the completeness;
+* UBs will test the OpenAIRE’s metadata enrichment feedback-loop to improve completeness, and OpenAIRE will use the evaluation of the test to improve the graph enrichment algorithms.
 
 
 ## 3. Increase full-text collection
@@ -162,17 +162,17 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s and KB believe they are the custodians of the Dutch Knowledge Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
+* UBs and KB believe they are the custodians of the Dutch Knowledge Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
 
 *TACTICAL:*
 
-* UB’s will add full text to ‘empty’ metadata records, within a defined scope, from the past and present. 
+* UBs will add full text to ‘empty’ metadata records, within a defined scope, from the past and present. 
 
 *OPERATIONAL:*
 
-* for past records the UB’s come to an agreement on the scope and financial business case of the full-texts completeness of the back-log/back-files to aim for. (e.g only journal articles, closed and open, from that last 5 years, from all or specific publishers.) 
-* for new present records the UB’s come to an agreement with the publishers and other venues to exchange the rich metadata and a copy of full text in the read and publish deals, preferably using a standard protocol (e.g. SWORD)
-* UB’s will share and teach each other the tools, methods and services to meet these targets within the agreed scope.
+* for past records the UBs come to an agreement on the scope and financial business case of the full-texts completeness of the back-log/back-files to aim for. (e.g only journal articles, closed and open, from that last 5 years, from all or specific publishers.) 
+* for new present records the UBs come to an agreement with the publishers and other venues to exchange the rich metadata and a copy of full text in the read and publish deals, preferably using a standard protocol (e.g. SWORD)
+* UBs will share and teach each other the tools, methods and services to meet these targets within the agreed scope.
 
 
 ## 4. Preserve output via the KB's e-Depot
@@ -185,15 +185,15 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s and KB believe that the Dutch Scientific Knowledge corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
+* UBs and KB believe that the Dutch Scientific Knowledge corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
 
 *OPERATIONAL:*
 
-* The UB’s will share their repository outputs with the e-Depot for the purposes of long-term preservation.
-* The KB will preserve and resolve the metadata and full text that is delivered by the UB’s.
+* The UBs will share their repository outputs with the e-Depot for the purposes of long-term preservation.
+* The KB will preserve and resolve the metadata and full text that is delivered by the UBs.
 
 
-## 5. Maximize discoverability through multiple channels
+## 5. Maximise discoverability through multiple channels
 
 Good metadata is only useful if it reaches researchers where they actually search. Dutch research output should be discoverable not only through institutional repositories, but through the channels researchers actually use: aggregators such as OpenAlex, general search engines such as Google (Scholar), open knowledge bases such as Wikidata, and the network of EOSC nodes that connects European research infrastructure. Wikidata is a particularly strong candidate: it is open, widely reused by other services, and one of the sources used to train AI. 
 
@@ -206,12 +206,12 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s believe Dutch research output must be findable and accessible for researchers and the public on a multitude of relevant outlets and venues to maximize discovery.
+* UBs believe Dutch research output must be findable and accessible for researchers and the public on a multitude of relevant outlets and venues to maximise discovery.
 
 
 *OPERATIONAL:*
 
-* UB’s will share and teach each other the tools and methods to maximize the discoverability of Dutch research output, for human consumption and machines alike. 
+* UBs will share and teach each other the tools and methods to maximise the discoverability of Dutch research output, for human consumption and machines alike. 
 
 
 ## 6. Provide a Dutch Portal as the outlet for curated research output
@@ -226,14 +226,14 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UB’s and KB believe the Netherlands Research Portal as the prime public facing outlet of Dutch research, researchers and research projects; so that researchers, policy makers, professionals and citizens can find and understand Dutch research and the experts behind it;
+* UBs and KB believe the Netherlands Research Portal should be the prime public-facing outlet of Dutch research, researchers and research projects; so that researchers, policy makers, professionals and citizens can find and understand Dutch research and the experts behind it;
 
 *OPERATIONAL:*
 
-* UB’s share their curated research output with the Netherlands Research Portal, and keep it up to date;
-* UB’s and KB take shared and financial responsibility for the portal's editorial care, functional management;
-* UB’s and KB take shared and financial responsibility for the technical hosting and maintenance of the portal by OpenAIRE;
-* UB’s and KB provide input for new functionality and help develop the portal further;
+* UBs share their curated research output with the Netherlands Research Portal, and keep it up to date;
+* UBs and KB take shared and financial responsibility for the portal's editorial care, functional management;
+* UBs and KB take shared and financial responsibility for the technical hosting and maintenance of the portal by OpenAIRE;
+* UBs and KB provide input for new functionality and help develop the portal further;
 * OpenAIRE will provide a development roadmap for the Connect Portal implementation.
 
 # Appendix
