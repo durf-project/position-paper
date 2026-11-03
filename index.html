@@ -454,9 +454,146 @@ a:hover { color: var(--sds--color--blue--500); }
   white-space: nowrap;
   border: 0;
 }
+
+/* ---- table of contents sidebar ---------------------------------------------
+   Same markup and states as Oat's sidebar (oat.ink): a layout element with
+   [data-sidebar-layout], an aside[data-sidebar], a [data-sidebar-toggle]
+   button, and [data-sidebar-open] on the layout while it is open. Collapsed
+   by default; it slides in over the page and never shifts the text. */
+.durf-toc-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  border: .0625rem solid var(--sds--color--gray--200);
+  border-radius: .5rem;
+  background: var(--sds--color--white);
+  color: var(--sds--color--black);
+  font: inherit;
+  font-size: .875rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .08);
+}
+.durf-toc-toggle:hover { color: var(--durf--blue); }
+.durf-toc-toggle svg { width: 1rem; height: 1rem; }
+[data-sidebar-open] .durf-toc-toggle { visibility: hidden; }
+
+aside[data-sidebar] {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 40;
+  width: min(20rem, 88vw);
+  display: flex;
+  flex-direction: column;
+  background: var(--sds--color--white);
+  border-right: .0625rem solid var(--sds--color--gray--200);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .18);
+  transform: translateX(calc(-100% - 2rem));
+  visibility: hidden;
+  transition: transform .2s ease, visibility 0s linear .2s;
+}
+[data-sidebar-open] aside[data-sidebar] {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform .2s ease, visibility 0s;
+}
+aside[data-sidebar] > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem .75rem 1.25rem;
+  border-bottom: .0625rem solid var(--sds--color--gray--200);
+}
+aside[data-sidebar] > header h2 {
+  margin: 0;
+  font-family: Nunito, "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+.durf-toc-close {
+  display: inline-flex;
+  padding: .375rem;
+  border: 0;
+  border-radius: .375rem;
+  background: transparent;
+  color: var(--sds--color--gray--500);
+  cursor: pointer;
+}
+.durf-toc-close:hover { color: var(--sds--color--black); background: var(--sds--color--gray--100); }
+.durf-toc-close svg { width: 1.125rem; height: 1.125rem; display: block; }
+aside[data-sidebar] > nav {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: .75rem .5rem 1.5rem;
+}
+.durf-toc-list, .durf-toc-list ol { list-style: none; margin: 0; padding: 0; }
+.durf-toc-list ol { margin: .125rem 0 .5rem; }
+.durf-toc-list a {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  padding: .3rem .75rem;
+  border-radius: .375rem;
+  color: var(--sds--color--black);
+  font-size: .875rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+.durf-toc-list > li > a { font-weight: 700; margin-top: .5rem; }
+.durf-toc-list ol a { padding-left: 1.5rem; color: var(--sds--color--gray--500); }
+.durf-toc-list a:hover { background: var(--sds--color--gray--100); color: var(--sds--color--black); }
+.durf-toc-list a[aria-current="true"] {
+  background: var(--sds--color--blue--100);
+  color: var(--sds--color--blue--500);
+}
+.durf-toc-dot {
+  flex: 0 0 auto;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  transform: translateY(-.0625rem);
+}
+
+.durf-toc-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: rgba(5, 14, 29, .35);
+}
+.durf-toc-backdrop[hidden] { display: none; }
+
+/* On phones the toggle moves to the bottom-left corner, clear of the header. */
+@media (max-width: 40rem) {
+  .durf-toc-toggle { top: auto; bottom: 1rem; }
+}
+/* Wide screens have room beside the text column: no dimmed backdrop. */
+@media (min-width: 75rem) {
+  .durf-toc-backdrop { display: none; }
+}
 </style>
 </head>
-<body>
+<body data-sidebar-layout>
+
+<button type="button" class="durf-toc-toggle" data-sidebar-toggle aria-controls="durf-toc" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+  <span>Contents</span>
+</button>
+<aside data-sidebar id="durf-toc" aria-label="Table of contents">
+  <header>
+    <h2>Contents</h2>
+    <button type="button" class="durf-toc-close" aria-label="Close contents">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </header>
+  <nav><ol class="durf-toc-list" id="durf-toc-list"></ol></nav>
+</aside>
+<div class="durf-toc-backdrop" hidden></div>
 
 <header class="durf-header">
   <div class="durf-shell">
@@ -670,10 +807,96 @@ a:hover { color: var(--sds--color--blue--500); }
   new MutationObserver(sendThemeToEmbeds).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sendThemeToEmbeds);
 
+  // ---- table of contents sidebar ------------------------------------------
+  // Built from the rendered h1 and h2 headings: h1s are the groups, h2s the
+  // entries under them (h2s before the first h1 stand on their own). The six
+  // theme headings get their theme colour as a dot.
+  var tocLayout = document.body;
+  var tocToggle = document.querySelector('[data-sidebar-toggle]');
+  var tocAside = document.getElementById('durf-toc');
+  var tocBackdrop = document.querySelector('.durf-toc-backdrop');
+  var tocList = document.getElementById('durf-toc-list');
+  var tocLinks = [];
+
+  function setTocOpen(open) {
+    if (open) tocLayout.setAttribute('data-sidebar-open', '');
+    else tocLayout.removeAttribute('data-sidebar-open');
+    tocToggle.setAttribute('aria-expanded', String(open));
+    tocBackdrop.hidden = !open;
+    if (open) {
+      var current = tocList.querySelector('[aria-current="true"]') || tocList.querySelector('a');
+      if (current) current.focus({ preventScroll: true });
+    } else if (tocAside.contains(document.activeElement)) {
+      tocToggle.focus();
+    }
+  }
+  tocToggle.addEventListener('click', function () { setTocOpen(true); });
+  tocAside.querySelector('.durf-toc-close').addEventListener('click', function () { setTocOpen(false); });
+  tocBackdrop.addEventListener('click', function () { setTocOpen(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && tocLayout.hasAttribute('data-sidebar-open')) setTocOpen(false);
+  });
+
+  function buildToc() {
+    tocList.innerHTML = '';
+    tocLinks = [];
+    var group = null;
+    var headings = contentEl.querySelectorAll('h1[id], h2[id]');
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      var m = /^\s*(\d)\./.exec(h.textContent);
+      if (h.tagName === 'H2' && m && THEME_COLOURS[m[1]]) {
+        var dot = document.createElement('span');
+        dot.className = 'durf-toc-dot';
+        dot.style.background = THEME_COLOURS[m[1]];
+        a.appendChild(dot);
+      }
+      a.appendChild(document.createTextNode(h.textContent.trim()));
+      li.appendChild(a);
+      tocLinks.push({ link: a, heading: h });
+      if (h.tagName === 'H1') {
+        group = document.createElement('ol');
+        li.appendChild(group);
+        tocList.appendChild(li);
+      } else if (group) {
+        group.appendChild(li);
+      } else {
+        tocList.appendChild(li);
+      }
+      a.addEventListener('click', function () {
+        // On narrow screens the drawer covers the text: close it after a jump.
+        if (!window.matchMedia('(min-width: 75rem)').matches) setTocOpen(false);
+      });
+    }
+    markCurrentSection();
+  }
+
+  function markCurrentSection() {
+    var current = null;
+    for (var i = 0; i < tocLinks.length; i++) {
+      if (tocLinks[i].heading.getBoundingClientRect().top <= 120) current = tocLinks[i];
+      else break;
+    }
+    for (var j = 0; j < tocLinks.length; j++) {
+      if (tocLinks[j] === current) tocLinks[j].link.setAttribute('aria-current', 'true');
+      else tocLinks[j].link.removeAttribute('aria-current');
+    }
+  }
+  var tocTicking = false;
+  window.addEventListener('scroll', function () {
+    if (tocTicking) return;
+    tocTicking = true;
+    window.requestAnimationFrame(function () { markCurrentSection(); tocTicking = false; });
+  }, { passive: true });
+
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
     markPledges();
     addHeadingIds();
+    buildToc();
     scrollToHash();
   }
 
