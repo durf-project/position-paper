@@ -245,7 +245,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 | Statement in the paper | Figure | Source |
 | --- | --- | --- |
-| Size of the Dutch Scientific Knowledge Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted October 2026) |
+| Size of the Dutch Scientific Knowledge Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted May 2026) |
 | Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
 | Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
 | Records missing a DOI or ORCID | about 50% | _source to be added_ |
