@@ -330,6 +330,16 @@ a:hover { color: var(--sds--color--blue--500); }
 .durf-content .durf-pledge ol { margin-bottom: 0; }
 .durf-content .durf-pledge p + ul,
 .durf-content .durf-pledge p + ol { margin-top: .75rem; }
+.durf-content .durf-pledge p.durf-pledge-level {
+  margin-top: 1rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--sds--color--blue--500);
+}
+.durf-content .durf-pledge p.durf-pledge-level em { color: inherit; font-style: normal; }
+.durf-content .durf-pledge p.durf-pledge-level + ul,
+.durf-content .durf-pledge p.durf-pledge-level + ol { margin-top: .35rem; }
 .durf-content .durf-pledge p:first-of-type::before {
   content: "Pledge";
   display: block;
@@ -439,7 +449,7 @@ a:hover { color: var(--sds--color--blue--500); }
       <div class="durf-header__text">
         <p class="durf-eyebrow">Dutch Repository Federation</p>
         <h1 class="durf-title">Position Paper<span class="durf-draft-tag">Draft</span></h1>
-        <p class="durf-byline">Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam) · September 2026</p>
+        <p class="durf-byline">Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam) · October 2026</p>
         <nav class="durf-header__links">
           <a href="https://github.com/durf-project/position-paper" target="_blank" rel="noopener">View source on GitHub</a>
           <a href="https://github.com/durf-project/position-paper/edit/main/position-paper.md" target="_blank" rel="noopener">Edit this paper</a>
@@ -540,6 +550,8 @@ a:hover { color: var(--sds--color--blue--500); }
     'Signatories of the DURF Position Paper pledge'
   ];
 
+  var LEVEL_LABEL = /^(STRATEGIC|TACTICAL|OPERATIONAL):?$/;
+
   function markPledges() {
     // Give the "signees agree" / "signatories pledge" paragraphs (and any
     // list of commitments right after them) a distinct callout, so the
@@ -556,9 +568,17 @@ a:hover { color: var(--sds--color--blue--500); }
       p.parentNode.insertBefore(wrapper, p);
       wrapper.appendChild(p);
 
+      // Pull in everything up to the next heading or rule: the commitments
+      // can be one list, or several (STRATEGIC / TACTICAL / OPERATIONAL),
+      // each introduced by its own short label paragraph.
       var next = wrapper.nextElementSibling;
-      if (next && (next.tagName === 'UL' || next.tagName === 'OL')) {
+      while (next && !/^(H1|H2|H3|HR)$/.test(next.tagName)) {
+        var after = next.nextElementSibling;
+        if (next.tagName === 'P' && LEVEL_LABEL.test(next.textContent.trim())) {
+          next.className = 'durf-pledge-level';
+        }
         wrapper.appendChild(next);
+        next = after;
       }
     }
   }
