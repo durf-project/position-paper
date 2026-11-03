@@ -227,6 +227,9 @@ a:hover { color: var(--sds--color--blue--500); }
   border-radius: .5rem;
 }
 .durf-content figure { margin: 0; }
+.durf-content .durf-embed { margin: 1.5rem 0; }
+.durf-content .durf-embed iframe { display: block; width: 100%; border: 0; }
+.durf-content .durf-embed figcaption { margin-top: .5rem; font-size: .875rem; color: var(--sds--color--gray--500); }
 
 .durf-content table {
   width: 100%;
@@ -604,6 +607,31 @@ a:hover { color: var(--sds--color--blue--500); }
     var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if (target) target.scrollIntoView();
   }
+
+  // Embedded DURF dashboard charts (<figure class="durf-embed"><iframe>) report
+  // their content height and accept this page's light/dark theme, so they
+  // size to fit without a scrollbar and follow the theme toggle.
+  var EMBED_ORIGIN = 'https://durf-project.github.io';
+  function currentTheme() {
+    var t = document.documentElement.getAttribute('data-theme');
+    if (t === 'light' || t === 'dark') return t;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function sendThemeToEmbeds() {
+    document.querySelectorAll('.durf-embed iframe').forEach(function (frame) {
+      if (frame.contentWindow) frame.contentWindow.postMessage({ type: 'durf-embed-theme', theme: currentTheme() }, EMBED_ORIGIN);
+    });
+  }
+  window.addEventListener('message', function (e) {
+    if (e.origin !== EMBED_ORIGIN || !e.data || e.data.type !== 'durf-embed-height') return;
+    document.querySelectorAll('.durf-embed iframe').forEach(function (frame) {
+      if (frame.contentWindow !== e.source) return;
+      frame.style.height = Math.ceil(e.data.height) + 'px';
+      frame.contentWindow.postMessage({ type: 'durf-embed-theme', theme: currentTheme() }, EMBED_ORIGIN);
+    });
+  });
+  new MutationObserver(sendThemeToEmbeds).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', sendThemeToEmbeds);
 
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
