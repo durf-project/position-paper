@@ -321,12 +321,24 @@ a:hover { color: var(--sds--color--blue--500); }
 .durf-content blockquote p:last-child { margin-bottom: 0; }
 .durf-content blockquote em { color: inherit; opacity: .85; }
 
+/* Commitment blocks. Each takes the colour of its theme (--pledge-colour,
+   set by markPledges from the theme number), the same palette as the DURF
+   dashboards. The tint and the label/marker colours are mixed with the page's
+   own background and text tokens, so they work in light and dark mode and
+   stay legible even for the yellow of theme 2. */
 .durf-content .durf-pledge {
+  --pledge-colour: var(--durf--blue);
+  --pledge-ink: color-mix(in srgb, var(--pledge-colour) 65%, var(--sds--color--black));
   margin: 1.5rem 0;
   padding: 1.125rem 1.375rem;
-  background: var(--sds--color--blue--100);
-  border-left: .25rem solid var(--durf--blue);
+  background: color-mix(in srgb, var(--pledge-colour) 10%, var(--sds--color--white));
+  border-left: .375rem solid var(--pledge-colour);
   border-radius: 0 .5rem .5rem 0;
+}
+.durf-content .durf-pledge > h3.durf-pledge-title {
+  margin: 0 0 .5rem;
+  font-size: 1.125rem;
+  color: var(--sds--color--black);
 }
 .durf-content .durf-pledge p,
 .durf-content .durf-pledge ul,
@@ -338,22 +350,23 @@ a:hover { color: var(--sds--color--blue--500); }
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: .06em;
-  color: var(--sds--color--blue--500);
+  color: var(--pledge-ink);
 }
 .durf-content .durf-pledge p.durf-pledge-level em { color: inherit; font-style: normal; }
 .durf-content .durf-pledge p.durf-pledge-level + ul,
 .durf-content .durf-pledge p.durf-pledge-level + ol { margin-top: .35rem; }
-.durf-content .durf-pledge p:first-of-type::before {
+/* Without a "Commitments for ..." heading, fall back to a "Pledge" label. */
+.durf-content .durf-pledge:not(.has-title) p:first-of-type::before {
   content: "Pledge";
   display: block;
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: .06em;
   text-transform: uppercase;
-  color: var(--durf--blue);
+  color: var(--pledge-ink);
   margin-bottom: .4rem;
 }
-.durf-content .durf-pledge li::marker { color: var(--durf--blue); }
+.durf-content .durf-pledge li::marker { color: var(--pledge-ink); }
 
 .durf-loading {
   color: var(--sds--color--gray--500);
@@ -554,6 +567,20 @@ a:hover { color: var(--sds--color--blue--500); }
   ];
 
   var LEVEL_LABEL = /^(STRATEGIC|TACTICAL|OPERATIONAL):?$/;
+  // Theme colours, as in the DURF dashboards (durf-project/dashboards,
+  // notebooks/*/metadata.json).
+  var THEME_COLOURS = { 1: '#EE7628', 2: '#F6DA44', 3: '#177ABF', 4: '#17A95D', 5: '#5C1B61', 6: '#83201B' };
+
+  function themeNumberBefore(el) {
+    // The nearest preceding "## N. ..." heading gives the theme number.
+    for (var n = el.previousElementSibling; n; n = n.previousElementSibling) {
+      if (n.tagName === 'H2' || n.tagName === 'H1') {
+        var m = /^\s*(\d)\./.exec(n.textContent);
+        return m ? m[1] : null;
+      }
+    }
+    return null;
+  }
 
   function markPledges() {
     // Give the "signees agree" / "signatories pledge" paragraphs (and any
@@ -568,8 +595,18 @@ a:hover { color: var(--sds--color--blue--500); }
 
       var wrapper = document.createElement('div');
       wrapper.className = 'durf-pledge';
-      p.parentNode.insertBefore(wrapper, p);
+      // A "Commitments for ..." heading right above becomes the block's title.
+      var prev = p.previousElementSibling;
+      var title = (prev && prev.tagName === 'H3' && /^Commitments? for/i.test(prev.textContent.trim())) ? prev : null;
+      p.parentNode.insertBefore(wrapper, title || p);
+      if (title) {
+        title.classList.add('durf-pledge-title');
+        wrapper.classList.add('has-title');
+        wrapper.appendChild(title);
+      }
       wrapper.appendChild(p);
+      var theme = themeNumberBefore(wrapper);
+      if (theme && THEME_COLOURS[theme]) wrapper.style.setProperty('--pledge-colour', THEME_COLOURS[theme]);
 
       // Pull in everything up to the next heading or rule: the commitments
       // can be one list, or several (STRATEGIC / TACTICAL / OPERATIONAL),
