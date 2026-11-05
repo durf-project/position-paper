@@ -576,9 +576,74 @@ aside[data-sidebar] > nav {
 @media (min-width: 75rem) {
   .durf-toc-backdrop { display: none; }
 }
+
+/* ---- evidence panels -------------------------------------------------------
+   The key figures behind the problem statement sit in native <details>
+   panels (Oat's accordion pattern), collapsed by default so they don't
+   interrupt the text. The embedded dashboards load only when opened. */
+.durf-content details.durf-evidence {
+  margin: 1rem 0;
+  border: .0625rem solid var(--sds--color--gray--200);
+  border-radius: .5rem;
+  background: var(--sds--color--white);
+}
+.durf-content details.durf-evidence > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .75rem;
+  padding: .875rem 2.75rem .875rem 1.125rem;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  font-family: Nunito, "Source Sans 3", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 800;
+  line-height: 1.3;
+  border-radius: .5rem;
+}
+.durf-content details.durf-evidence > summary::-webkit-details-marker { display: none; }
+.durf-content details.durf-evidence > summary::after {
+  content: "";
+  position: absolute;
+  right: 1.125rem;
+  top: 1.15rem;
+  width: .5rem;
+  height: .5rem;
+  border-right: .125rem solid var(--sds--color--gray--500);
+  border-bottom: .125rem solid var(--sds--color--gray--500);
+  transform: rotate(45deg);
+  transition: transform .15s ease;
+}
+.durf-content details.durf-evidence[open] > summary::after { transform: rotate(-135deg); top: 1.4rem; }
+.durf-content details.durf-evidence > summary:hover { background: var(--sds--color--gray--100); }
+.durf-content details.durf-evidence > summary:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
+.durf-content details.durf-evidence[open] > summary {
+  border-bottom: .0625rem solid var(--sds--color--gray--200);
+  border-radius: .5rem .5rem 0 0;
+}
+.durf-evidence-kicker {
+  font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--durf--blue);
+}
+.durf-content details.durf-evidence > :not(summary) { margin-left: 1.125rem; margin-right: 1.125rem; }
+.durf-content details.durf-evidence > p:first-of-type { margin-top: 1rem; }
+.durf-content details.durf-evidence > .durf-embed { margin-bottom: 1.125rem; }
+
+/* The Dutch Scientific Knowledge Corpus is the shared asset this paper is
+   about: every mention gets a marker-style highlight. */
+.durf-content .durf-corpus {
+  font-weight: 700;
+  background: linear-gradient(transparent 60%, color-mix(in srgb, var(--durf--yellow) 55%, transparent) 60%);
+  padding: 0 .05em;
+}
 </style>
 </head>
-<body data-sidebar-layout>
+<body data-sidebar-layout="always">
 
 <button type="button" class="durf-toc-toggle" data-sidebar-toggle aria-controls="durf-toc" aria-expanded="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
@@ -892,9 +957,46 @@ aside[data-sidebar] > nav {
     window.requestAnimationFrame(function () { markCurrentSection(); tocTicking = false; });
   }, { passive: true });
 
+  // ---- Corpus highlight ------------------------------------------------------
+  // "Dutch Scientific Knowledge Corpus", and "Corpus" on its own, get the
+  // durf-corpus highlight wherever they appear in running text (not in
+  // headings, links, code or the matrix).
+  var CORPUS_RE = /Dutch Scientific Knowledge Corpus|\bCorpus\b/g;
+  function markCorpus() {
+    var walker = document.createTreeWalker(contentEl, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        if (!CORPUS_RE.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+        CORPUS_RE.lastIndex = 0;
+        var el = node.parentElement;
+        if (el.closest('h1, h2, h3, h4, a, code, pre, summary, .durf-matrix, .durf-corpus')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      var text = node.nodeValue;
+      var frag = document.createDocumentFragment();
+      var last = 0;
+      CORPUS_RE.lastIndex = 0;
+      var m;
+      while ((m = CORPUS_RE.exec(text))) {
+        if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        var mark = document.createElement('strong');
+        mark.className = 'durf-corpus';
+        mark.textContent = m[0];
+        frag.appendChild(mark);
+        last = m.index + m[0].length;
+      }
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
     markPledges();
+    markCorpus();
     addHeadingIds();
     buildToc();
     scrollToHash();
