@@ -635,11 +635,11 @@ aside[data-sidebar] > nav {
 .durf-content details.durf-evidence > .durf-embed { margin-bottom: 1.125rem; }
 
 /* The Dutch Scientific Knowledge Corpus is the shared asset this paper is
-   about: every mention gets a marker-style highlight. */
-.durf-content .durf-corpus {
-  font-weight: 700;
-  background: linear-gradient(transparent 60%, color-mix(in srgb, var(--durf--yellow) 55%, transparent) 60%);
-  padding: 0 .05em;
+   about: every mention is set in italics. Same colour as the text around it
+   (plain <em> is grey in this stylesheet). */
+.durf-content em.durf-corpus {
+  font-style: italic;
+  color: inherit;
 }
 </style>
 </head>
@@ -958,8 +958,8 @@ aside[data-sidebar] > nav {
   }, { passive: true });
 
   // ---- Corpus highlight ------------------------------------------------------
-  // "Dutch Scientific Knowledge Corpus", and "Corpus" on its own, get the
-  // durf-corpus highlight wherever they appear in running text (not in
+  // "Dutch Scientific Knowledge Corpus", and "Corpus" on its own, are set in
+  // italics (durf-corpus) wherever they appear in running text (not in
   // headings, links, code or the matrix).
   var CORPUS_RE = /Dutch Scientific Knowledge Corpus|\bCorpus\b/g;
   function markCorpus() {
@@ -982,7 +982,7 @@ aside[data-sidebar] > nav {
       var m;
       while ((m = CORPUS_RE.exec(text))) {
         if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
-        var mark = document.createElement('strong');
+        var mark = document.createElement('em');
         mark.className = 'durf-corpus';
         mark.textContent = m[0];
         frag.appendChild(mark);
