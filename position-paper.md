@@ -15,17 +15,35 @@ This makes this Corpus a **highly valuable asset**, serving as a common resource
 
 Dutch science is among the most productive and influential in the world: its impact is 72% above the global average<sup><a href="#ref-1">1</a></sup>, and Dutch research institutes publish over 127,000 articles a year<sup><a href="#ref-2">2</a></sup>. Libraries have an essential role in managing, curating, disseminating and preserving that output, through the repositories and CRIS systems that Dutch universities and research institutes have been building since the early 2000s.
 
-These distributed but loosely connected systems are still maturing. While progress has been rapid, it has been lacking in coherent coordination.   The Corpus contains 1.9 million publications from 1995 until 2025.
+These distributed but loosely connected systems are still maturing. While progress has been rapid, it has been lacking in coherent coordination. The Corpus contains 1.9 million publications from 1995 until 2025, and at least half of these records are missing crucial pieces of metadata and the full text that are required for robust availability and preservation. Complete metadata and full texts are what the Corpus needs to be considered a digitally autonomous and highly valuable asset.
 
-* Metadata in our repositories and CRIS systems are incomplete, on average 50% of the records are missing essential elements like DOI’s and ORCiDs, making it hard to find and connect literature and use the Dutch knowledge corpus for strategic analysis using overpriced commercial databases that come with their biases underrepresenting numerous fields of sciences. 
-* But at the core is that **we do not have autonomy of accessing the fulltext** of our own Dutch scientific  knowledge corpus freely at any moment. 67% of the records do not have a file in the repository, which makes us as an academic community  very vulnerable to commercial and geopolitical turbulence. Having the complete full texts also opens new opportunities that grounds a metadata record in truth, allowing us to e.g. custom classification of research and training our own AI models.
+The key figures behind this problem statement are in the two panels below.
+
+<details class="durf-evidence">
+<summary><span class="durf-evidence-kicker">Key figures</span> Missing metadata &amp; the importance of filling the gaps</summary>
+
+Metadata in our repositories and CRIS systems is incomplete. As the data below shows, on average half of the records are missing information in essential metadata elements and persistent identifiers. These gaps make it hard to find and connect literature and to use the Dutch Scientific Knowledge Corpus for strategic analysis. They force us to rely on commercial databases that come with their own issues: biases that underrepresent numerous fields of science, high price tags, and a lack of the auditability that transparency in research evaluation requires. Closing these gaps makes the Corpus findable, connected and fit for analysis from our own, open data.
+
+<figure class="durf-embed">
+<iframe src="https://durf-project.github.io/dashboards/02-metadata-quality.html?embed=publications-kpis,publications-heatmap&mode=relative&sort=avg-desc" title="DURF Metadata Monitor: Valid per institution and field" loading="lazy" style="width:100%;height:1190px;border:0"></iframe>
+<figcaption>Share of records per institution with a valid value in each essential metadata field. Figures and sources: <a href="#a-data-supporting-the-problem-statement">Appendix A</a>. Open the <a href="https://durf-project.github.io/dashboards/02-metadata-quality.html">interactive dashboard</a> to filter and see the queries behind the figures.</figcaption>
+</figure>
+
+</details>
+
+<details class="durf-evidence">
+<summary><span class="durf-evidence-kicker">Key figures</span> Missing full texts &amp; the importance of filling the gaps</summary>
+
+Full texts in our repositories and CRIS systems are incomplete, as the data below shows. For both closed and open access publications we usually have a link to the file at the publisher, but for the majority - two thirds of all records - **we do not hold a copy ourselves**. This gap makes us, as an academic community, very vulnerable to commercial and geopolitical turbulence. Having complete full texts, on the other hand, opens new opportunities: it grounds a metadata record in truth, and allows us to, for example, classify research in our own way and train (our own) AI models under our own conditions.
 
 <figure class="durf-embed">
 <iframe src="https://durf-project.github.io/dashboards/03-full-text-capture.html?embed=kpis,filestatus-inst&mode=relative&sort=total-desc" title="DURF Full Text Monitor: File status per institution" loading="lazy" style="width:100%;height:1000px;border:0"></iframe>
 <figcaption>Share of records per institution with an open file, an embargoed file or no file in the repository (publications 1995&ndash;2025). Figures and sources: <a href="#a-data-supporting-the-problem-statement">Appendix A</a>. Open the <a href="https://durf-project.github.io/dashboards/03-full-text-capture.html">interactive dashboard</a> to filter by institution, publication type, open access status, licence and publisher.</figcaption>
 </figure>
 
-Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our Dutch science can be well represented in AI models by offering our high quality open knowledge corpus.
+</details>
+
+Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our Dutch science can be well represented in AI models by offering our high-quality, open Dutch Scientific Knowledge Corpus.
 
 ## Central Aim of this paper
 
@@ -85,7 +103,7 @@ Bringing these parties together under one set of shared rules is called **federa
 
 ### Roles and responsibilities
 
-Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch scientific corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
+Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch Scientific Knowledge Corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
 
 [Appendix B](#b-roles-and-responsibilities-matrix) sets these roles and responsibilities out for every pair of parties in the chain. This position paper is not itself a legal agreement. How they relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
 
@@ -105,7 +123,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe they are the custodians of the Scientific Knowledge Corpus (metadata and full texts), and are committed to the same **central aim** stated above.
+* UBs and KB believe they are the custodians of the Dutch Scientific Knowledge Corpus (metadata and full texts), and are committed to the same **central aim** stated above.
 
 *TACTICAL:*
 
@@ -132,11 +150,11 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs believe the Scientific Knowledge Corpus is potentially a highly valuable asset when it has high quality metadata. 
+* UBs believe the Dutch Scientific Knowledge Corpus is potentially a highly valuable asset when it has high quality metadata. 
 
 *TACTICAL:*
 
-* UBs make the Scientific Knowledge Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
+* UBs make the Dutch Scientific Knowledge Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
 
 *OPERATIONAL:*
 
@@ -165,7 +183,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe they are the custodians of the Dutch Knowledge Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
+* UBs and KB believe they are the custodians of the Dutch Scientific Knowledge Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
 
 *TACTICAL:*
 
@@ -188,7 +206,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe that the Dutch Scientific Knowledge corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
+* UBs and KB believe that the Dutch Scientific Knowledge Corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
 
 *OPERATIONAL:*
 
@@ -248,13 +266,14 @@ Therefore, the signees of the DURF Position Paper agree the following:
 | Size of the Dutch Scientific Knowledge Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted May 2026) |
 | Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
 | Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
-| Records missing a DOI or ORCID | about 50% | _source to be added_ |
+| Records missing essential metadata | About half. A valid DOI in 51.7% of records (989,074), an abstract in 49.8% and a Handle in 37.4%; ORCID iDs and ROR IDs are not present in the harvested records at all | [DURF Metadata Monitor](https://durf-project.github.io/dashboards/02-metadata-quality.html) (2) |
 | Impact of Dutch science | 72% above the global average | [Nederland als wetenschapsland 2024](#ref-1) |
 | Articles published by Dutch research institutes | over 127,000 a year | [OpenAIRE Monitor](#ref-2) |
 
 (1) The DURF Full Text Monitor is a proof of concept built on the `cris.publications` table of the SURF ORI DuckLake, a static snapshot loaded on 4 March 2026, covering publications from 1995 to 2025. A record counts as having a file when it lists at least one file location, whatever its format or web address; "open file" means at least one of its files is openly accessible, "embargoed file" that all its files are under embargo.
 
-> _To be completed: a source for the share of records missing a DOI or ORCID, for example from the ORI Quality Monitoring dashboard or a query on the same DuckLake snapshot._
+(2) The DURF Metadata Monitor is a proof of concept built on the same `cris.publications` table, in the snapshot of 13 May 2026. A value counts as valid when the field is filled in and passes a format check, for example a DOI of the form 10.NNNN/... without a URL prefix.
+
 
 ## B. Roles and responsibilities matrix
 
