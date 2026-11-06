@@ -585,7 +585,8 @@ aside[data-sidebar] > nav {
   margin: 1rem 0;
   border: .0625rem solid var(--sds--color--gray--200);
   border-radius: .5rem;
-  background: var(--sds--color--white);
+  /* a slightly different tint from the page, in light and dark alike */
+  background: var(--sds--color--gray--100);
 }
 .durf-content details.durf-evidence > summary {
   display: flex;
@@ -616,7 +617,7 @@ aside[data-sidebar] > nav {
   transition: transform .15s ease;
 }
 .durf-content details.durf-evidence[open] > summary::after { transform: rotate(-135deg); top: 1.4rem; }
-.durf-content details.durf-evidence > summary:hover { background: var(--sds--color--gray--100); }
+.durf-content details.durf-evidence > summary:hover { background: var(--sds--color--gray--200); }
 .durf-content details.durf-evidence > summary:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
 .durf-content details.durf-evidence[open] > summary {
   border-bottom: .0625rem solid var(--sds--color--gray--200);
