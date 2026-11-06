@@ -634,13 +634,78 @@ aside[data-sidebar] > nav {
 .durf-content details.durf-evidence > p:first-of-type { margin-top: 1rem; }
 .durf-content details.durf-evidence > .durf-embed { margin-bottom: 1.125rem; }
 
-/* The Dutch Scientific Knowledge Corpus is the shared asset this paper is
+/* The Dutch Scholarly Communication Corpus is the shared asset this paper is
    about: every mention is set in italics. Same colour as the text around it
    (plain <em> is grey in this stylesheet). */
 .durf-content em.durf-corpus {
   font-style: italic;
   color: inherit;
 }
+
+/* ---- definition dialog ------------------------------------------------------
+   An (i) button in the running text opens a native <dialog> (Oat's dialog
+   pattern: commandfor + command="show-modal", closedby="any"). A small
+   script below covers browsers without invoker commands. */
+.durf-content .durf-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0 .1em;
+  padding: 0;
+  vertical-align: .1em;
+  border: .0625rem solid var(--durf--blue);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--durf--blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: .8em;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+.durf-content .durf-info:hover { background: var(--durf--blue); color: var(--sds--color--white); }
+.durf-content .durf-info:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
+dialog.durf-dialog {
+  width: min(40rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: .0625rem solid var(--sds--color--gray--200);
+  border-radius: .75rem;
+  background: var(--sds--color--white);
+  color: var(--sds--color--black);
+  box-shadow: 0 1.5rem 3rem rgba(5, 14, 29, .25);
+}
+dialog.durf-dialog::backdrop { background: rgba(5, 14, 29, .55); }
+dialog.durf-dialog form { display: flex; flex-direction: column; max-height: calc(100vh - 2rem); margin: 0; }
+dialog.durf-dialog header { padding: 1.25rem 1.5rem .75rem; border-bottom: .0625rem solid var(--sds--color--gray--200); }
+dialog.durf-dialog header h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+dialog.durf-dialog .durf-dialog-kicker {
+  margin: 0 0 .25rem;
+  font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--durf--blue);
+}
+dialog.durf-dialog .durf-dialog-body { padding: .5rem 1.5rem; overflow-y: auto; }
+dialog.durf-dialog .durf-dialog-body p, dialog.durf-dialog .durf-dialog-body li { font-size: 1rem; line-height: 1.55; }
+dialog.durf-dialog .durf-dialog-body ul { margin-top: .25rem; }
+dialog.durf-dialog footer { display: flex; justify-content: flex-end; padding: .75rem 1.5rem 1.25rem; border-top: .0625rem solid var(--sds--color--gray--200); }
+dialog.durf-dialog footer button {
+  padding: .5rem 1.25rem;
+  border: 0;
+  border-radius: .375rem;
+  background: var(--durf--blue);
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
 </style>
 </head>
 <body data-sidebar-layout="always">
@@ -958,10 +1023,10 @@ aside[data-sidebar] > nav {
   }, { passive: true });
 
   // ---- Corpus highlight ------------------------------------------------------
-  // "Dutch Scientific Knowledge Corpus", and "Corpus" on its own, are set in
+  // "Dutch Scholarly Communication Corpus", and "Corpus" on its own, are set in
   // italics (durf-corpus) wherever they appear in running text (not in
   // headings, links, code or the matrix).
-  var CORPUS_RE = /Dutch Scientific Knowledge Corpus|\bCorpus\b/g;
+  var CORPUS_RE = /Dutch Scholarly Communication Corpus|\bCorpus\b/g;
   function markCorpus() {
     var walker = document.createTreeWalker(contentEl, NodeFilter.SHOW_TEXT, {
       acceptNode: function (node) {
@@ -993,10 +1058,35 @@ aside[data-sidebar] > nav {
     });
   }
 
+  // ---- Definition dialogs ------------------------------------------------------
+  // The markup uses invoker commands (commandfor/command) and closedby="any",
+  // as in Oat. Where the browser lacks them, open/close and backdrop-click
+  // are wired up here.
+  function wireDialogs() {
+    var hasCommands = 'command' in HTMLButtonElement.prototype;
+    var hasClosedBy = 'closedBy' in HTMLDialogElement.prototype;
+    contentEl.querySelectorAll('dialog').forEach(function (dlg) {
+      if (!hasClosedBy) {
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+      }
+    });
+    if (hasCommands) return;
+    contentEl.querySelectorAll('button[commandfor]').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        var dlg = document.getElementById(btn.getAttribute('commandfor'));
+        if (!dlg) return;
+        var cmd = btn.getAttribute('command');
+        if (cmd === 'show-modal' && !dlg.open) dlg.showModal();
+        else if (cmd === 'close') { e.preventDefault(); dlg.close(); }
+      });
+    });
+  }
+
   function render(markdown) {
     contentEl.innerHTML = window.marked.parse(stripDuplicateTitle(markdown), { headerIds: false, mangle: false });
     markPledges();
     markCorpus();
+    wireDialogs();
     addHeadingIds();
     buildToc();
     scrollToHash();
