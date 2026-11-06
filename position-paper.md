@@ -67,7 +67,7 @@ Full texts in our repositories and CRIS systems are incomplete, as the data belo
 
 </details>
 
-Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our Dutch science can be well represented in AI models by offering our high-quality, open Dutch Scholarly Communication Corpus.
+Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our **Dutch scholarly works can be well represented, under our own conditions**, in AI models by offering our high-quality Dutch Scholarly Communication Corpus.
 
 ## Central Aim of this paper
 
