@@ -142,6 +142,12 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 High-quality metadata is a condition for a successful repository. Poor metadata can mean broken links or context-free content. It erodes trust, one of the most important values that university repositories should embody.
 
+The metadata in Dutch repositories and CRIS systems is used for strategic purposes within the Netherlands. Because the institutions register and check it themselves, it can be the most trusted source on Dutch research output, also for third parties building new technology for finding and using research information - provided its quality is consistently high.
+
+For research indexes that quality is decisive. Only with consistent, complete metadata can they merge the Dutch additions, such as the full text in the repository and a clear affiliation to the institution, into their research graphs through deduplication. Today that affiliation path is largely missing: like ORCID iDs, ROR IDs are not present in the harvested records at all (see the [key figures](#why-problem-statement)). Open (CC0) metadata of consistent quality also allows new indexes and AI tools to be built on top of the Dutch Scientific Knowledge Corpus without legal or financial barriers, opening the way for open alternatives to proprietary databases such as Scopus and Web of Science.
+
+Rich metadata and complete coverage matter for research assessment as well. For this we foresee working with the OpenAIRE Broker and SURF's BROCCOLI project to enrich records in a validated chain. And high-quality metadata is the prerequisite for seeing what is still missing: which publications are absent from our repositories, and which full texts (theme 3).
+
 A metadata harvester and validator (OpenAIRE PROVIDE) collects records from institutional repositories and CRIS systems into the OpenAIRE Graph, where they are deduplicated, cross-referenced and enriched (OpenAIRE Broker) - with the results fed back to the originating repositories rather than disappearing into a one-way pipeline. Those results are suggestions, not changes: each institution decides which enrichments it accepts into its own system. Aggregation and dissemination of metadata and the related content also becomes much easier if each institute registering research output does so in a unified manner.
 
 ### Commitments for Metadata
@@ -159,9 +165,9 @@ Therefore, the signees of the DURF Position Paper agree the following:
 *OPERATIONAL:*
 
 * UBs and KB form a NL Research Information Content Board (formerly known as ‘WISH’), through EduStandaard.nl, to steward the new shared metadata standard;
-* UBs will contribute to develop an updated metadata application profile, translating the current NL-DIDL-MODS requirements to OpenAIRE's CERIF and DC guidelines;
+* UBs will contribute to develop an updated metadata application profile, translating the current NL-DIDL-MODS requirements to the OpenAIRE Guidelines for CRIS Managers (CERIF) and the OpenAIRE Guidelines for Literature Repository Managers (based on the DataCite metadata schema);
 * UBs support each other in adopting that new profile, and monitor compliance;
-* UBs will monitor the completeness of core persistent identifiers (ROR, ORCID, DOI) within their records and improve the completeness;
+* UBs will monitor the completeness of core persistent identifiers (ROR, ORCID, DOI) within their records, improve it, and make sure these identifiers are included in what they expose for harvesting;
 * UBs will test the OpenAIRE’s metadata enrichment feedback-loop to improve completeness, and OpenAIRE will use the evaluation of the test to improve the graph enrichment algorithms.
 
 
@@ -175,7 +181,7 @@ Repositories are not just collections of metadata. The collection of the actual 
 * it provides a corpus for multiple AI uses
 * it facilitates better aggregation and dissemination
 
-Despite this, there are various challenges to importing full-text of research output - different tools and methodologies (with varying levels of effectiveness). Too many article PDFs are still missing from repositories, and this can be much better.
+Despite this, there are various challenges to importing full-text of research output - different tools and methodologies (with varying levels of effectiveness). Too many article PDFs are still missing from repositories, and this can be much better. Capturing full texts also raises legal questions - copyright, licences, embargoes and the terms of publisher agreements - which DURF will address explicitly. Of all themes, this one is likely to ask the most local effort from the libraries.
 
 ### Commitments for Full-texts
 
@@ -192,13 +198,14 @@ Therefore, the signees of the DURF Position Paper agree the following:
 *OPERATIONAL:*
 
 * for past records the UBs come to an agreement on the scope and financial business case of the full-texts completeness of the back-log/back-files to aim for. (e.g only journal articles, closed and open, from that last 5 years, from all or specific publishers.) 
-* for new present records the UBs come to an agreement with the publishers and other venues to exchange the rich metadata and a copy of full text in the read and publish deals, preferably using a standard protocol (e.g. SWORD)
+* for new records the UBs come to an agreement with publishers and other venues, in the read and publish deals, to deliver the rich metadata and a copy of the full text - preferably through a national solution, such as a router or switchboard, that delivers to every repository through a standard protocol such as SWORD, instead of separate arrangements per institution;
+* UBs will jointly address the legal aspects of capturing and sharing full texts: copyright, licences, Taverne and the terms of publisher agreements;
 * UBs will share and teach each other the tools, methods and services to meet these targets within the agreed scope.
 
 
 ## 4. Preserve output via the KB's e-Depot
 
-While university libraries have capacity to manage their research outputs, tasks related to the long term  preservation of digital publications are undertaken by the National Library of the Netherlands (KB). The KB's e-Depot service ensures that files remain accessible in the long term, that they are associated with the right metadata, and - in the event of any digital disaster - that there is also a safe copy of the deposited material. A persistent URN:NBN resolver, also maintained by the KB, keeps preserved files reliably citable and linkable over time. This gives the KB a unique role in relation to university repositories.
+While university libraries have capacity to manage their research outputs, tasks related to the long term  preservation of digital publications are undertaken by the National Library of the Netherlands (KB). The KB's e-Depot service ensures that files remain accessible in the long term, that they are associated with the right metadata, and - in the event of any digital disaster - that there is also a safe copy of the deposited material. A persistent URN:NBN resolver, also maintained by the KB, keeps preserved files reliably citable and linkable over time. This gives the KB a unique role in relation to university repositories. For unique content, such as journals published by the institutions themselves, a preserved copy at the national library is of great added value: the KB is registered as an archiving agency in the Keepers Registry, and preservation with such an agency is something a journal needs to show, for example for the DOAJ Seal.
 
 ### Commitments for Preservation
 
@@ -212,6 +219,8 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 * The UBs will share their repository outputs with the e-Depot for the purposes of long-term preservation.
 * The KB will preserve and resolve the metadata and full text that is delivered by the UBs.
+* The KB will assign a URN:NBN to each preserved publication and keep it resolving to the current, preserved location;
+* The UBs will record that URN:NBN in their repository records, so it travels with the metadata.
 
 
 ## 5. Maximise discoverability through multiple channels
