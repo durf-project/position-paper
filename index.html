@@ -1,23 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-accent="blue">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<script>
-// Applied before the stylesheet below is parsed, so the right theme paints
-// first try - no flash of the wrong theme. Only an explicit light/dark
-// choice needs this; "system" is left to the prefers-color-scheme media
-// query in the CSS.
-(function () {
-  try {
-    var stored = localStorage.getItem('durf-theme');
-    if (stored === 'light' || stored === 'dark') {
-      document.documentElement.setAttribute('data-theme', stored);
-    }
-  } catch (e) {}
-})();
-</script>
 <title>DURF Position Paper</title>
 <meta name="description" content="A call for Dutch university libraries to commit to a shared, mature and resilient infrastructure for Dutch scientific output — Dutch Repository Federation.">
 <link rel="canonical" href="https://durf-project.github.io/position-paper/">
@@ -28,185 +14,38 @@
 <meta property="og:url" content="https://durf-project.github.io/position-paper/">
 <meta property="og:image" content="https://durf-project.github.io/position-paper/assets/durf-logo.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- DURF design system: Oat UI, then durf.css, then durf-nav.js (topbar, menu,
+     theme button, ?embed). No defer: the theme must be set before first paint. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@knadh/oat@1.0.0/oat.min.css">
+<link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf.css">
+<script src="https://durf-project.github.io/durf-design-system/durf-nav.js"></script>
 <style>
-/* ==========================================================================
-   DURF Position Paper
-   Design tokens and component rules are taken from the SURF Design System
-   (@surfnet/sds), reused from the DURF roadmap Gantt for a consistent
-   DURF look. https://surfnet.github.io/DesignSystem/
-   ========================================================================== */
 
-/* Tokens below are reused as-is by every rule in this file; only their
-   VALUES change between themes (see the dark-mode blocks further down).
-   Despite the literal names, treat --sds--color--black as "primary text"
-   and --sds--color--white as "page background" - that is the only way
-   they are ever used here. */
-:root {
-  --sds--color--black: #050E1D;
-  --sds--color--white: #FFFFFF;
-  --sds--color--gray--100: #F4F6F8;
-  --sds--color--gray--200: #EAECF0;
-  --sds--color--gray--250: #CDD0D5;
-  --sds--color--gray--300: #B2B6BE;
-  --sds--color--gray--400: #8C969F;
-  --sds--color--gray--500: #5E6873;
-  --sds--color--yellow--200: #FEF8D3;
-  --sds--color--green--100: #DCF2E5;
-  --sds--color--green--400: #008939;
-  --sds--color--green--500: #006731;
-  --sds--color--blue--100: #DFF4FF;
-  --sds--color--blue--400: #0077C8;
-  --sds--color--blue--500: #004C97;
-  --sds--color--orange--100: #FFE6D2;
-  --sds--color--orange--400: #E67300;
-
-  --durf--blue: #177ABF;
-  --durf--orange: #EE7628;
-  --durf--purple: #5C1B61;
-  --durf--green: #17A95D;
-  --durf--yellow: #F6DA44;
-
-  --durf--amber-text: #6b5900;
-  --durf--orange-text: #7a3600;
-  --durf--purple-tint: #F3E7F4;
-}
-
-/* ---- dark theme --------------------------------------------------------
-   Two blocks, same values: the media query covers "system" (no explicit
-   choice stored), the attribute selector covers an explicit dark choice
-   regardless of system setting. ["light" is just the tokens above, so it
-   needs no block of its own - :root[data-theme="light"] simply keeps them.] */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --sds--color--black: #EDF1F6;
-    --sds--color--white: #0A1420;
-    --sds--color--gray--100: #101C2C;
-    --sds--color--gray--200: #1D2C42;
-    --sds--color--gray--250: #26374F;
-    --sds--color--gray--300: #52657E;
-    --sds--color--gray--400: #7891AC;
-    --sds--color--gray--500: #9FB0C4;
-    --sds--color--yellow--200: #2E2A10;
-    --sds--color--blue--100: #10263D;
-    --sds--color--blue--500: #6FC2FF;
-    --sds--color--orange--100: #2E1D0E;
-    --durf--amber-text: #E8D67A;
-    --durf--orange-text: #F0B27A;
-    --durf--purple-tint: #241A2E;
-  }
-}
-:root[data-theme="dark"] {
-  --sds--color--black: #EDF1F6;
-  --sds--color--white: #0A1420;
-  --sds--color--gray--100: #101C2C;
-  --sds--color--gray--200: #1D2C42;
-  --sds--color--gray--250: #26374F;
-  --sds--color--gray--300: #52657E;
-  --sds--color--gray--400: #7891AC;
-  --sds--color--gray--500: #9FB0C4;
-  --sds--color--yellow--200: #2E2A10;
-  --sds--color--blue--100: #10263D;
-  --sds--color--blue--500: #6FC2FF;
-  --sds--color--orange--100: #2E1D0E;
-  --durf--amber-text: #E8D67A;
-  --durf--orange-text: #F0B27A;
-  --durf--purple-tint: #241A2E;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: "Source Sans 3", "Source Sans Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--sds--color--black);
-  background-color: var(--sds--color--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color .15s ease, color .15s ease;
-}
-a { color: var(--durf--blue); }
-a:hover { color: var(--sds--color--blue--500); }
-
-.durf-shell { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem; }
-
-/* ---- header ------------------------------------------------------------ */
-.durf-header {
-  border-bottom: .0625rem solid var(--sds--color--gray--200);
-  padding: 3rem 0 2.5rem;
-}
-.durf-header__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-.durf-header__logo { width: 8.5rem; height: 8.5rem; flex: 0 0 auto; }
-.durf-header__text { flex: 1 1 20rem; min-width: 0; }
+/* ---- page head (layout comes from .durf-page-head in durf.css) --------- */
 .durf-eyebrow {
   margin: 0 0 .5rem;
   font-weight: 700;
   font-size: .8125rem;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--durf--blue);
+  color: var(--accent-solid);
 }
-.durf-title {
-  margin: 0;
-  font-family: Nunito, "Source Sans 3", sans-serif;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  font-size: 2.5rem;
-  line-height: 1.1;
-}
-.durf-byline {
-  margin: .75rem 0 0;
-  color: var(--sds--color--gray--500);
-  font-weight: 600;
-}
-.durf-draft-tag {
-  display: inline-block;
-  margin-left: .5rem;
-  padding: .125rem .5rem;
-  border-radius: 1rem;
-  background: var(--sds--color--yellow--200);
-  color: var(--durf--amber-text);
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  vertical-align: middle;
-}
-.durf-header__links {
-  margin-top: 1.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  font-size: .875rem;
-  font-weight: 600;
-}
-.durf-header__links a { text-decoration: none; }
-.durf-header__links a:hover { text-decoration: underline; }
 
 /* ---- content ------------------------------------------------------------ */
 .durf-content { padding: 2.5rem 0 1rem; }
 .durf-content h1,
 .durf-content h2,
 .durf-content h3 {
-  font-family: Nunito, "Source Sans 3", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   letter-spacing: -.01em;
-  color: var(--sds--color--black);
+  color: var(--foreground);
 }
 .durf-content h1 {
   font-size: 1.875rem;
   margin: 2.75rem 0 1rem;
   padding-top: 1.5rem;
-  border-top: .1875rem solid var(--durf--blue);
+  border-top: .1875rem solid var(--accent-solid);
 }
 .durf-content > h1:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
 .durf-content h2 { font-size: 1.375rem; margin: 2.25rem 0 .75rem; }
@@ -215,7 +54,7 @@ a:hover { color: var(--sds--color--blue--500); }
 .durf-content p { margin: 0 0 1.1rem; }
 .durf-content ul, .durf-content ol { margin: 0 0 1.1rem; padding-left: 1.5rem; }
 .durf-content li { margin-bottom: .4rem; }
-.durf-content em { color: var(--sds--color--gray--500); }
+.durf-content em { color: var(--muted-foreground); }
 .durf-content strong { font-weight: 700; }
 .durf-content a { font-weight: 600; }
 .durf-content img {
@@ -223,13 +62,13 @@ a:hover { color: var(--sds--color--blue--500); }
   max-width: 100%;
   height: auto;
   margin: 1.5rem 0;
-  border: .0625rem solid var(--sds--color--gray--200);
+  border: .0625rem solid var(--border);
   border-radius: .5rem;
 }
 .durf-content figure { margin: 0; }
 .durf-content .durf-embed { margin: 1.5rem 0; }
 .durf-content .durf-embed iframe { display: block; width: 100%; border: 0; }
-.durf-content .durf-embed figcaption { margin-top: .5rem; font-size: .875rem; color: var(--sds--color--gray--500); }
+.durf-content .durf-embed figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted-foreground); }
 
 .durf-content table {
   width: 100%;
@@ -241,14 +80,14 @@ a:hover { color: var(--sds--color--blue--500); }
   padding: .625rem .875rem;
   text-align: left;
   vertical-align: top;
-  border-bottom: .0625rem solid var(--sds--color--gray--200);
+  border-bottom: .0625rem solid var(--border);
 }
 .durf-content th {
   font-weight: 700;
-  color: var(--sds--color--black);
-  border-bottom: .125rem solid var(--durf--blue);
+  color: var(--foreground);
+  border-bottom: .125rem solid var(--accent-solid);
 }
-.durf-content tbody tr:nth-child(even) { background: var(--sds--color--gray--100); }
+.durf-content tbody tr:nth-child(even) { background: var(--muted); }
 
 /* The matrix breaks out of the 46rem text column: up to 76rem wide, or the
    viewport minus a 1rem gutter on each side, centred on the text. Only on
@@ -259,13 +98,13 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 .durf-content .durf-matrix { border-collapse: collapse; width: 100%; min-width: 48rem; margin: 0; font-size: .75rem; line-height: 1.35; }
 .durf-matrix th, .durf-matrix td {
-  border: .0625rem solid var(--sds--color--gray--200);
+  border: .0625rem solid var(--border);
   padding: .375rem .5rem;
   text-align: left;
   vertical-align: top;
 }
 .durf-matrix thead th {
-  background: var(--sds--color--gray--100);
+  background: var(--muted);
   font-weight: 700;
   font-size: .6875rem;
   white-space: nowrap;
@@ -278,7 +117,7 @@ a:hover { color: var(--sds--color--blue--500); }
   font-size: .625rem;
   font-weight: 700;
   letter-spacing: .02em;
-  color: var(--sds--color--gray--500);
+  color: var(--muted-foreground);
   hyphens: none;
 }
 /* Ordinary markdown tables scroll inside themselves on narrow screens
@@ -288,34 +127,34 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 .durf-content code { overflow-wrap: anywhere; }
 .durf-matrix tbody th {
-  background: var(--sds--color--gray--100);
+  background: var(--muted);
   font-weight: 700;
   min-width: 6.5rem;
 }
-.durf-matrix td.d { background: var(--sds--color--gray--200); text-align: center; color: var(--sds--color--gray--400); }
-.durf-matrix td.u { background: var(--sds--color--blue--100); }
-.durf-matrix td.l { background: var(--durf--purple-tint); }
-.durf-matrix td.n { color: var(--sds--color--gray--300); text-align: center; }
+.durf-matrix td.d { background: var(--border); text-align: center; color: var(--faint-foreground); }
+.durf-matrix td.u { background: var(--accent); }
+.durf-matrix td.l { background: color-mix(in srgb, var(--durf-purple) 18%, var(--background)); }
+.durf-matrix td.n { color: var(--faint-foreground); text-align: center; }
 .durf-matrix-legend {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
   margin: .75rem 0 0;
   font-size: .8125rem;
-  color: var(--sds--color--gray--500);
+  color: var(--muted-foreground);
 }
 .durf-matrix-legend span { display: inline-flex; align-items: center; gap: .4rem; }
-.durf-matrix-legend i { width: .875rem; height: .875rem; border-radius: .1875rem; display: inline-block; border: .0625rem solid var(--sds--color--gray--250); }
-.durf-matrix-legend .u { background: var(--sds--color--blue--100); }
-.durf-matrix-legend .l { background: var(--durf--purple-tint); }
+.durf-matrix-legend i { width: .875rem; height: .875rem; border-radius: .1875rem; display: inline-block; border: .0625rem solid var(--input); }
+.durf-matrix-legend .u { background: var(--accent); }
+.durf-matrix-legend .l { background: color-mix(in srgb, var(--durf-purple) 18%, var(--background)); }
 
 .durf-content blockquote {
   margin: 1.25rem 0;
   padding: .75rem 1.25rem;
-  border-left: .25rem solid var(--durf--yellow);
-  background: var(--sds--color--yellow--200);
+  border-left: .25rem solid var(--durf-yellow);
+  background: var(--durf-yellow-wash);
   border-radius: 0 .375rem .375rem 0;
-  color: var(--durf--amber-text);
+  color: var(--foreground);
 }
 .durf-content blockquote p { margin: 0 0 .4rem; }
 .durf-content blockquote p:last-child { margin-bottom: 0; }
@@ -327,18 +166,18 @@ a:hover { color: var(--sds--color--blue--500); }
    own background and text tokens, so they work in light and dark mode and
    stay legible even for the yellow of theme 2. */
 .durf-content .durf-pledge {
-  --pledge-colour: var(--durf--blue);
-  --pledge-ink: color-mix(in srgb, var(--pledge-colour) 65%, var(--sds--color--black));
+  --pledge-colour: var(--accent-solid);
+  --pledge-ink: color-mix(in srgb, var(--pledge-colour) 65%, var(--foreground));
   margin: 1.5rem 0;
   padding: 1.125rem 1.375rem;
-  background: color-mix(in srgb, var(--pledge-colour) 10%, var(--sds--color--white));
+  background: color-mix(in srgb, var(--pledge-colour) 10%, var(--background));
   border-left: .375rem solid var(--pledge-colour);
   border-radius: 0 .5rem .5rem 0;
 }
 .durf-content .durf-pledge > h3.durf-pledge-title {
   margin: 0 0 .5rem;
   font-size: 1.125rem;
-  color: var(--sds--color--black);
+  color: var(--foreground);
 }
 .durf-content .durf-pledge p,
 .durf-content .durf-pledge ul,
@@ -369,23 +208,18 @@ a:hover { color: var(--sds--color--blue--500); }
 .durf-content .durf-pledge li::marker { color: var(--pledge-ink); }
 
 .durf-loading {
-  color: var(--sds--color--gray--500);
+  color: var(--muted-foreground);
   font-style: italic;
 }
 .durf-error {
   padding: 1rem 1.25rem;
   border-radius: .375rem;
-  background: var(--sds--color--orange--100);
-  color: var(--durf--orange-text);
+  background: color-mix(in srgb, var(--danger) 12%, var(--background));
+  border-left: .25rem solid var(--danger);
+  color: var(--foreground);
 }
 
 /* ---- footer -------------------------------------------------------------- */
-.durf-footer {
-  border-top: .0625rem solid var(--sds--color--gray--200);
-  padding: 2rem 0 3rem;
-  color: var(--sds--color--gray--500);
-  font-size: .875rem;
-}
 .durf-footer p { margin: 0 0 .5rem; }
 .durf-footer a { font-weight: 600; }
 .durf-footer__license {
@@ -396,8 +230,7 @@ a:hover { color: var(--sds--color--blue--500); }
 }
 
 @media (max-width: 30rem) {
-  .durf-title { font-size: 2rem; }
-  .durf-header__logo { width: 6rem; height: 6rem; }
+  .durf-page-head__logo { width: 6rem; height: 6rem; }
 }
 
 /* Diagrams (assets/durf-information-chain.svg) are drawn with an opaque
@@ -415,103 +248,62 @@ a:hover { color: var(--sds--color--blue--500); }
   padding: .75rem;
 }
 
-/* ---- theme toggle -------------------------------------------------------- */
-.durf-theme-toggle {
-  display: inline-flex;
-  gap: .125rem;
-  padding: .1875rem;
-  margin-left: auto;
-  align-self: flex-start;
-  border: .0625rem solid var(--sds--color--gray--200);
-  border-radius: .5rem;
-  background: var(--sds--color--gray--100);
-}
-.durf-theme-toggle button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border: 0;
-  border-radius: .375rem;
-  background: transparent;
-  color: var(--sds--color--gray--500);
-  cursor: pointer;
-}
-.durf-theme-toggle button:hover { color: var(--sds--color--black); }
-.durf-theme-toggle button[aria-pressed="true"] {
-  background: var(--sds--color--white);
-  color: var(--durf--blue);
-  box-shadow: 0 .0625rem .125rem rgba(0, 0, 0, .16);
-}
-.durf-theme-toggle svg { width: 1rem; height: 1rem; }
-.durf-visually-hidden {
-  position: absolute;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* ---- table of contents sidebar ---------------------------------------------
-   Same markup and states as Oat's sidebar (oat.ink): a layout element with
-   [data-sidebar-layout], an aside[data-sidebar], a [data-sidebar-toggle]
-   button, and [data-sidebar-open] on the layout while it is open. Collapsed
-   by default; it slides in over the page and never shifts the text. */
+   Own attributes (data-toc-*), deliberately not Oat's data-sidebar-*: Oat
+   styles those and would turn the page into a grid layout. [data-toc-open]
+   on <body> marks it open. Collapsed by default; it slides in over the page and never shifts the text. */
 .durf-toc-toggle {
   position: fixed;
-  top: 1rem;
+  top: calc(var(--topbar-h) + .75rem);
   left: 1rem;
   z-index: 30;
   display: inline-flex;
   align-items: center;
   gap: .5rem;
   padding: .5rem .75rem;
-  border: .0625rem solid var(--sds--color--gray--200);
+  border: .0625rem solid var(--border);
   border-radius: .5rem;
-  background: var(--sds--color--white);
-  color: var(--sds--color--black);
+  background: var(--background);
+  color: var(--foreground);
   font: inherit;
   font-size: .875rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .08);
 }
-.durf-toc-toggle:hover { color: var(--durf--blue); }
+.durf-toc-toggle:hover { color: var(--accent-solid); }
 .durf-toc-toggle svg { width: 1rem; height: 1rem; }
-[data-sidebar-open] .durf-toc-toggle { visibility: hidden; }
+[data-toc-open] .durf-toc-toggle { visibility: hidden; }
 
-aside[data-sidebar] {
+aside[data-toc] {
   position: fixed;
-  inset: 0 auto 0 0;
+  inset: var(--topbar-h) auto 0 0;
   z-index: 40;
   width: min(20rem, 88vw);
   display: flex;
   flex-direction: column;
-  background: var(--sds--color--white);
-  border-right: .0625rem solid var(--sds--color--gray--200);
+  background: var(--background);
+  border-right: .0625rem solid var(--border);
   box-shadow: 0 0 2rem rgba(0, 0, 0, .18);
   transform: translateX(calc(-100% - 2rem));
   visibility: hidden;
   transition: transform .2s ease, visibility 0s linear .2s;
 }
-[data-sidebar-open] aside[data-sidebar] {
+[data-toc-open] aside[data-toc] {
   transform: translateX(0);
   visibility: visible;
   transition: transform .2s ease, visibility 0s;
 }
-aside[data-sidebar] > header {
+aside[data-toc] > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1rem .75rem 1.25rem;
-  border-bottom: .0625rem solid var(--sds--color--gray--200);
+  border-bottom: .0625rem solid var(--border);
 }
-aside[data-sidebar] > header h2 {
+aside[data-toc] > header h2 {
   margin: 0;
-  font-family: Nunito, "Source Sans 3", sans-serif;
+  font-family: var(--font-heading);
   font-size: 1rem;
   font-weight: 800;
 }
@@ -521,12 +313,12 @@ aside[data-sidebar] > header h2 {
   border: 0;
   border-radius: .375rem;
   background: transparent;
-  color: var(--sds--color--gray--500);
+  color: var(--muted-foreground);
   cursor: pointer;
 }
-.durf-toc-close:hover { color: var(--sds--color--black); background: var(--sds--color--gray--100); }
+.durf-toc-close:hover { color: var(--foreground); background: var(--muted); }
 .durf-toc-close svg { width: 1.125rem; height: 1.125rem; display: block; }
-aside[data-sidebar] > nav {
+aside[data-toc] > nav {
   flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -540,17 +332,17 @@ aside[data-sidebar] > nav {
   gap: .5rem;
   padding: .3rem .75rem;
   border-radius: .375rem;
-  color: var(--sds--color--black);
+  color: var(--foreground);
   font-size: .875rem;
   line-height: 1.35;
   text-decoration: none;
 }
 .durf-toc-list > li > a { font-weight: 700; margin-top: .5rem; }
-.durf-toc-list ol a { padding-left: 1.5rem; color: var(--sds--color--gray--500); }
-.durf-toc-list a:hover { background: var(--sds--color--gray--100); color: var(--sds--color--black); }
+.durf-toc-list ol a { padding-left: 1.5rem; color: var(--muted-foreground); }
+.durf-toc-list a:hover { background: var(--muted); color: var(--foreground); }
 .durf-toc-list a[aria-current="true"] {
-  background: var(--sds--color--blue--100);
-  color: var(--sds--color--blue--500);
+  background: var(--accent);
+  color: var(--accent-solid);
 }
 .durf-toc-dot {
   flex: 0 0 auto;
@@ -562,7 +354,7 @@ aside[data-sidebar] > nav {
 
 .durf-toc-backdrop {
   position: fixed;
-  inset: 0;
+  inset: var(--topbar-h) 0 0 0;
   z-index: 35;
   background: rgba(5, 14, 29, .35);
 }
@@ -583,53 +375,42 @@ aside[data-sidebar] > nav {
    interrupt the text. The embedded dashboards load only when opened. */
 .durf-content details.durf-evidence {
   margin: 1rem 0;
-  border: .0625rem solid var(--sds--color--gray--200);
+  border: .0625rem solid var(--border);
   border-radius: .5rem;
   /* a slightly different tint from the page, in light and dark alike */
-  background: var(--sds--color--gray--100);
+  background: var(--muted);
 }
 .durf-content details.durf-evidence > summary {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  justify-content: flex-start;
   gap: .25rem .75rem;
   padding: .875rem 2.75rem .875rem 1.125rem;
   position: relative;
   cursor: pointer;
   list-style: none;
-  font-family: Nunito, "Source Sans 3", sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.0625rem;
   font-weight: 800;
   line-height: 1.3;
   border-radius: .5rem;
 }
-.durf-content details.durf-evidence > summary::-webkit-details-marker { display: none; }
-.durf-content details.durf-evidence > summary::after {
-  content: "";
-  position: absolute;
-  right: 1.125rem;
-  top: 1.15rem;
-  width: .5rem;
-  height: .5rem;
-  border-right: .125rem solid var(--sds--color--gray--500);
-  border-bottom: .125rem solid var(--sds--color--gray--500);
-  transform: rotate(45deg);
-  transition: transform .15s ease;
-}
-.durf-content details.durf-evidence[open] > summary::after { transform: rotate(-135deg); top: 1.4rem; }
-.durf-content details.durf-evidence > summary:hover { background: var(--sds--color--gray--200); }
-.durf-content details.durf-evidence > summary:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
+/* Oat draws the chevron (summary::after, rotated when open); keep it at the right. */
+.durf-content details.durf-evidence > summary::after { margin-inline-start: auto; align-self: center; position: absolute; right: 1.125rem; top: 50%; translate: 0 -50%; }
+.durf-content details.durf-evidence > summary:hover { background: var(--border); }
+.durf-content details.durf-evidence > summary:focus-visible { outline: .125rem solid var(--accent-solid); outline-offset: .125rem; }
 .durf-content details.durf-evidence[open] > summary {
-  border-bottom: .0625rem solid var(--sds--color--gray--200);
+  border-bottom: .0625rem solid var(--border);
   border-radius: .5rem .5rem 0 0;
 }
 .durf-evidence-kicker {
-  font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: .6875rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--durf--blue);
+  color: var(--accent-solid);
 }
 .durf-content details.durf-evidence > :not(summary) { margin-left: 1.125rem; margin-right: 1.125rem; }
 .durf-content details.durf-evidence > p:first-of-type { margin-top: 1rem; }
@@ -656,10 +437,10 @@ aside[data-sidebar] > nav {
   margin: 0 .1em;
   padding: 0;
   vertical-align: .1em;
-  border: .0625rem solid var(--durf--blue);
+  border: .0625rem solid var(--accent-solid);
   border-radius: 50%;
   background: transparent;
-  color: var(--durf--blue);
+  color: var(--accent-solid);
   font-family: Georgia, "Times New Roman", serif;
   font-size: .8em;
   font-style: italic;
@@ -667,55 +448,55 @@ aside[data-sidebar] > nav {
   line-height: 1;
   cursor: pointer;
 }
-.durf-content .durf-info:hover { background: var(--durf--blue); color: var(--sds--color--white); }
-.durf-content .durf-info:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
+.durf-content .durf-info:hover { background: var(--accent-solid); color: var(--accent-on); }
+.durf-content .durf-info:focus-visible { outline: .125rem solid var(--accent-solid); outline-offset: .125rem; }
 dialog.durf-dialog {
   width: min(40rem, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
   padding: 0;
-  border: .0625rem solid var(--sds--color--gray--200);
+  border: .0625rem solid var(--border);
   border-radius: .75rem;
-  background: var(--sds--color--white);
-  color: var(--sds--color--black);
+  background: var(--background);
+  color: var(--foreground);
   box-shadow: 0 1.5rem 3rem rgba(5, 14, 29, .25);
 }
 dialog.durf-dialog::backdrop { background: rgba(5, 14, 29, .55); }
 dialog.durf-dialog form { display: flex; flex-direction: column; max-height: calc(100vh - 2rem); margin: 0; }
-dialog.durf-dialog header { padding: 1.25rem 1.5rem .75rem; border-bottom: .0625rem solid var(--sds--color--gray--200); }
+dialog.durf-dialog header { padding: 1.25rem 1.5rem .75rem; border-bottom: .0625rem solid var(--border); }
 dialog.durf-dialog header h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
 dialog.durf-dialog .durf-dialog-kicker {
   margin: 0 0 .25rem;
-  font-family: "Source Sans 3", "Source Sans Pro", system-ui, sans-serif;
+  font-family: var(--font-sans);
   font-size: .6875rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--durf--blue);
+  color: var(--accent-solid);
 }
 dialog.durf-dialog .durf-dialog-body { padding: .5rem 1.5rem; overflow-y: auto; }
 dialog.durf-dialog .durf-dialog-body p, dialog.durf-dialog .durf-dialog-body li { font-size: 1rem; line-height: 1.55; }
 dialog.durf-dialog .durf-dialog-body ul { margin-top: .25rem; }
-dialog.durf-dialog footer { display: flex; justify-content: flex-end; padding: .75rem 1.5rem 1.25rem; border-top: .0625rem solid var(--sds--color--gray--200); }
+dialog.durf-dialog footer { display: flex; justify-content: flex-end; padding: .75rem 1.5rem 1.25rem; border-top: .0625rem solid var(--border); }
 dialog.durf-dialog footer button {
   padding: .5rem 1.25rem;
   border: 0;
   border-radius: .375rem;
-  background: var(--durf--blue);
-  color: #FFFFFF;
+  background: var(--accent-solid);
+  color: var(--accent-on);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
-dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--durf--blue); outline-offset: .125rem; }
+dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--accent-solid); outline-offset: .125rem; }
 </style>
 </head>
-<body data-sidebar-layout="always">
+<body>
 
-<button type="button" class="durf-toc-toggle" data-sidebar-toggle aria-controls="durf-toc" aria-expanded="false">
+<button type="button" class="durf-toc-toggle" data-toc-toggle aria-controls="durf-toc" aria-expanded="false">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
   <span>Contents</span>
 </button>
-<aside data-sidebar id="durf-toc" aria-label="Table of contents">
+<aside data-toc id="durf-toc" aria-label="Table of contents">
   <header>
     <h2>Contents</h2>
     <button type="button" class="durf-toc-close" aria-label="Close contents">
@@ -726,48 +507,32 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--du
 </aside>
 <div class="durf-toc-backdrop" hidden></div>
 
-<header class="durf-header">
-  <div class="durf-shell">
-    <div class="durf-header__inner">
-      <img class="durf-header__logo" src="assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
-      <div class="durf-header__text">
+<header class="durf-page-head">
+  <div class="durf-shell narrow">
+    <div class="durf-page-head__inner">
+      <img class="durf-page-head__logo" src="assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
+      <div class="durf-page-head__text">
         <p class="durf-eyebrow">Dutch Repository Federation</p>
-        <h1 class="durf-title">Position Paper<span class="durf-draft-tag">Draft</span></h1>
-        <p class="durf-byline">Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam) · October 2026</p>
-        <nav class="durf-header__links">
+        <h1>Position Paper <span class="durf-tag" data-tone="draft">DRAFT</span></h1>
+        <p class="byline">Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam) · October 2026</p>
+        <nav class="links" aria-label="Paper">
           <a href="https://github.com/durf-project/position-paper" target="_blank" rel="noopener">View source on GitHub</a>
           <a href="https://github.com/durf-project/position-paper/edit/main/position-paper.md" target="_blank" rel="noopener">Edit this paper</a>
           <a href="https://github.com/durf-project/position-paper/commits/main/position-paper.md" target="_blank" rel="noopener">Version history</a>
-          <a href="https://durf-project.github.io/durf-gantt/" target="_blank" rel="noopener">DURF roadmap</a>
-          <a href="https://durf-project.github.io/durf-data-mesh-architecture/" target="_blank" rel="noopener">Data contracts</a>
         </nav>
-      </div>
-      <div class="durf-theme-toggle" role="group" aria-label="Colour theme">
-        <button type="button" data-theme-choice="light" aria-pressed="false" title="Light theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <span class="durf-visually-hidden">Light theme</span>
-        </button>
-        <button type="button" data-theme-choice="dark" aria-pressed="false" title="Dark theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <span class="durf-visually-hidden">Dark theme</span>
-        </button>
-        <button type="button" data-theme-choice="system" aria-pressed="true" title="Match system setting">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          <span class="durf-visually-hidden">Match system setting</span>
-        </button>
       </div>
     </div>
   </div>
 </header>
 
-<main class="durf-shell">
-  <article id="content" class="durf-content">
+<main class="durf-shell narrow">
+  <article id="content" class="durf-content durf-prose">
     <p class="durf-loading">Loading the position paper…</p>
   </article>
 </main>
 
 <footer class="durf-footer">
-  <div class="durf-shell">
+  <div class="durf-shell narrow">
     <p class="durf-footer__license">
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener license">CC BY 4.0</a>
       <span>© Alastair Dunning, Maurice Vanderfeesten, Simone Kortekaas and Hilde van Wijngaarde. This work may be shared and adapted with attribution.</span>
@@ -776,48 +541,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--du
   </div>
 </footer>
 
-<script>
-(function () {
-  var STORAGE_KEY = 'durf-theme';
 
-  function getStoredChoice() {
-    try { return localStorage.getItem(STORAGE_KEY) || 'system'; } catch (e) { return 'system'; }
-  }
-
-  function setStoredChoice(choice) {
-    try {
-      if (choice === 'system') localStorage.removeItem(STORAGE_KEY);
-      else localStorage.setItem(STORAGE_KEY, choice);
-    } catch (e) {}
-  }
-
-  function applyTheme(choice) {
-    if (choice === 'light' || choice === 'dark') {
-      document.documentElement.setAttribute('data-theme', choice);
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-    var buttons = document.querySelectorAll('.durf-theme-toggle button');
-    for (var i = 0; i < buttons.length; i++) {
-      var pressed = buttons[i].getAttribute('data-theme-choice') === choice;
-      buttons[i].setAttribute('aria-pressed', pressed ? 'true' : 'false');
-    }
-  }
-
-  var toggleButtons = document.querySelectorAll('.durf-theme-toggle button');
-  for (var i = 0; i < toggleButtons.length; i++) {
-    toggleButtons[i].addEventListener('click', function () {
-      var choice = this.getAttribute('data-theme-choice');
-      setStoredChoice(choice);
-      applyTheme(choice);
-    });
-  }
-
-  // The inline script in <head> already set data-theme on <html> to avoid
-  // a flash of the wrong theme; this just syncs the toggle buttons to match.
-  applyTheme(getStoredChoice());
-})();
-</script>
 <script src="assets/marked.min.js"></script>
 <script>
 (function () {
@@ -943,15 +667,15 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--du
   // entries under them (h2s before the first h1 stand on their own). The six
   // theme headings get their theme colour as a dot.
   var tocLayout = document.body;
-  var tocToggle = document.querySelector('[data-sidebar-toggle]');
+  var tocToggle = document.querySelector('[data-toc-toggle]');
   var tocAside = document.getElementById('durf-toc');
   var tocBackdrop = document.querySelector('.durf-toc-backdrop');
   var tocList = document.getElementById('durf-toc-list');
   var tocLinks = [];
 
   function setTocOpen(open) {
-    if (open) tocLayout.setAttribute('data-sidebar-open', '');
-    else tocLayout.removeAttribute('data-sidebar-open');
+    if (open) tocLayout.setAttribute('data-toc-open', '');
+    else tocLayout.removeAttribute('data-toc-open');
     tocToggle.setAttribute('aria-expanded', String(open));
     tocBackdrop.hidden = !open;
     if (open) {
@@ -965,7 +689,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--du
   tocAside.querySelector('.durf-toc-close').addEventListener('click', function () { setTocOpen(false); });
   tocBackdrop.addEventListener('click', function () { setTocOpen(false); });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && tocLayout.hasAttribute('data-sidebar-open')) setTocOpen(false);
+    if (e.key === 'Escape' && tocLayout.hasAttribute('data-toc-open')) setTocOpen(false);
   });
 
   function buildToc() {
