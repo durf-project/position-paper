@@ -9,7 +9,7 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 <dialog id="corpus-definition" class="durf-dialog" closedby="any" aria-labelledby="corpus-definition-title">
 <form method="dialog">
 <header>
-<p class="durf-dialog-kicker">Definition</p>
+<p class="durf-dialog-kicker">Definition and commons</p>
 <h3 id="corpus-definition-title">The Dutch Scholarly Communication Corpus</h3>
 </header>
 <div class="durf-dialog-body">
@@ -23,6 +23,27 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 </ul>
 <p><strong>It excludes</strong> the digital objects of other research entities, such as datasets, software, projects, persons, organisations, instruments and samples. These have their own domains and custodians.</p>
 <p><strong>But it connects to them.</strong> Where it fits, the metadata of a published work must carry the identifiers of, and references to, these entities: the DOIs of underlying datasets and software, ORCID iDs, ROR IDs, project and grant identifiers. That places the literature in the context of the research endeavour, and makes it transparent and traceable what it is based on and who was involved.</p>
+<h4 id="corpus-commons">The Corpus as a commons</h4>
+<p>The Corpus is a shared resource, a commons. No single institution owns it. Every institution contributes to it and every institution depends on it. Like any commons, it only stays healthy when the community that uses it also takes care of it.</p>
+<p>Organising the Corpus as a commons means that we agree together what good looks like, for example which metadata, identifiers and full texts a complete record of a Dutch published work should have. It means that we measure the state of the Corpus in the open, so that every institution can see where it is incomplete or inconsistent. And it means that each of us does their part at the source, in our own repository and CRIS, so that an improvement reaches everyone and not just a local copy.</p>
+<p>The report <a href="https://doi.org/10.5281/zenodo.21526773" target="_blank" rel="noopener">Organizing research as a commons</a> (Waegemaekers et al., 2026) explains how the idea of the commons can help to organise a fragmented research ecosystem, so that infrastructure, data and scholarly output are seen as a shared responsibility, and funding, support and governance are organised through collective action.</p>
+<h4 id="corpus-ostrom">Ostrom's design principles</h4>
+<p>Elinor Ostrom studied commons that have lasted for generations and found eight design principles that they share (Ostrom, 1990). This is how they apply to the Corpus:</p>
+<ol>
+<li><strong>Clear boundaries.</strong> The definition above says which works belong to the Corpus and which do not, and the federation makes clear which institutions take part.</li>
+<li><strong>Rules that fit local conditions.</strong> Shared agreements on metadata, identifiers and full texts work with the systems and workflows each institution already has.</li>
+<li><strong>Collective choice.</strong> The libraries and institutions affected by these agreements make and change them together, through the federation's shared governance.</li>
+<li><strong>Monitoring.</strong> The state of the Corpus is measured in the open, so that all members can see how the shared resource is doing.</li>
+<li><strong>Graduated sanctions.</strong> When an agreement is not met, the first response is a signal and support, with firmer steps only if a problem persists.</li>
+<li><strong>Conflict resolution.</strong> Members have quick and accessible ways to settle disagreements among themselves.</li>
+<li><strong>Recognition of the right to organise.</strong> The boards of the institutions and national bodies respect the federation's right to make its own arrangements.</li>
+<li><strong>Nested enterprises.</strong> Each institution looks after its own part of the Corpus, the federation coordinates at national level, and the Corpus connects to international infrastructures such as OpenAIRE.</li>
+</ol>
+<div class="durf-dialog-refs">
+<p><strong>References</strong></p>
+<p>Waegemaekers, E., Sesink, L., Witkowska, I., Hoogerwerf, M., van den Berg, Y., Doove, J., Bijsterbosch, M., &amp; Oonk, R. (2026). <cite>Organizing research as a commons</cite> (Version 1.1) [Report]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21526773" target="_blank" rel="noopener">doi:10.5281/zenodo.21526773</a></p>
+<p>Ostrom, E. (1990). <cite>Governing the commons: The evolution of institutions for collective action</cite>. Cambridge University Press. <a href="https://doi.org/10.1017/CBO9780511807763" target="_blank" rel="noopener">doi:10.1017/CBO9780511807763</a></p>
+</div>
 </div>
 <footer>
 <button type="submit" commandfor="corpus-definition" command="close">Close</button>
@@ -34,6 +55,14 @@ This Corpus is created throughout time by thousands of researchers and millions 
 This makes this Corpus a **highly valuable asset**, serving as a common resource for the public to benefit.
 
 **Mission:** joining this federation makes each of us (libraries) all/together responsible to maintain the services/pieces of a federative Open Science infrastructure for Dutch publicly funded scientific output, so that the Corpus and its services remain open, findable, accessible, available, and resilient in times of commercial and geopolitical turbulence.
+
+## The Dutch Scholarly Communication Corpus as a shared resource
+
+The Dutch Scholarly Communication Corpus is a shared resource, a commons. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
+
+A commons only stays healthy when the community that uses it also takes care of it. That means agreeing together what good looks like, measuring it in the open and each doing our part at the source. This paper sets out how we, as libraries, want to do that together.
+
+<p class="durf-more"><button type="button" class="outline" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" data-dialog-target="corpus-commons">Read more about the Corpus as a commons</button></p>
 
 ## Why / problem statement
 

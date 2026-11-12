@@ -7,16 +7,18 @@
 <title>DURF Position Paper</title>
 <meta name="description" content="A call for Dutch university libraries to commit to a shared, mature and resilient infrastructure for Dutch scientific output — Dutch Repository Federation.">
 <link rel="canonical" href="https://durf-project.github.io/position-paper/">
-<link rel="icon" type="image/png" href="assets/durf-favicon.png">
+<link rel="icon" type="image/svg+xml" href="https://durf-project.github.io/durf-design-system/assets/favicon.svg">
+<link rel="apple-touch-icon" href="https://durf-project.github.io/durf-design-system/assets/apple-touch-icon.png">
 <meta property="og:title" content="DURF Position Paper">
 <meta property="og:description" content="A call for Dutch university libraries to commit to a shared, mature and resilient infrastructure for Dutch scientific output.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://durf-project.github.io/position-paper/">
-<meta property="og:image" content="https://durf-project.github.io/position-paper/assets/durf-logo.png">
+<meta property="og:image" content="https://durf-project.github.io/durf-design-system/assets/durf-og.png">
 <meta name="twitter:card" content="summary_large_image">
-<!-- DURF design system: Oat UI, then durf.css, then durf-nav.js (topbar, menu,
-     theme button, ?embed). No defer: the theme must be set before first paint. -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@knadh/oat@1.0.0/oat.min.css">
+<!-- DURF design system v1.1: Oat UI (vendored in the design system's lib/),
+     then durf.css, then durf-nav.js (topbar, menu, theme button, ?embed,
+     window.DURF). No defer: the theme must be set before first paint. -->
+<link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/lib/oat.min.css">
 <link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf.css">
 <script src="https://durf-project.github.io/durf-design-system/durf-nav.js"></script>
 <style>
@@ -160,11 +162,12 @@
 .durf-content blockquote p:last-child { margin-bottom: 0; }
 .durf-content blockquote em { color: inherit; opacity: .85; }
 
-/* Commitment blocks. Each takes the colour of its theme (--pledge-colour,
-   set by markPledges from the theme number), the same palette as the DURF
-   dashboards. The tint and the label/marker colours are mixed with the page's
-   own background and text tokens, so they work in light and dark mode and
-   stay legible even for the yellow of theme 2. */
+/* Commitment blocks. Each takes the colour of its theme: markPledges sets
+   data-theme-n from the theme number, and the design system (durf.css) turns
+   that into --theme-color, the same palette as the DURF dashboards. The tint
+   and the label/marker colours are mixed with the page's own background and
+   text tokens, so they work in light and dark mode and stay legible even for
+   the yellow of theme 2. */
 .durf-content .durf-pledge {
   --pledge-colour: var(--accent-solid);
   --pledge-ink: color-mix(in srgb, var(--pledge-colour) 65%, var(--foreground));
@@ -174,6 +177,7 @@
   border-left: .375rem solid var(--pledge-colour);
   border-radius: 0 .5rem .5rem 0;
 }
+.durf-content .durf-pledge[data-theme-n] { --pledge-colour: var(--theme-color); }
 .durf-content .durf-pledge > h3.durf-pledge-title {
   margin: 0 0 .5rem;
   font-size: 1.125rem;
@@ -356,7 +360,7 @@ aside[data-toc] > nav {
   position: fixed;
   inset: var(--topbar-h) 0 0 0;
   z-index: 35;
-  background: rgba(5, 14, 29, .35);
+  background: color-mix(in srgb, var(--durf-black) 35%, transparent);
 }
 .durf-toc-backdrop[hidden] { display: none; }
 
@@ -458,9 +462,9 @@ dialog.durf-dialog {
   border-radius: .75rem;
   background: var(--background);
   color: var(--foreground);
-  box-shadow: 0 1.5rem 3rem rgba(5, 14, 29, .25);
+  box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--durf-black) 25%, transparent);
 }
-dialog.durf-dialog::backdrop { background: rgba(5, 14, 29, .55); }
+dialog.durf-dialog::backdrop { background: color-mix(in srgb, var(--durf-black) 55%, transparent); }
 dialog.durf-dialog form { display: flex; flex-direction: column; max-height: calc(100vh - 2rem); margin: 0; }
 dialog.durf-dialog header { padding: 1.25rem 1.5rem .75rem; border-bottom: .0625rem solid var(--border); }
 dialog.durf-dialog header h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
@@ -473,9 +477,36 @@ dialog.durf-dialog .durf-dialog-kicker {
   text-transform: uppercase;
   color: var(--accent-solid);
 }
-dialog.durf-dialog .durf-dialog-body { padding: .5rem 1.5rem; overflow-y: auto; }
+dialog.durf-dialog .durf-dialog-body { position: relative; padding: .5rem 1.5rem; overflow-y: auto; }
 dialog.durf-dialog .durf-dialog-body p, dialog.durf-dialog .durf-dialog-body li { font-size: 1rem; line-height: 1.55; }
-dialog.durf-dialog .durf-dialog-body ul { margin-top: .25rem; }
+dialog.durf-dialog .durf-dialog-body ul,
+dialog.durf-dialog .durf-dialog-body ol { margin-top: .25rem; }
+dialog.durf-dialog .durf-dialog-body h4 {
+  margin: 1.75rem 0 .5rem;
+  padding-top: 1.25rem;
+  border-top: .0625rem solid var(--border);
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  scroll-margin-top: .5rem;
+}
+dialog.durf-dialog .durf-dialog-body h4#corpus-ostrom { margin-top: 1.25rem; padding-top: 0; border-top: 0; }
+dialog.durf-dialog .durf-dialog-body .durf-dialog-refs {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: .0625rem solid var(--border);
+  font-size: .875rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+dialog.durf-dialog .durf-dialog-body .durf-dialog-refs p { margin: 0 0 .5rem; font-size: inherit; line-height: inherit; }
+dialog.durf-dialog .durf-dialog-refs strong { color: var(--foreground); }
+dialog.durf-dialog .durf-dialog-refs cite { font-style: italic; }
+dialog.durf-dialog .durf-dialog-refs a { overflow-wrap: anywhere; }
+
+/* "Read more" button under the commons section: opens the Corpus dialog
+   at its commons part. Oat's outline button. */
+.durf-content p.durf-more { margin: 1.25rem 0 1.5rem; }
 dialog.durf-dialog footer { display: flex; justify-content: flex-end; padding: .75rem 1.5rem 1.25rem; border-top: .0625rem solid var(--border); }
 dialog.durf-dialog footer button {
   padding: .5rem 1.25rem;
@@ -510,7 +541,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
 <header class="durf-page-head">
   <div class="durf-shell narrow">
     <div class="durf-page-head__inner">
-      <img class="durf-page-head__logo" src="assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
+      <img class="durf-page-head__logo" src="https://durf-project.github.io/durf-design-system/assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
       <div class="durf-page-head__text">
         <p class="durf-eyebrow">Dutch Repository Federation</p>
         <h1>Position Paper <span class="durf-tag" data-tone="draft">DRAFT</span></h1>
@@ -559,9 +590,9 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
   ];
 
   var LEVEL_LABEL = /^(STRATEGIC|TACTICAL|OPERATIONAL):?$/;
-  // Theme colours, as in the DURF dashboards (durf-project/dashboards,
-  // notebooks/*/metadata.json).
-  var THEME_COLOURS = { 1: '#EE7628', 2: '#F6DA44', 3: '#177ABF', 4: '#17A95D', 5: '#5C1B61', 6: '#83201B' };
+  // The six themes come from the design system (window.DURF.themes, set by
+  // durf-nav.js); their colours are its --durf-theme-N tokens.
+  function isTheme(n) { return !!(window.DURF && window.DURF.theme && window.DURF.theme(n)); }
 
   function themeNumberBefore(el) {
     // The nearest preceding "## N. ..." heading gives the theme number.
@@ -598,7 +629,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
       }
       wrapper.appendChild(p);
       var theme = themeNumberBefore(wrapper);
-      if (theme && THEME_COLOURS[theme]) wrapper.style.setProperty('--pledge-colour', THEME_COLOURS[theme]);
+      if (theme && isTheme(theme)) wrapper.setAttribute('data-theme-n', theme);
 
       // Pull in everything up to the next heading or rule: the commitments
       // can be one list, or several (STRATEGIC / TACTICAL / OPERATIONAL),
@@ -703,10 +734,10 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
       var a = document.createElement('a');
       a.href = '#' + h.id;
       var m = /^\s*(\d)\./.exec(h.textContent);
-      if (h.tagName === 'H2' && m && THEME_COLOURS[m[1]]) {
+      if (h.tagName === 'H2' && m && isTheme(m[1])) {
         var dot = document.createElement('span');
         dot.className = 'durf-toc-dot';
-        dot.style.background = THEME_COLOURS[m[1]];
+        dot.style.background = 'var(--durf-theme-' + m[1] + ')';
         a.appendChild(dot);
       }
       a.appendChild(document.createTextNode(h.textContent.trim()));
@@ -750,7 +781,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
   // ---- Corpus highlight ------------------------------------------------------
   // "Dutch Scholarly Communication Corpus", and "Corpus" on its own, are set in
   // italics (durf-corpus) wherever they appear in running text (not in
-  // headings, links, code or the matrix).
+  // headings, links, buttons, code or the matrix).
   var CORPUS_RE = /Dutch Scholarly Communication Corpus|\bCorpus\b/g;
   function markCorpus() {
     var walker = document.createTreeWalker(contentEl, NodeFilter.SHOW_TEXT, {
@@ -758,7 +789,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
         if (!CORPUS_RE.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
         CORPUS_RE.lastIndex = 0;
         var el = node.parentElement;
-        if (el.closest('h1, h2, h3, h4, a, code, pre, summary, .durf-matrix, .durf-corpus')) return NodeFilter.FILTER_REJECT;
+        if (el.closest('h1, h2, h3, h4, a, button, code, pre, summary, .durf-matrix, .durf-corpus')) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }
     });
@@ -794,6 +825,21 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
       if (!hasClosedBy) {
         dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
       }
+    });
+    // One dialog can be opened from several buttons. data-dialog-target names
+    // the part to scroll to (e.g. the commons part); without it the dialog
+    // opens at the top.
+    contentEl.querySelectorAll('button[commandfor][command="show-modal"]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        window.requestAnimationFrame(function () {
+          var dlg = document.getElementById(btn.getAttribute('commandfor'));
+          var body = dlg && dlg.querySelector('.durf-dialog-body');
+          if (!body) return;
+          var target = btn.dataset.dialogTarget && document.getElementById(btn.dataset.dialogTarget);
+          // offsetTop, not getBoundingClientRect: Oat scales the dialog in while it opens.
+          body.scrollTop = target && body.contains(target) ? target.offsetTop - 8 : 0;
+        });
+      });
     });
     if (hasCommands) return;
     contentEl.querySelectorAll('button[commandfor]').forEach(function (btn) {
