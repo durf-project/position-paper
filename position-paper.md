@@ -9,7 +9,7 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 <dialog id="corpus-definition" class="durf-dialog" closedby="any" aria-labelledby="corpus-definition-title">
 <form method="dialog">
 <header>
-<p class="durf-dialog-kicker">Definition</p>
+<p class="durf-dialog-kicker">Definition and commons</p>
 <h3 id="corpus-definition-title">The Dutch Scholarly Communication Corpus</h3>
 </header>
 <div class="durf-dialog-body">
