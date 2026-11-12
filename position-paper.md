@@ -1,6 +1,6 @@
 # DURF Position Paper - Draft
 
-_Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarde (VU Amsterdam), October 2026_
+_Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Kortekaas (KB) and Hilde van Wijngaarden (VU Amsterdam), October 2026_
 
 ## Dutch Scholarly Communication and the Role of University Libraries
 
