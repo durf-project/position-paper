@@ -10,6 +10,8 @@ System](https://surfnet.github.io/DesignSystem/) look used by the
 index.html            the page -- self-contained, ready to publish
 position-paper.md      the source of truth for the text; edit this
 assets/                logo, favicon and the vendored markdown renderer
+tools/information-chain.py  draws assets/durf-information-chain.svg in the DURF design system style
+                        (puzzle pieces for the themes, text as outlines; needs fonttools, Nunito and Source Sans)
 LICENSE                CC BY 4.0 (Alastair Dunning, Maurice Vanderfeesten, Simone Kortekaas and Hilde van Wijngaarden)
 ```
 

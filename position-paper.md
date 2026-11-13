@@ -54,13 +54,15 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 This Corpus is created throughout time by thousands of researchers and millions of euros of public money were spent on it. 
 This makes this Corpus a **highly valuable asset**, serving as a common resource for the public to benefit.
 
-**Mission:** joining this federation makes each of us (libraries) all/together responsible to maintain the services/pieces of a federative Open Science infrastructure for Dutch publicly funded scientific output, so that the Corpus and its services remain open, findable, accessible, available, and resilient in times of commercial and geopolitical turbulence.
+**Mission:** joining this federation makes each of us (libraries) all/together responsible to maintain the services/pieces of a federative Open Science infrastructure for Dutch publicly funded scholarly output, so that the Corpus and its services remain open, findable, accessible, available, and resilient in times of commercial and geopolitical turbulence.
 
 ## The Dutch Scholarly Communication Corpus as a shared resource
 
 The Dutch Scholarly Communication Corpus is a shared resource, a commons. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
 
 A commons only stays healthy when the community that uses it also takes care of it. That means agreeing together what good looks like, measuring it in the open and each doing our part at the source. This paper sets out how we, as libraries, want to do that together.
+
+The Corpus is not kept in one place. Each institution looks after its own part, in its own repository and CRIS, and shared services bring the parts together: they harvest and validate the records, enrich them, preserve them and make them findable. Together these form a federated ecosystem, shown in [the DURF information chain](#the-durf-information-chain) below. Taking care of the Corpus means taking care of that chain.
 
 <p class="durf-more"><button type="button" class="outline" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" data-dialog-target="corpus-commons">Read more about the Corpus as a commons</button></p>
 
@@ -100,7 +102,7 @@ Additional challenges now loom large. The rise of agentic AI offers both threats
 
 ## Central Aim of this paper
 
-**This position paper is initially a call for university libraries, KB and OpenAIRE to commit to working together to help develop and sustain a robust backbone infrastructure for Dutch scientific output that is shared, mature and resilient.**  
+**This position paper is initially a call for university libraries, KB and OpenAIRE to commit to working together to help develop and sustain a robust backbone infrastructure for Dutch scholarly output that is shared, mature and resilient.**  
 
 **Mandate and Context:** This commitment will contribute to the vision of [NPOS2030](https://doi.org/10.5281/zenodo.7433767) signed by the [Dutch covenant parties in 2023](https://www.rijksoverheid.nl/documenten/2023/03/29/open-science-nl-versnelt-transitie-naar-open-science), and the [UNL Open Science Agenda in 2023](https://doi.org/10.5281/zenodo.10362464), and to the [“academic freedom statement”](https://www.universiteitenvannederland.nl/en/current/news/statement-on-academic-freedom-the-rectors-of-the-dutch-universities-2025) in 2025 by the Dutch university rectors.
 
@@ -121,8 +123,9 @@ These themes will be explained in more detail below.
 
 # The DURF Information Chain
 
+The information chain is how the Dutch Scholarly Communication Corpus is looked after: from the repositories and CRIS systems where each institution keeps its part, through the shared OpenAIRE services that bring the parts together, to preservation and discovery. The puzzle pieces mark where each DURF theme works on the chain.
 
-![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver. The Dutch part of the OpenAIRE Graph is part of the Dutch EOSC Node.](assets/durf-information-chain.svg)
+![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver. The Dutch part of the OpenAIRE Graph is part of the Dutch EOSC Node. Puzzle pieces numbered 1 to 6 mark where each DURF theme works on the chain.](assets/durf-information-chain.svg)
 
 ## Roles, Responsibilities and Parties
 
@@ -139,12 +142,12 @@ The federation welcomes all other Dutch research performing organisations (RPOs)
 | Metadata harvester & validator (OpenAIRE PROVIDE) | Collect and check records from repositories and CRIS's | OpenAIRE |
 | OpenAIRE Graph | Aggregate, deduplicate and cross-reference records nationally and internationally | OpenAIRE |
 | Enrichment (OpenAIRE Broker) | Return quality and enrichment suggestions to the source system | OpenAIRE |
-| Netherlands Research Portal (OpenAIRE Connect) | Offer a curated, national outlet for Dutch research output | OpenAIRE, with editorial and functional management by the DURF partners |
+| Netherlands Research Portal (OpenAIRE Connect) | Offer a curated, national outlet for Dutch scholarly output | OpenAIRE, with editorial and functional management by the DURF partners |
 | e-Depot | Preserve deposited files for the long term | KB (National Library of the Netherlands) |
 | URN:NBN resolver | Keep preserved files reliably citable and linkable | KB |
 | Other research indexes (OpenAlex, Google, Wikidata, EOSC nodes) | Offer external discovery channels | Parties outside DURF's own governance |
 
-The OpenAIRE Graph plays a central role in this chain. For the metadata of Dutch research output, the OpenAIRE Graph:
+The OpenAIRE Graph plays a central role in this chain. For the metadata of Dutch scholarly output, the OpenAIRE Graph:
 
 - harvests the metadata from every Dutch repository and CRIS;
 - unites and deduplicates it with what it knows from other sources;
@@ -195,7 +198,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 Validated, high-quality metadata is a condition for a successful, trusted repository. Poor metadata can mean broken links or context-free content. It erodes trust, one of the most important values that university repositories should embody.
 
-The metadata in Dutch repositories and CRIS systems is used for strategic purposes within the Netherlands. Because the institutions register and check it themselves, it can be the most trusted source on Dutch research output, also for third parties building new technology for finding and using research information - but only when its quality is consistently high.
+The metadata in Dutch repositories and CRIS systems is used for strategic purposes within the Netherlands. Because the institutions register and check it themselves, it can be the most trusted source on Dutch scholarly output, also for third parties building new technology for finding and using research information - but only when its quality is consistently high.
 
 For research indexes that quality is decisive. Only with consistent, complete metadata can they merge the Dutch additions, such as the full text in the repository and a clear affiliation to the institution, into their research graphs through deduplication. Today that affiliation path is largely missing: like ORCID iDs, ROR IDs are not present in the harvested records at all (see the [key figures](#why-problem-statement)). Openly licensed metadata (such as CC0) of consistent quality also allows new indexes and AI tools to be built on top of the Dutch Scholarly Communication Corpus without legal or financial barriers, opening the way for open alternatives to proprietary databases such as Scopus and Web of Science.
 
@@ -278,7 +281,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 ## 5. Maximise discoverability through multiple channels
 
-Good metadata is only useful if it reaches researchers where they actually search. Dutch research output should be discoverable not only through institutional repositories, but through the channels researchers actually use: aggregators such as OpenAlex, general search engines such as Google (Scholar), open knowledge bases such as Wikidata, and the network of EOSC nodes that connects European research infrastructure. Wikidata is a particularly strong candidate: it is open, widely reused by other services, and one of the sources used to train AI. 
+Good metadata is only useful if it reaches researchers where they actually search. Dutch scholarly output should be discoverable not only through institutional repositories, but through the channels researchers actually use: aggregators such as OpenAlex, general search engines such as Google (Scholar), open knowledge bases such as Wikidata, and the network of EOSC nodes that connects European research infrastructure. Wikidata is a particularly strong candidate: it is open, widely reused by other services, and one of the sources used to train AI. 
 
 Discoverability is no longer only for human consumption. We want all publicly funded Dutch research to be open for humans and machines alike. This is of strategic importance. AI models, wherever in the world they are built, increasingly shape how people find and understand knowledge. 
 We believe that Dutch research should be well represented in them, so that the value of Dutch science, and its careful search for what is true, stays present in those models and in the answers they give. That openness needs to happen with the right conditions: lawfully and on fair terms.
@@ -289,17 +292,17 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs believe Dutch research output must be findable and accessible for researchers and the public on a multitude of relevant outlets and venues to maximise discovery.
+* UBs believe Dutch scholarly output must be findable and accessible for researchers and the public on a multitude of relevant outlets and venues to maximise discovery.
 
 
 *OPERATIONAL:*
 
-* UBs will share and teach each other the tools and methods to maximise the discoverability of Dutch research output, for human consumption and machines alike. 
+* UBs will share and teach each other the tools and methods to maximise the discoverability of Dutch scholarly output, for human consumption and machines alike. 
 
 
 ## 6. Provide a Dutch Portal as the outlet for curated research output
 
-Alongside the many channels through which Dutch research output can be discovered, DURF partners also commit to the Netherlands Research Portal (built on OpenAIRE Connect) as the national, curated showcase of that output - a single outlet where the results of shared governance, enriched metadata and full-text collection come together for a Dutch and international audience.
+Alongside the many channels through which Dutch scholarly output can be discovered, DURF partners also commit to the Netherlands Research Portal (built on OpenAIRE Connect) as the national, curated showcase of that output - a single outlet where the results of shared governance, enriched metadata and full-text collection come together for a Dutch and international audience.
 
 A portal is only as good as the care it gets. The DURF partners therefore do more than deliver their output to it: they share the responsibility for running it, through its editorial care and functional management, and for developing it further. The signees provide the input for new functionality, and so decide together where the portal goes next. If they want to take it in the direction of a public portal, that is possible. The KB's WijsNL project shows what that could look like: a search environment that makes finding and understanding research possible for everyone, starting with the open access publications of researchers at Dutch universities - the very output that DURF brings together. The aim is a portal that serves not only libraries, but everyone who wants clear, understandable access to Dutch research and to the researchers behind it: researchers, policy makers, professionals and citizens looking for knowledge or expertise.
 
