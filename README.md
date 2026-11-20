@@ -12,6 +12,7 @@ position-paper.md      the source of truth for the text; edit this
 assets/                logo, favicon and the vendored markdown renderer
 tools/information-chain.py  draws assets/durf-information-chain.svg in the DURF design system style
                         (puzzle pieces for the themes, text as outlines; needs fonttools, Nunito and Source Sans)
+tools/word/            Word round trip: export to .docx for track changes and comments, import back to Markdown
 LICENSE                CC BY 4.0 (Alastair Dunning, Maurice Vanderfeesten, Simone Kortekaas and Hilde van Wijngaarden)
 ```
 
@@ -29,6 +30,12 @@ A few conventions used in the source:
   stripped from the rendered body to avoid repeating them.
 - Blockquotes (`>`) are used for the draft's placeholder notes and citations,
   and render as highlighted "draft note" callouts.
+
+## Reviewing in Word
+
+For a review round with track changes and comments (in Word, or in Collabora on Nextcloud),
+export the paper to `.docx` and import the reviewed file back into `position-paper.md`. See
+[`tools/word/README.md`](tools/word/README.md).
 
 ## Previewing locally
 
