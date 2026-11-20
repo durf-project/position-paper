@@ -92,8 +92,8 @@ Metadata in our repositories and CRIS systems is incomplete. As the data below s
 Full texts in our repositories and CRIS systems are incomplete, as the data below shows. For both closed and open access publications we usually have a link to the file at the publisher, but for the majority - two thirds of all records - **we do not hold a copy ourselves**. This gap makes us, as an academic community, very vulnerable to commercial and geopolitical turbulence. Having complete full texts, on the other hand, opens new opportunities: it grounds a metadata record in truth, and allows us to, for example, classify research in our own way and train (our own) AI models under our own conditions.
 
 <figure class="durf-embed">
-<iframe src="https://durf-project.github.io/dashboards/03-full-text-capture.html?embed=kpis,filestatus-inst&mode=relative&sort=total-desc" title="DURF Full Text Monitor: File status per institution" loading="lazy" style="width:100%;height:1000px;border:0"></iframe>
-<figcaption>Share of records per institution with an open file, an embargoed file or no file in the repository (publications 1995&ndash;2025). Figures and sources: <a href="#a-data-supporting-the-problem-statement">Appendix A</a>. Open the <a href="https://durf-project.github.io/dashboards/03-full-text-capture.html">interactive dashboard</a> to filter by institution, publication type, open access status, licence and publisher.</figcaption>
+<iframe src="https://durf-project.github.io/dashboards/03-full-text-capture-poc.html?embed=kpis,filestatus-inst&mode=relative&sort=total-desc" title="DURF Full Text Monitor: File status per institution" loading="lazy" style="width:100%;height:1000px;border:0"></iframe>
+<figcaption>Share of records per institution with an open file, an embargoed file or no file in the repository (publications 1995&ndash;2025). Figures and sources: <a href="#a-data-supporting-the-problem-statement">Appendix A</a>. Open the <a href="https://durf-project.github.io/dashboards/03-full-text-capture-poc.html">interactive dashboard</a> to filter by institution, publication type, open access status, licence and publisher.</figcaption>
 </figure>
 
 </details>
@@ -329,8 +329,8 @@ Therefore, the signees of the DURF Position Paper agree the following:
 | Statement in the paper | Figure | Source |
 | --- | --- | --- |
 | Size of the Dutch Scholarly Communication Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted May 2026) |
-| Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
-| Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture.html) (1) |
+| Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture-poc.html) (1) |
+| Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture-poc.html) (1) |
 | Records missing essential metadata | About half. A valid DOI in 51.7% of records (989,074), an abstract in 49.8% and a Handle in 37.4%; ORCID iDs and ROR IDs are not present in the harvested records at all | [DURF Metadata Monitor](https://durf-project.github.io/dashboards/02-metadata-quality.html) (2) |
 | Impact of Dutch science | 72% above the global average | [Nederland als wetenschapsland 2024](#ref-3) |
 | Articles published by Dutch research institutes | over 127,000 a year | [OpenAIRE Monitor](#ref-4) |
