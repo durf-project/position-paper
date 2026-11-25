@@ -4,7 +4,7 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 
 ## Dutch Scholarly Communication and the Role of University Libraries
 
-**Dutch Repository Federation:** together we (libraries) are the custodians of the Dutch Scholarly Communication Corpus, containing 3.4 million published works <button type="button" class="durf-info" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" aria-label="What is the Dutch Scholarly Communication Corpus?" title="What is the Dutch Scholarly Communication Corpus?">i</button> from the early 1800s until today. However, for most of these works we do not have a copy in our repositories<sup><a href="#ref-1">1</a></sup>, which is weakening our academic and digital autonomy<sup><a href="#ref-2">2</a></sup>.
+**Dutch Repository Federation:** together we (libraries) are the custodians of the Dutch Scholarly Communication Corpus, containing 3.4 million publicly funded, published scholarly works <button type="button" class="durf-info" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" aria-label="What is the Dutch Scholarly Communication Corpus?" title="What is the Dutch Scholarly Communication Corpus?">i</button> from the early 1800s until today. However, for most of these works we do not have a copy in our repositories<sup><a href="#ref-1">1</a></sup>, which is weakening our academic and digital autonomy<sup><a href="#ref-2">2</a></sup>.
 
 <dialog id="corpus-definition" class="durf-dialog" closedby="any" aria-labelledby="corpus-definition-title">
 <form method="dialog">
@@ -13,7 +13,7 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 <h3 id="corpus-definition-title">The Dutch Scholarly Communication Corpus</h3>
 </header>
 <div class="durf-dialog-body">
-<p>The Dutch Scholarly Communication Corpus is the body of <strong>published works</strong> with at least one author affiliated with a Dutch research institution. Libraries do not look after everything that science produces; their focus is the literature, which is why we speak of <em>scholarly communication</em>.</p>
+<p>The Dutch Scholarly Communication Corpus is the body of <strong>publicly funded, published scholarly works</strong> with at least one author affiliated with a Dutch research institution. It was created with public money, so it should be available to the public: that is what makes it a commons, a shared resource. Libraries do not look after everything that science produces; their focus is the literature, which is why we speak of <em>scholarly communication</em>.</p>
 <p><strong>It includes</strong></p>
 <ul>
 <li>traditional publications, such as journal articles, books and book chapters, conference papers and theses;</li>
@@ -24,7 +24,7 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 <p><strong>It excludes</strong> the digital objects of other research entities, such as datasets, software, projects, persons, organisations, instruments and samples. These have their own domains and custodians.</p>
 <p><strong>But it connects to them.</strong> Where it fits, the metadata of a published work must carry the identifiers of, and references to, these entities: the DOIs of underlying datasets and software, ORCID iDs, ROR IDs, project and grant identifiers. That places the literature in the context of the research endeavour, and makes it transparent and traceable what it is based on and who was involved.</p>
 <h4 id="corpus-commons">The Corpus as a commons</h4>
-<p>The Corpus is a shared resource, a commons. No single institution owns it. Every institution contributes to it and every institution depends on it. Like any commons, it only stays healthy when the community that uses it also takes care of it.</p>
+<p>The Corpus is a shared resource, a commons. It was created with public money, so it belongs to the public, and no single institution owns it. Every institution contributes to it and every institution depends on it. Like any commons, it only stays healthy when the community that uses it also takes care of it.</p>
 <p>Organising the Corpus as a commons means that we agree together what good looks like, for example which metadata, identifiers and full texts a complete record of a Dutch published work should have. It means that we measure the state of the Corpus in the open, so that every institution can see where it is incomplete or inconsistent. And it means that each of us does their part at the source, in our own repository and CRIS, so that an improvement reaches everyone and not just a local copy.</p>
 <p>The report <a href="https://doi.org/10.5281/zenodo.21526773" target="_blank" rel="noopener">Organizing research as a commons</a> (Waegemaekers et al., 2026) explains how the idea of the commons can help to organise a fragmented research ecosystem, so that infrastructure, data and scholarly output are seen as a shared responsibility, and funding, support and governance are organised through collective action.</p>
 <h4 id="corpus-ostrom">Ostrom's design principles</h4>
@@ -58,7 +58,7 @@ This makes this Corpus a **highly valuable asset**, serving as a common resource
 
 ## The Dutch Scholarly Communication Corpus as a shared resource
 
-The Dutch Scholarly Communication Corpus is a shared resource, a commons. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
+The Dutch Scholarly Communication Corpus is a shared resource, a commons, because it was created with public money: what the public has paid for should be available to the public. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
 
 A commons only stays healthy when the community that uses it also takes care of it. That means agreeing together what good looks like, measuring it in the open and each doing our part at the source. This paper sets out how we, as libraries, want to do that together.
 
