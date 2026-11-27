@@ -4,16 +4,16 @@ _Alastair Dunning (TU Delft), Maurice Vanderfeesten (VU Amsterdam), Simone Korte
 
 ## Dutch Scholarly Communication and the Role of University Libraries
 
-**Dutch Repository Federation:** together we (libraries) are the custodians of the Dutch Scholarly Communication Corpus, containing 3.4 million publicly funded, published scholarly works <button type="button" class="durf-info" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" aria-label="What is the Dutch Scholarly Communication Corpus?" title="What is the Dutch Scholarly Communication Corpus?">i</button> from the early 1800s until today. However, for most of these works we do not have a copy in our repositories<sup><a href="#ref-1">1</a></sup>, which is weakening our academic and digital autonomy<sup><a href="#ref-2">2</a></sup>.
+**Dutch Repository Federation:** together we (libraries) are the custodians of the Dutch Scholarly Knowledge Corpus (DSKC), containing 3.4 million publicly funded, published scholarly works <button type="button" class="durf-info" commandfor="corpus-definition" command="show-modal" aria-haspopup="dialog" aria-label="What is the Dutch Scholarly Knowledge Corpus?" title="What is the Dutch Scholarly Knowledge Corpus?">i</button> from the early 1800s until today. However, for most of these works we do not have a copy in our repositories<sup><a href="#ref-1">1</a></sup>, which is weakening our academic and digital autonomy<sup><a href="#ref-2">2</a></sup>.
 
 <dialog id="corpus-definition" class="durf-dialog" closedby="any" aria-labelledby="corpus-definition-title">
 <form method="dialog">
 <header>
 <p class="durf-dialog-kicker">Definition and commons</p>
-<h3 id="corpus-definition-title">The Dutch Scholarly Communication Corpus</h3>
+<h3 id="corpus-definition-title">The Dutch Scholarly Knowledge Corpus (DSKC)</h3>
 </header>
 <div class="durf-dialog-body">
-<p>The Dutch Scholarly Communication Corpus is the body of <strong>publicly funded, published scholarly works</strong> with at least one author affiliated with a Dutch research institution. It was created with public money, so it should be available to the public: that is what makes it a commons, a shared resource. Libraries do not look after everything that science produces; their focus is the literature, which is why we speak of <em>scholarly communication</em>.</p>
+<p>The Dutch Scholarly Knowledge Corpus is the body of <strong>publicly funded, published scholarly works</strong> with at least one author affiliated with a Dutch research institution. It was created with public money, so it should be available to the public: that is what makes it a commons, a shared resource. Libraries do not look after everything that science produces; their focus is the literature, which is why we speak of <em>scholarly communication</em>.</p>
 <p><strong>It includes</strong></p>
 <ul>
 <li>traditional publications, such as journal articles, books and book chapters, conference papers and theses;</li>
@@ -56,9 +56,11 @@ This makes this Corpus a **highly valuable asset**, serving as a common resource
 
 **Mission:** joining this federation makes each of us (libraries) all/together responsible to maintain the services/pieces of a federative Open Science infrastructure for Dutch publicly funded scholarly output, so that the Corpus and its services remain open, findable, accessible, available, and resilient in times of commercial and geopolitical turbulence.
 
-## The Dutch Scholarly Communication Corpus as a shared resource
+<a id="the-dutch-scholarly-communication-corpus-as-a-shared-resource"></a>
 
-The Dutch Scholarly Communication Corpus is a shared resource, a commons, because it was created with public money: what the public has paid for should be available to the public. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
+## The Dutch Scholarly Knowledge Corpus as a shared resource
+
+The Dutch Scholarly Knowledge Corpus is a shared resource, a commons, because it was created with public money: what the public has paid for should be available to the public. No single institution owns it. Every institution contributes to it, through the work of its researchers and the records in its repository and CRIS, and every institution depends on it to find, assess and preserve its research.
 
 A commons only stays healthy when the community that uses it also takes care of it. That means agreeing together what good looks like, measuring it in the open and each doing our part at the source. This paper sets out how we, as libraries, want to do that together.
 
@@ -77,7 +79,7 @@ The key figures behind this problem statement are in the two panels below.
 <details class="durf-evidence">
 <summary><span class="durf-evidence-kicker">Key figures</span> Missing metadata &amp; the importance of filling the gaps</summary>
 
-Metadata in our repositories and CRIS systems is incomplete. As the data below shows, on average half of the records are missing information in essential metadata elements and persistent identifiers. These gaps make it hard to find and connect literature and to use the Dutch Scholarly Communication Corpus for strategic analysis. They force us to rely on commercial databases that come with their own issues: biases that underrepresent numerous fields of science, high price tags, and a lack of the auditability that transparency in research evaluation requires. Closing these gaps makes the Corpus findable, connected and fit for analysis from our own, open data.
+Metadata in our repositories and CRIS systems is incomplete. As the data below shows, on average half of the records are missing information in essential metadata elements and persistent identifiers. These gaps make it hard to find and connect literature and to use the Dutch Scholarly Knowledge Corpus for strategic analysis. They force us to rely on commercial databases that come with their own issues: biases that underrepresent numerous fields of science, high price tags, and a lack of the auditability that transparency in research evaluation requires. Closing these gaps makes the Corpus findable, connected and fit for analysis from our own, open data.
 
 <figure class="durf-embed">
 <iframe src="https://durf-project.github.io/dashboards/02-metadata-quality.html?embed=publications-kpis,publications-heatmap&mode=relative&sort=avg-desc" title="DURF Metadata Monitor: Valid per institution and field" loading="lazy" style="width:100%;height:1190px;border:0"></iframe>
@@ -98,7 +100,7 @@ Full texts in our repositories and CRIS systems are incomplete, as the data belo
 
 </details>
 
-Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our **Dutch scholarly works can be well represented, under our own conditions**, in AI models by offering our high-quality Dutch Scholarly Communication Corpus.
+Additional challenges now loom large. The rise of agentic AI offers both threats and opportunities to scholarly publications; one threat could be that access to publications can be blocked and held to ransom in negotiations, an opportunity could be that our **Dutch scholarly works can be well represented, under our own conditions**, in AI models by offering our high-quality Dutch Scholarly Knowledge Corpus.
 
 ## Central Aim of this paper
 
@@ -123,7 +125,7 @@ These themes will be explained in more detail below.
 
 # The DURF Information Chain
 
-The information chain is how the Dutch Scholarly Communication Corpus is looked after: from the repositories and CRIS systems where each institution keeps its part, through the shared OpenAIRE services that bring the parts together, to preservation and discovery. The puzzle pieces mark where each DURF theme works on the chain.
+The information chain is how the Dutch Scholarly Knowledge Corpus is looked after: from the repositories and CRIS systems where each institution keeps its part, through the shared OpenAIRE services that bring the parts together, to preservation and discovery. The puzzle pieces mark where each DURF theme works on the chain.
 
 ![The DURF information ecosystem: repositories and CRIS systems feed a metadata harvester and validator (OpenAIRE PROVIDE), which populates the OpenAIRE Graph; from there, metadata is enriched (OpenAIRE Broker), made discoverable via the Netherlands Research Portal (OpenAIRE Connect), and preserved long-term via the KB e-Depot and URN resolver. The Dutch part of the OpenAIRE Graph is part of the Dutch EOSC Node. Puzzle pieces numbered 1 to 6 mark where each DURF theme works on the chain.](assets/durf-information-chain.svg)
 
@@ -159,7 +161,7 @@ Bringing these parties together under one set of shared rules is called **federa
 
 ### Roles, Responsibilities and Reciprocity
 
-Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch Scholarly Communication Corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
+Being part of the federation is not only a duty to the whole. It rests on reciprocity between the parties operating each system: each takes on specific responsibilities, and can expect something in return. The KB's e-Depot, for example, takes on the *responsibility* to archive and safely back up the Dutch Scholarly Knowledge Corpus deposited by university repositories - but it can only do so if it can *expect* to receive that metadata and full text from those repositories, in a usable, agreed form. Take either one away, and the other cannot be honoured.
 
 [Appendix B](#b-roles-and-responsibilities-matrix) sets these roles and responsibilities out for every pair of parties in the chain. This position paper is not itself a legal agreement. How they relate to existing agreements, such as those between the KB and the institutions, will be worked out in the formal agreements under theme 1.
 
@@ -179,7 +181,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe they are the custodians of the Dutch Scholarly Communication Corpus (metadata and full texts), and are committed to the same **central aim** stated above.
+* UBs and KB believe they are the custodians of the Dutch Scholarly Knowledge Corpus (metadata and full texts), and are committed to the same **central aim** stated above.
 
 *TACTICAL:*
 
@@ -200,7 +202,7 @@ Validated, high-quality metadata is a condition for a successful, trusted reposi
 
 The metadata in Dutch repositories and CRIS systems is used for strategic purposes within the Netherlands. Because the institutions register and check it themselves, it can be the most trusted source on Dutch scholarly output, also for third parties building new technology for finding and using research information - but only when its quality is consistently high.
 
-For research indexes that quality is decisive. Only with consistent, complete metadata can they merge the Dutch additions, such as the full text in the repository and a clear affiliation to the institution, into their research graphs through deduplication. Today that affiliation path is largely missing: like ORCID iDs, ROR IDs are not present in the harvested records at all (see the [key figures](#why-problem-statement)). Openly licensed metadata (such as CC0) of consistent quality also allows new indexes and AI tools to be built on top of the Dutch Scholarly Communication Corpus without legal or financial barriers, opening the way for open alternatives to proprietary databases such as Scopus and Web of Science.
+For research indexes that quality is decisive. Only with consistent, complete metadata can they merge the Dutch additions, such as the full text in the repository and a clear affiliation to the institution, into their research graphs through deduplication. Today that affiliation path is largely missing: like ORCID iDs, ROR IDs are not present in the harvested records at all (see the [key figures](#why-problem-statement)). Openly licensed metadata (such as CC0) of consistent quality also allows new indexes and AI tools to be built on top of the Dutch Scholarly Knowledge Corpus without legal or financial barriers, opening the way for open alternatives to proprietary databases such as Scopus and Web of Science.
 
 Rich metadata and complete coverage matter for research assessment as well. For this we foresee working with the OpenAIRE Broker and SURF's BROCCOLI project to enrich records in a validated chain. And high-quality metadata is the prerequisite for seeing what is still missing: which publications are absent from our repositories, and which full texts (theme 3).
 
@@ -212,11 +214,11 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs believe the Dutch Scholarly Communication Corpus is potentially a highly valuable asset when it has high quality metadata. 
+* UBs believe the Dutch Scholarly Knowledge Corpus is potentially a highly valuable asset when it has high quality metadata. 
 
 *TACTICAL:*
 
-* UBs make the Dutch Scholarly Communication Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
+* UBs make the Dutch Scholarly Knowledge Corpus available for harvest and quality enrichment to the OpenAIRE Graph, so Dutch research is connected to the European Open Science Cloud Nodes.
 
 *OPERATIONAL:*
 
@@ -245,7 +247,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe they are the custodians of the Dutch Scholarly Communication Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
+* UBs and KB believe they are the custodians of the Dutch Scholarly Knowledge Corpus, and feel responsible for the availability (findable and accessible) of metadata and full texts of the Dutch Research Literature.
 
 *TACTICAL:*
 
@@ -269,7 +271,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 *STRATEGIC:*
 
-* UBs and KB believe that the Dutch Scholarly Communication Corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
+* UBs and KB believe that the Dutch Scholarly Knowledge Corpus is a highly valuable asset for generations to come, and must be preserved and be made accessible for the long term.
 
 *OPERATIONAL:*
 
@@ -328,7 +330,7 @@ Therefore, the signees of the DURF Position Paper agree the following:
 
 | Statement in the paper | Figure | Source |
 | --- | --- | --- |
-| Size of the Dutch Scholarly Communication Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted May 2026) |
+| Size of the Dutch Scholarly Knowledge Corpus | 3.4 million publications, from the early 1800s until today | [Netherlands Research Portal](https://netherlands.openaire.eu/search/advanced/research-outcomes?type=publication), research outcomes of type publication (consulted May 2026) |
 | Publications in Dutch repositories and CRIS systems, 1995-2025 | 1,912,504 publications, from 18 institutions | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture-poc.html) (1) |
 | Records without a file in the repository | 66.8% (1,277,665 publications). Of the rest, 29.7% (568,818) have an open file and 3.5% (66,021) only an embargoed file | [DURF Full Text Monitor](https://durf-project.github.io/dashboards/03-full-text-capture-poc.html) (1) |
 | Records missing essential metadata | About half. A valid DOI in 51.7% of records (989,074), an abstract in 49.8% and a Handle in 37.4%; ORCID iDs and ROR IDs are not present in the harvested records at all | [DURF Metadata Monitor](https://durf-project.github.io/dashboards/02-metadata-quality.html) (2) |
